@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
+  m_Name: orenge
+  m_EditorClassIdentifier: 
+  ID: 30003
+  itemHealth: 0
+  stackable: 0
+  itemObject: {fileID: 919132149155446097, guid: 67cd6d32806d2a5489e837f90719d6ae,
+    type: 3}
+  spawntoscene: {fileID: 0}
+  UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
+    type: 3}
+  itemName: orenge
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: adaf97ac306b41247a03d252bf7bdd3d, type: 3}
+  type: 0
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  healing: 100
+  satiety: 0
+  canbeBBQ: 0
+  roastStep: []
+  stepTime: []
+  foodWithin: []

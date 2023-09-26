@@ -1,0 +1,49 @@
+public bool fishingPullBack;
+
+if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.ID == 69)
+        {
+            GameObject hook = onHandItem.transform.GetChild(0).gameObject;
+            var hrb = hook.GetComponent<Rigidbody>();
+            var fishing = hook.GetComponent<Fishing>();
+            if (Input.GetMouseButtonDown(1) && !fishingPullBack)
+            {
+                Debug.Log("收");
+                hrb.isKinematic = false;
+                fishingPullBack = true;
+                //碰到東西關掉RB
+            }
+            if (fishing.getFish)
+            {
+                Debug.LogWarning("yougetfish");
+                fishing.getFish = false;
+            }
+
+            
+            
+
+
+            if (fishingPullBack && fishing.Ihavecollisth)
+            {
+                print("fpb");
+                hrb.isKinematic = false;
+                hrb.useGravity = false;
+                hook.transform.localPosition = Vector3.Lerp(hook.transform.localPosition, fishing.initialPos.transform.localPosition, fishing.smooth * Time.deltaTime);
+                if (Vector3.Distance(hook.transform.localPosition , fishing.initialPos.transform.localPosition ) <= 1f)
+                {
+                    fishing.waterTrigger = false;
+                    fishing.canFish = true;
+                    hook.GetComponent<BoxCollider>().enabled = true;
+                    fishing.Ihavecollisth= false;
+                    print("back");
+                }
+            }
+        }
+
+        if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.ID == 69 && Input.GetMouseButtonDown(1) && onHandItem.transform.GetChild(0).gameObject.GetComponent<Fishing>().canFish)
+        {
+            GameObject hook = onHandItem.transform.GetChild(0).gameObject;
+            var _fishing = hook.GetComponent<Fishing>();
+            _fishing.fishing(hook);
+            _fishing.canFish = false;
+            fishingPullBack = false;
+        }

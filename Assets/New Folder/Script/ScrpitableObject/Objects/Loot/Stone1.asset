@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: Stone1
+  m_EditorClassIdentifier: 
+  ID: 10001
+  itemHealth: 0
+  stackable: 1
+  itemObject: {fileID: 5583441775687608059, guid: b7e9fadbfdedabd46b4f6b02eb36a060,
+    type: 3}
+  spawntoscene: {fileID: 5583441775687608059, guid: 06572321cea011d478ac3fd1dab2ac9c,
+    type: 3}
+  UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
+    type: 3}
+  itemName: Stone
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 80dd921c6e1078a4cb6457843b539e7a, type: 3}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  Drop: 

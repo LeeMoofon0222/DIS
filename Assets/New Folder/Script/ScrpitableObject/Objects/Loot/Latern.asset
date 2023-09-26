@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: Latern
+  m_EditorClassIdentifier: 
+  ID: 10016
+  itemHealth: 0
+  stackable: 0
+  itemObject: {fileID: 1789130807696522531, guid: 0e07f200f28693044a57e96f6a907180,
+    type: 3}
+  spawntoscene: {fileID: 5165175423225129739, guid: 4342477bc0d09bf43a9950b7a01785ca,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: "\u71C8\u7C60"
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 3ad275e3acf3a404fb1959808e7b9b75, type: 3}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 1
+  Preplace: {fileID: 6803338748000343111, guid: d87955f8212f5db468e536e516148eac,
+    type: 3}
+  Drop: 

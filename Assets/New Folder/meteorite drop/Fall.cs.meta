@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be96c8f3bfedb3446abe30a67a4a64ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Meteorite: {fileID: 3274719023001649935, guid: f40b4cd22dacfc4448a4f9cf4d31d6de,
+      type: 3}
+  - SpawnMeteoritePosition: {instanceID: 0}
+  - _camera: {instanceID: 0}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: LaveCrystalPower
+  m_EditorClassIdentifier: 
+  ID: 10017
+  itemHealth: 0
+  stackable: 0
+  itemObject: {fileID: 0}
+  spawntoscene: {fileID: 0}
+  UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
+    type: 3}
+  itemName: Lave Crystal Powder
+  itemWeights: 0
+  itemIcon: {fileID: 0}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  Drop: 

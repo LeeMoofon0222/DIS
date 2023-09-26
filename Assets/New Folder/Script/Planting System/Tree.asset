@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
+  m_Name: Tree
+  m_EditorClassIdentifier: 
+  ID: 798789
+  itemHealth: 1
+  stackable: 1
+  itemObject: {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403,
+    type: 3}
+  spawntoscene: {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403,
+    type: 3}
+  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+    type: 3}
+  itemName: tree
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
+  type: 3
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 0
+  Preplace: {fileID: 0}
+  period: 10
+  plantstep:
+  - {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403, type: 3}
+  - {fileID: 4751039627884398626, guid: 27444f773b5c2f84c83243edf561a9d3, type: 3}
+  - {fileID: 684691319753315937, guid: cc799e7cd8d9de246a5f63b4b81d7934, type: 3}

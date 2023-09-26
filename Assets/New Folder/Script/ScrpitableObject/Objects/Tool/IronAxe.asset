@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
+  m_Name: IronAxe
+  m_EditorClassIdentifier: 
+  ID: 20009
+  itemHealth: 100
+  stackable: 0
+  itemObject: {fileID: 6932481752647736456, guid: 31035222bcbcc674ab0cb1b606d0da85,
+    type: 3}
+  spawntoscene: {fileID: 7529449861246313763, guid: 7406ef956c9e66240b49e1afbc3a4aa3,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: Iron Axe
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: e3c48f70620beec4e93de1e83d334eb1, type: 3}
+  type: 1
+  gainingType: 1
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  ToolATK: 1
+  ToolDEF: 0
+  ratio: 4

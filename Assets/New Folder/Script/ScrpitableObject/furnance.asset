@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: furnance
+  m_EditorClassIdentifier: 
+  ID: 11002
+  itemHealth: 0
+  stackable: 1
+  itemObject: {fileID: 5622813378531810500, guid: 78cf546c2e6083a4ba2fa4382157ef1e,
+    type: 3}
+  spawntoscene: {fileID: 3013992858215029006, guid: 7da702261cd48c148ba96aff489a7270,
+    type: 3}
+  UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
+    type: 3}
+  itemName: "\u7194\u7210"
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 22c7207453525b24c8783876e5fe6d07, type: 3}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 1
+  Preplace: {fileID: 7964647935224668952, guid: f126c43b4f83a2e4bb8e40725ac87202,
+    type: 3}
+  Drop: 

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
+  m_Name: Finshing_rod
+  m_EditorClassIdentifier: 
+  ID: 21000
+  itemHealth: 1
+  stackable: 0
+  itemObject: {fileID: 4825313617422586194, guid: 934bfb0deb0f39f4286a919269ce0007,
+    type: 3}
+  spawntoscene: {fileID: 4825313617422586194, guid: 934bfb0deb0f39f4286a919269ce0007,
+    type: 3}
+  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+    type: 3}
+  itemName: Rod
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
+  type: 1
+  gainingType: 0
+  desciption: 
+  ToolATK: 0
+  ToolDEF: 0
+  ratio: 0

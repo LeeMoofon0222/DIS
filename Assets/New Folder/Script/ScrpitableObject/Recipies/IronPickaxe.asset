@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc70dfe516c920b4a924137e6c99779d, type: 3}
+  m_Name: IronPickaxe
+  m_EditorClassIdentifier: 
+  materials:
+  - ID: 10009
+    amount: 2
+  - ID: 10003
+    amount: 2
+  - ID: 0
+    amount: 0
+  outputAmount: 1
+  output: {fileID: 8315774533625892874, guid: b2d88847d44e4ac44b67405cfab89cb9, type: 3}
+  Itemoutput: {fileID: 11400000, guid: a1fd2f4308ed412469fe46e8c03d9d77, type: 2}
+  craftresult: {fileID: 5000068726392299183, guid: 3cb1ef91606d0a44bbd2685317b0f84e,
+    type: 3}

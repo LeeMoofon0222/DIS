@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
+  m_Name: CopperSword
+  m_EditorClassIdentifier: 
+  ID: 20006
+  itemHealth: 100
+  stackable: 0
+  itemObject: {fileID: 7783908026505054396, guid: 6e9a816165a52894e99a17271ce9efbe,
+    type: 3}
+  spawntoscene: {fileID: 3502296772619692977, guid: 50c239992cbad9740a5c1961cb37e51f,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: Copper Sword
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 7083e3fe961379b42aedb6918c484038, type: 3}
+  type: 1
+  gainingType: 2
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  ToolATK: 2
+  ToolDEF: 0
+  ratio: 1

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerItemHolder
+  - prebuildFoundation
+  - Foundation
+  - prebuildParts
+  - cherryIsland
+  - desertIsland
+  - pond
+  - Hook
+  - preplace
+  - preisland
+  - Env
+  - lavaIsland
+  - Smelter
+  - c
+  - w
+  - reward
+  - field
+  - chaser
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - itemMask
+  - Water
+  - UI
+  - handitem
+  - foundation
+  - canBuildOn
+  - islands
+  - preWay
+  - bbqFire
+  - 3dui
+  - Player
+  - NPCMask
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

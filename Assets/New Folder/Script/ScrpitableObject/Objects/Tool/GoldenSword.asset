@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
+  m_Name: GoldenSword
+  m_EditorClassIdentifier: 
+  ID: 20017
+  itemHealth: 100
+  stackable: 0
+  itemObject: {fileID: 915894051929232743, guid: e5d56162b705fa045ad2b555457384b0,
+    type: 3}
+  spawntoscene: {fileID: 5955983108816870765, guid: 85454679def3af74abc9a1e0634304f9,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: Golden Sword
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 3056aafeeb922594ebaa8cb2dd3d82d8, type: 3}
+  type: 1
+  gainingType: 2
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  ToolATK: 2
+  ToolDEF: 0
+  ratio: 1
