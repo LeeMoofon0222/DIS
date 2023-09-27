@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - ID: 10009
-    amount: 2
+    amount: 1
   - ID: 10003
-    amount: 2
+    amount: 1
   - ID: 0
     amount: 0
   outputAmount: 1
-  output: {fileID: 8315774533625892874, guid: b2d88847d44e4ac44b67405cfab89cb9, type: 3}
+  output: {fileID: 1911721756254005025, guid: 17d94618b1c08ca44845b04a888d6977, type: 3}
   Itemoutput: {fileID: 11400000, guid: a1fd2f4308ed412469fe46e8c03d9d77, type: 2}
   craftresult: {fileID: 5000068726392299183, guid: 3cb1ef91606d0a44bbd2685317b0f84e,
     type: 3}

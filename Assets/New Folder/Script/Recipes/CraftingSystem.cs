@@ -22,7 +22,7 @@ public class CraftingSystem : MonoBehaviour
 
     public LayerMask itemMask;
 
-
+    public Transform uiContrainer;
 
     void Awake()
     {
@@ -71,8 +71,9 @@ public class CraftingSystem : MonoBehaviour
         
         if (!showed)
         {
-            Instantiate(recipeChoose[rcn].craftresult, uishow);
-            showed = true;
+            if(recipeChoose.Count != 0)
+                Instantiate(recipeChoose[rcn].craftresult, uishow);
+                showed = true;
         }
         
         if(Input.GetKeyDown(KeyCode.C) && recipeChoose.Count != 0)
@@ -81,14 +82,20 @@ public class CraftingSystem : MonoBehaviour
             {
                 if (collider.gameObject.TryGetComponent(out ItemObject IO))
                 {
-                    
+                
                     Destroy(IO.gameObject);
                 }
+            }
+            
+            foreach (Transform child in uiContrainer)
+            {
+                Destroy(child.gameObject);
             }
 
             Instantiate(recipeChoose[rcn].output, detectBox.transform.position,Quaternion.identity);
             
             itemIDs.Clear();
+            recipeChoose.Clear();
         }
     }
 

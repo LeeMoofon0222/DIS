@@ -73,8 +73,8 @@ public class PlayerMoveMent : MonoBehaviour
             PA.wakeUp();
         }
 
-        v_input = Input.GetAxisRaw("Vertical") * speed;
-        h_input = Input.GetAxisRaw("Horizontal") * speed;
+        v_input = Input.GetAxis("Vertical") * speed;
+        h_input = Input.GetAxis("Horizontal") * speed;
         if(v_input != 0 || h_input != 0)
         {
             isMoving = true;
@@ -131,7 +131,7 @@ public class PlayerMoveMent : MonoBehaviour
 
         if (isMoving && cC.isGrounded && canMove )
         {
-            headbob_x = Mathf.Sin(Time.time * 6 * sprintingHeadbob) * 0.04f;
+            headbob_x = Mathf.Sin(Time.time * 6 * sprintingHeadbob) * 0.06f;
             headbob_y = (Mathf.Cos(Time.time * 12 * sprintingHeadbob) * 0.08f * -1 ) ;
 
             if(cam.transform.localPosition == camResetPos)

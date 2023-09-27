@@ -20,7 +20,7 @@ MonoBehaviour:
   - ID: 0
     amount: 0
   outputAmount: 1
-  output: {fileID: 6932481752647736456, guid: 31035222bcbcc674ab0cb1b606d0da85, type: 3}
+  output: {fileID: 7529449861246313763, guid: 7406ef956c9e66240b49e1afbc3a4aa3, type: 3}
   Itemoutput: {fileID: 11400000, guid: 94f20b41c345a3542a50ec6f0cfed0d7, type: 2}
   craftresult: {fileID: 7397863016516569010, guid: 273b95c22f74a464282eb385a5558c75,
     type: 3}

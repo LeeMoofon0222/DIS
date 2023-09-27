@@ -25,8 +25,8 @@ MonoBehaviour:
   m_SupportsTerrainHoles: 1
   m_StoreActionsOptimization: 0
   m_SupportsHDR: 1
-  m_MSAA: 8
-  m_RenderScale: 0.89
+  m_MSAA: 4
+  m_RenderScale: 0.87
   m_UpscalingFilter: 0
   m_FsrOverrideSharpness: 0
   m_FsrSharpness: 0.92
@@ -42,13 +42,13 @@ MonoBehaviour:
   m_AdditionalLightsShadowResolutionTierHigh: 512
   m_ReflectionProbeBlending: 1
   m_ReflectionProbeBoxProjection: 1
-  m_ShadowDistance: 148.41
+  m_ShadowDistance: 100
   m_ShadowCascadeCount: 4
   m_Cascade2Split: 0.25
   m_Cascade3Split: {x: 0.1, y: 0.3}
-  m_Cascade4Split: {x: 0.47907332, y: 0.7170598, z: 0.8329481}
-  m_CascadeBorder: 0.1691085
-  m_ShadowDepthBias: 1
+  m_Cascade4Split: {x: 0.058294043, y: 0.35922027, z: 0.5442597}
+  m_CascadeBorder: 0.47263607
+  m_ShadowDepthBias: 2.69
   m_ShadowNormalBias: 0
   m_AnyShadowsSupported: 1
   m_SoftShadowsSupported: 1

@@ -187,7 +187,7 @@ public class InventoryRecord : ScriptableObject
                 return Container[i].doneness;
             }
         }
-        return -1;
+        return 0;
     }
 
     public int GetItemhealth(Item _item, int _Pnum)

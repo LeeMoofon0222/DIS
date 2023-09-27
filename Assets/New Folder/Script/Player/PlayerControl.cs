@@ -59,6 +59,7 @@ public class PlayerControl : MonoBehaviour
     public Transform mainhandHolder;
     public bool onhandSpawned;      //主手重製
     public variables onhandProperty;
+    
 
     [Header("other option panel")]
     public GameObject optionMenu;
@@ -69,6 +70,8 @@ public class PlayerControl : MonoBehaviour
     public LayerMask bbqLayer;
     bool bbq_isPlayed;
     float bbqTimer;
+    public GameObject BBQsmoke;
+    bool animPlayed;
 
     [Header("Cursor")]
     public Image cursor;
@@ -180,6 +183,7 @@ public class PlayerControl : MonoBehaviour
         {
             onhandProperty.itemhealth = PIC.itemProperties[setItem].itemhealth;
             onhandProperty.itemdoneness = PIC.itemProperties[setItem].itemdoneness;
+            
         }
         else
         {
@@ -340,7 +344,7 @@ public class PlayerControl : MonoBehaviour
         #endregion
 
         #region ATK/Mineing
-        if (Input.GetMouseButton(0) && timer >= digCD && !anyoptionOn() && !PIC.inventoryOpen)
+        if (Input.GetMouseButton(0) && timer >= digCD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected)
         {
             StopAllCoroutines();
             StartCoroutine(_Digging());
@@ -476,12 +480,16 @@ public class PlayerControl : MonoBehaviour
                         }
                     }
                     bbq = true;
+
+                    StartCoroutine(smoking());
                     //fork.SetActive(true);
                     if (!bbq_isPlayed)
                     {
                         handHolderController.Play("Roasting");
+                        
                         bbq_isPlayed = true;
                     }
+                    
                 }
                 else if (Input.GetMouseButtonDown(1) && !iseating && !anyoptionOn() && !PIC.inventoryOpen && !bbq)
                 {
@@ -500,11 +508,6 @@ public class PlayerControl : MonoBehaviour
                     Input.GetKey(KeyCode.F) ||
                     Input.GetKey(KeyCode.Tab)) && bbq)
                 {
-                    bbq = false;
-                    bbq_isPlayed = false;
-                    //Debug.Log(m_inventory.GetBBQStep(itemHolding.item, PIC.i_pnum[setItem]));
-                    bbqTimer = food.stepTime[m_inventory.GetBBQStep(itemHolding.item, PIC.i_pnum[setItem])];
-                    
                     //fork.SetActive(false);
                     if (pm.GetComponent<PlayerMoveMent>().isMoving)
                     {
@@ -514,6 +517,17 @@ public class PlayerControl : MonoBehaviour
                     {
                         handHolderController.Play("Idle");
                     }
+
+                    bbq = false;
+                    if (bbq_isPlayed)
+                    {
+                        GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform.position, Quaternion.identity);
+                        Destroy(smoke, 6f);
+                    }
+                    bbq_isPlayed = false;
+                    //Debug.Log(m_inventory.GetBBQStep(itemHolding.item, PIC.i_pnum[setItem]));
+                    bbqTimer = food.stepTime[m_inventory.GetBBQStep(itemHolding.item, PIC.i_pnum[setItem])];
+
                 }
             }
         }  
@@ -527,6 +541,8 @@ public class PlayerControl : MonoBehaviour
                 
             }
         }
+
+
     }
 
     public void ChangeonHandItem()      //主手物體控制
@@ -544,7 +560,8 @@ public class PlayerControl : MonoBehaviour
             {
                 foreach (Transform child in mainhandHolder)
                 {
-                    Destroy(child.gameObject);
+                    if(!child.transform.CompareTag("hand-dont-delete"))
+                        Destroy(child.gameObject);
                 }
                 onhandProperty.itemhealth = 0;
                 onhandProperty.itemdoneness= 0;
@@ -578,7 +595,7 @@ public class PlayerControl : MonoBehaviour
                 var IO = onHandItem.GetComponent<ItemObject>();
                 IO.record_health = onhandProperty.itemhealth;
 
-                if (onHandItem != null && IO.item.type == ItemType.Food)
+                if (IO.item.type == ItemType.Food)
                 {
                     FoodObject _food = (FoodObject)IO.item;
                     
@@ -657,7 +674,7 @@ public class PlayerControl : MonoBehaviour
         bc.EatFood(Mathf.RoundToInt(food.satiety));
 
         bc.Setenergy(100);
-        if(food.ID < 31000)
+        if(food.ID < 35000)
         {
             m_inventory.DecreesItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
         }
@@ -672,6 +689,19 @@ public class PlayerControl : MonoBehaviour
         else
         {
             handHolderController.Play("Idle");
+        }
+
+    }
+
+    IEnumerator smoking()
+    {
+        if (!animPlayed)
+        {   
+            animPlayed = true;
+            yield return new WaitForSeconds(2f);
+            GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform.position, Quaternion.identity);
+            Destroy(smoke , 6f);
+            animPlayed = false;
         }
 
     }

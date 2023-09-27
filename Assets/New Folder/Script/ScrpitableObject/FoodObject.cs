@@ -17,6 +17,8 @@ public class FoodObject : Item
     public List<float> stepTime;        //¥Ñ¥½¨ìªì
 
     public List<FoodObject> foodWithin;
+
+    
     
 
     public void Awake()

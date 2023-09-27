@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   ID: 30001
-  itemHealth: 5
-  stackable: 0
+  itemHealth: 1
+  stackable: 1
   itemObject: {fileID: 3923268213829250558, guid: 9e1d81869bc4eb54aa1cd915d03818ca,
     type: 3}
   spawntoscene: {fileID: 3936831752673409221, guid: b0ba7e4174984e9459b0032c70ed77eb,
@@ -32,31 +32,14 @@ MonoBehaviour:
   Preplace: {fileID: 0}
   healing: 100
   satiety: 5
-  canbeBBQ: 1
+  canbeBBQ: 0
   roastStep:
-  - {fileID: 2100000, guid: 407a431ab8f140c4bb8dc37881a53a03, type: 2}
-  - {fileID: 2100000, guid: fc04dee7fe8477f49b349319da90984d, type: 2}
-  - {fileID: 2100000, guid: 3761b1d1fba90b14390044abddbb84c3, type: 2}
-  - {fileID: 2100000, guid: 43345fe2007230b4b87e6d008f1b8d42, type: 2}
-  - {fileID: 2100000, guid: fe840b99c3f6d624a9c4cccddb4fa583, type: 2}
-  - {fileID: 2100000, guid: 63fbcfbd09d960c469c74a59fa0ab4de, type: 2}
-  - {fileID: 2100000, guid: ca46f5a2d8dd5aa47a33d4730e80af8e, type: 2}
-  - {fileID: 2100000, guid: f5cde68f8a6c2d640a4e1ad03d2e8b5d, type: 2}
+  - {fileID: 2100000, guid: 85201c7eb2852f548b1ef64308a1486c, type: 2}
+  - {fileID: 2100000, guid: 85201c7eb2852f548b1ef64308a1486c, type: 2}
   stepTime:
   - 0
   - 2
   - 4
   - 6
   - 8
-  - 10
-  - 12
-  - 14
-  foodWithin:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  foodWithin: []

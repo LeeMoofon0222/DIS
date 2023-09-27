@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+    <License id="Terms">
+        <MachineBindings>
+            <Binding Key="1" Value="00326-10000-00000-AA081"/>
+            <Binding Key="2" Value="00000_00_000000_00_1000A7_25_1E2E8F_B3.E"/>
+            <Binding Key="4" Value="NUNEMTI4QkZaNA=="/>
+            <Binding Key="5" Value="48:9e:bd:35:e2:a0"/>
+        </MachineBindings>
+        <MachineID Value="HY+LA2AkL3ArLtY274dILLa4N1U="/>
+        <SerialHash Value="34604e342c90b34edc22e22555dd98d9757db74b"/>
+        <Features>
+            <Feature Value="33"/>
+            <Feature Value="12"/>
+            <Feature Value="34"/>
+            <Feature Value="13"/>
+            <Feature Value="24"/>
+            <Feature Value="25"/>
+            <Feature Value="36"/>
+            <Feature Value="17"/>
+            <Feature Value="18"/>
+            <Feature Value="19"/>
+            <Feature Value="0"/>
+            <Feature Value="1"/>
+            <Feature Value="2"/>
+            <Feature Value="3"/>
+            <Feature Value="4"/>
+            <Feature Value="60"/>
+            <Feature Value="63"/>
+            <Feature Value="20"/>
+        </Features>
+        <DeveloperData Value="AQAAAFNDLVVYU1UtV0ZIUy1EN1k1LVA0SEctN0g2Mw=="/>
+        <SerialMasked Value="SC-UXSU-WFHS-D7Y5-P4HG-XXXX"/>
+        <StartDate Value="2023-07-26T00:00:00"/>
+        <StopDate Value="2024-07-28T04:01:56"/>
+        <UpdateDate Value="2023-07-27T04:05:22"/>
+        <InitialActivationDate Value="2023-07-26T04:05:23"/>
+        <LicenseVersion Value="6.x"/>
+        <ClientProvidedVersion Value="2017.2.0"/>
+        <AlwaysOnline Value="false"/>
+        <Entitlements>
+            <Entitlement Ns="unity_editor" Tag="UnityPersonalPlus" Type="EDITOR" ValidTo="2024-07-26T04:01:56"/>
+            <Entitlement Ns="unity_editor" Tag="UnityPersonal" Type="EDITOR" ValidTo="9999-12-31T00:00:00"/>
+            <Entitlement Ns="unity_editor" Tag="DarkSkin" Type="EDITOR_FEATURE" ValidTo="9999-12-31T00:00:00"/>
+            <Entitlement Ns="unity_editor" Tag="UnityProStudent" Type="EDITOR_FEATURE" ValidTo="2024-07-26T04:01:56"/>
+        </Entitlements>
+    </License>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#Terms"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>vjNYTKMALAY2fGRddhtNKtO0ZR4=</DigestValue></Reference></SignedInfo><SignatureValue>CgaEvls8miDG663nrfMEHlvXB7QHsFe81TUXej7eL3TxuUdiwjt1Z8ggPe7owZrFJ/RRosChgWqc&#13;
+6nZaQTFKrZAR9H1tS0G2mhcKplHikraZUTAQLuALSq1rWYDgdhKCbzF72WO63xxG85WzTB9viLdE&#13;
+lXu5z+4EC3+kV2kW0e9NSIU80DkyS43VJZ4mqupxHBAJ6T7yPbsN9GzBMdhChZQjg4BqaW4tSewD&#13;
+Dnve3pJZB6+wbZFvcsx3w1LPgBXztcnI0uNXyitSFG3W1g19Qt/bx7ggt5NEtqlQSdpy4x3nhaTo&#13;
+loFn7nKVrWOaMn3NXHgmTk0mkID+bKy79BDgZA==</SignatureValue></Signature></root>

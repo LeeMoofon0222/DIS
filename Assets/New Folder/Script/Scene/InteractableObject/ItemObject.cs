@@ -69,6 +69,7 @@ public class ItemObject : MonoBehaviour
                 this.gameObject.GetComponent<Renderer>().materials = oh_Mats;*/
 
                 //Debug.LogWarning(record_doneness);
+                print("test1");
                 StartCoroutine(AwakeWait());
 
             }

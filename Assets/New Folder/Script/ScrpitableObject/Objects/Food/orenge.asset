@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: orenge
   m_EditorClassIdentifier: 
   ID: 30003
-  itemHealth: 0
-  stackable: 0
+  itemHealth: 1
+  stackable: 1
   itemObject: {fileID: 919132149155446097, guid: 67cd6d32806d2a5489e837f90719d6ae,
     type: 3}
   spawntoscene: {fileID: 0}

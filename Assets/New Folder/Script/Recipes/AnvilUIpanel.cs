@@ -15,6 +15,7 @@ public class AnvilUIpanel : MonoBehaviour
     public GameObject ScrollView;
     int n = 0;
     public int[] num;
+   
 
     // Start is called before the first frame update
     void Awake()

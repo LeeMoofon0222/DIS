@@ -22,6 +22,7 @@ TagManager:
   - reward
   - field
   - chaser
+  - hand-dont-delete
   layers:
   - Default
   - TransparentFX
