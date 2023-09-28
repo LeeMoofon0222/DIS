@@ -22,7 +22,7 @@ MonoBehaviour:
     type: 3}
   itemName: orange
   itemWeights: 0
-  itemIcon: {fileID: 21300000, guid: adaf97ac306b41247a03d252bf7bdd3d, type: 3}
+  itemIcon: {fileID: 21300000, guid: c7d21d45c821b57449477a1eb9d44a71, type: 3}
   type: 0
   gainingType: 3
   desciption: 

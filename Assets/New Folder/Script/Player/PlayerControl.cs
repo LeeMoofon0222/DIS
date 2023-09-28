@@ -674,9 +674,13 @@ public class PlayerControl : MonoBehaviour
         bc.EatFood(Mathf.RoundToInt(food.satiety));
 
         bc.Setenergy(100);
-        if(food.ID < 35000)
+        if(food.ID < 31000)
         {
             m_inventory.DecreesItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+        }
+        else
+        {
+            m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
         }
         
 

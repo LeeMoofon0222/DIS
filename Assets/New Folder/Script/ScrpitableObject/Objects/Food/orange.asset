@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
-  m_Name: orenge
+  m_Name: orange
   m_EditorClassIdentifier: 
   ID: 30003
   itemHealth: 1
   stackable: 1
-  itemObject: {fileID: 919132149155446097, guid: 67cd6d32806d2a5489e837f90719d6ae,
+  itemObject: {fileID: 2168514443645872682, guid: b958bb91d7743c3489d4db645a192c52,
     type: 3}
-  spawntoscene: {fileID: 0}
+  spawntoscene: {fileID: 7565069125001648296, guid: 372e46dc80e4b8e43a94a320932cd6e0,
+    type: 3}
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
-  itemName: orenge
+  itemName: Orange
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: adaf97ac306b41247a03d252bf7bdd3d, type: 3}
   type: 0

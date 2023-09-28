@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
+  m_Name: Potato
+  m_EditorClassIdentifier: 
+  ID: 31005
+  itemHealth: 5
+  stackable: 0
+  itemObject: {fileID: 35325665629739908, guid: e31948f47fd9ffe43985a477f8768aee,
+    type: 3}
+  spawntoscene: {fileID: 9177855587636868990, guid: 524f1e4635cc8a64fa383beea36b4e4c,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: Potato
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 0eee02932e5e0a5439514fcd87cef52a, type: 3}
+  type: 0
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  healing: 0
+  satiety: 0
+  canbeBBQ: 1
+  roastStep:
+  - {fileID: 2100000, guid: 9976d9ed5228ed44d830dec4837bfe03, type: 2}
+  - {fileID: 2100000, guid: 449bc5ebea1d0f3448fabbd5b4c12879, type: 2}
+  - {fileID: 2100000, guid: 53715956a3626bc43b7ed6c5cd6903ad, type: 2}
+  - {fileID: 2100000, guid: ed43c859e65ad3741b8da8322e583d02, type: 2}
+  - {fileID: 2100000, guid: aefa42d75a3ca1944bbd4602ab02ff30, type: 2}
+  stepTime:
+  - 0
+  - 2
+  - 4
+  - 6
+  - 8
+  foodWithin: []
