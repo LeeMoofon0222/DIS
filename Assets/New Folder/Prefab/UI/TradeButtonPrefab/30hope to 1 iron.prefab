@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3490205895547865403}
   - component: {fileID: 3490205895547865400}
   - component: {fileID: 3490205895547865381}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 30hope to 1 iron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3490205895547865406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3490205896927599458}
   - component: {fileID: 3490205896927599468}
   - component: {fileID: 3490205896927599469}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
