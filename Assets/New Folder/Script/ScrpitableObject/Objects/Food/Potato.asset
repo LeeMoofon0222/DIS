@@ -23,7 +23,7 @@ MonoBehaviour:
     type: 3}
   itemName: Potato
   itemWeights: 0
-  itemIcon: {fileID: 21300000, guid: 0eee02932e5e0a5439514fcd87cef52a, type: 3}
+  itemIcon: {fileID: 21300000, guid: 29e62c7f7e2bffd4194812f45614581e, type: 3}
   type: 0
   gainingType: 3
   desciption: 
