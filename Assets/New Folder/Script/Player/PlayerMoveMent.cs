@@ -21,6 +21,7 @@ public class PlayerMoveMent : MonoBehaviour
     public bool isMoving;
 
     public bool canMove;
+    public ParticleSystem hopeParticle;
 
 
     [Header("Respawn")]
@@ -155,6 +156,18 @@ public class PlayerMoveMent : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Hope"))
+        {
+            hopeParticle.gameObject.SetActive(true);
+            hopeParticle.Play();
 
-    
+
+        }
+    }
+
+
 }
+
+

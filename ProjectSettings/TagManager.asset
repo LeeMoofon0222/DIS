@@ -23,6 +23,7 @@ TagManager:
   - field
   - chaser
   - hand-dont-delete
+  - Hope
   layers:
   - Default
   - TransparentFX
