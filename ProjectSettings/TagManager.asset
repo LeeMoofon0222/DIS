@@ -23,6 +23,7 @@ TagManager:
   - field
   - chaser
   - hand-dont-delete
+  - watering-can
   layers:
   - Default
   - TransparentFX

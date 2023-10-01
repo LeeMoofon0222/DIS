@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5208537956659973139}
   m_Layer: 6
   m_Name: Stick
-  m_TagString: Untagged
+  m_TagString: watering-can
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 5ecfd351867e88b46b2ca9c980974e65, type: 2}
+  m_name: 
+  m_sprite: {fileID: 0}
   objectHealth: 0
   CanScaleChange: 0
   PickObj: 1

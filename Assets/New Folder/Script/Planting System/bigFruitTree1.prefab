@@ -150,7 +150,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79, type: 2}
   m_name: 
   m_sprite: {fileID: 0}
-  objectHealth: 200
+  objectHealth: 100
   CanScaleChange: 0
   PickObj: 0
   partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,

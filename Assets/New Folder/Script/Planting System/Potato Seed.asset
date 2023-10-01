@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
+  m_Name: Potato Seed
+  m_EditorClassIdentifier: 
+  ID: 788888
+  itemHealth: 1
+  stackable: 1
+  itemObject: {fileID: 2622205200866454038, guid: 12e2abfcdb6012a438d39672f5d26bcc,
+    type: 3}
+  spawntoscene: {fileID: 2622205200866454038, guid: 12e2abfcdb6012a438d39672f5d26bcc,
+    type: 3}
+  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+    type: 3}
+  itemName: potato_plant
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 29e62c7f7e2bffd4194812f45614581e, type: 3}
+  type: 3
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 0
+  Preplace: {fileID: 0}
+  period: 10
+  plantstep:
+  - {fileID: 2622205200866454038, guid: 12e2abfcdb6012a438d39672f5d26bcc, type: 3}
+  - {fileID: 1181710413938556512, guid: 6b3ae362fed0cec4ebd79848144fe914, type: 3}
+  - {fileID: 8622272248988700372, guid: d036b658f4b1584438cb0cde551206a2, type: 3}
+  - {fileID: 6683911592493546544, guid: 91633942e1e26094f81682d559b08e1e, type: 3}

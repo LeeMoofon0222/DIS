@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -14,7 +15,7 @@ public class PlayerControl : MonoBehaviour
     public bool attacking;
     [SerializeField] float digCD;
     public bool fishingPullBack;
-
+    public int watering = 0;
     float timer;
     //bool isDigging;
 
@@ -311,7 +312,6 @@ public class PlayerControl : MonoBehaviour
 
 
 
-
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
         #region Planting
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit raycastHit, maxRange))
@@ -319,7 +319,16 @@ public class PlayerControl : MonoBehaviour
             if (raycastHit.transform.tag == ("field"))
             {
                 GameObject thisfield = raycastHit.transform.gameObject;
+                bool hasplant = thisfield.GetComponent<Plantsys>().hasplant;
                 plantpoint = raycastHit.transform.gameObject.transform.GetChild(0).gameObject;
+                if (onHandItem.CompareTag("watering-can") && hasplant)
+                {
+                    watering = 1;
+                }
+                else
+                {
+                    watering = 0;
+                }
                 if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.type == ItemType.Plant && thisfield.GetComponent<Plantsys>().plant==null)
                 {
                     PlantObject thisseed = (PlantObject)onHandItem.GetComponent<ItemObject>().item;

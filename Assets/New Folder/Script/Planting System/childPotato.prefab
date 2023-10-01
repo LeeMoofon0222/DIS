@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2301210909669753363
+--- !u!1 &2622205200866454038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1487414441622296745}
-  - component: {fileID: 2525252859132499724}
-  - component: {fileID: 355634087487153094}
-  - component: {fileID: 7601953538683471832}
-  - component: {fileID: 5499087609891819294}
-  - component: {fileID: 401556226128400235}
-  - component: {fileID: 7764376898362909654}
+  - component: {fileID: 3398002272249311404}
+  - component: {fileID: 1767656829672554249}
+  - component: {fileID: 4567509619114249155}
+  - component: {fileID: 2928070302807873891}
+  - component: {fileID: 2928070302807873889}
+  - component: {fileID: 2928070302807873894}
+  - component: {fileID: 2928070302807873888}
   m_Layer: 0
-  m_Name: childTree1
+  m_Name: childPotato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1487414441622296745
+--- !u!4 &3398002272249311404
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
-  m_LocalRotation: {x: 0, y: -0.584536, z: -0, w: 0.81136775}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0371441, y: 1.0371441, z: 1.0371441}
+  m_GameObject: {fileID: 2622205200866454038}
+  m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.0000000754979}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2525252859132499724
+--- !u!33 &1767656829672554249
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
-  m_Mesh: {fileID: 1976966909725195019, guid: 014bde57bf4437c4da50de50bf54f02c, type: 3}
---- !u!23 &355634087487153094
+  m_GameObject: {fileID: 2622205200866454038}
+  m_Mesh: {fileID: -6734236012490125393, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
+--- !u!23 &4567509619114249155
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
+  m_GameObject: {fileID: 2622205200866454038}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,9 +65,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 014bde57bf4437c4da50de50bf54f02c, type: 3}
-  - {fileID: 4874126678125670354, guid: 014bde57bf4437c4da50de50bf54f02c, type: 3}
-  - {fileID: -6478536213147159724, guid: 014bde57bf4437c4da50de50bf54f02c, type: 3}
+  - {fileID: -6478536213147159724, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
+  - {fileID: -3846018093981099296, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,39 +88,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7601953538683471832
+--- !u!114 &2928070302807873891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
+  m_GameObject: {fileID: 2622205200866454038}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c104f02a72016d744b21e22132ac84c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: a93db241807749a478dae87aa722442a, type: 2}
-  m_name: 
+  item: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
+  m_name: Child_Potato
   m_sprite: {fileID: 0}
-  objectHealth: 5
+  objectHealth: 1
   CanScaleChange: 0
   PickObj: 1
-  partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
+  partical: {fileID: 2961014148580533450, guid: a8ac56953c26d3848849eb587cc4082d,
     type: 3}
   canPick: 1
   PlayerCanThrow: 1
-  rb: {fileID: 5499087609891819294}
+  rb: {fileID: 2928070302807873889}
   SceneSpawned: 1
-  record_health: 0
+  record_health: 5
   record_doneness: 0
---- !u!54 &5499087609891819294
+--- !u!54 &2928070302807873889
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
+  m_GameObject: {fileID: 2622205200866454038}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -131,32 +130,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &401556226128400235
+--- !u!65 &2928070302807873894
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
+  m_GameObject: {fileID: 2622205200866454038}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7129145, y: 0.5089571, z: 0.83260095}
-  m_Center: {x: 0.009569729, y: 0.8790935, z: -0.04770574}
---- !u!114 &7764376898362909654
+  m_Size: {x: 0.43053022, y: 0.6049746, z: 0.65576094}
+  m_Center: {x: -0.008634046, y: -0.04532613, z: -0.07903934}
+--- !u!114 &2928070302807873888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2301210909669753363}
+  m_GameObject: {fileID: 2622205200866454038}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 11400000, guid: a93db241807749a478dae87aa722442a, type: 2}
+  baseItem: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
   lootdrop: []
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}

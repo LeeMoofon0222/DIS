@@ -64,8 +64,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3799913, y: 1.9347166, z: 0.7114061}
-  m_Center: {x: -0.022671223, y: 1.3879776, z: 0.061628263}
+  m_Size: {x: 1.6330767, y: 1.9347166, z: 1.4556715}
+  m_Center: {x: 0.00595967, y: 1.3879776, z: 0.05160173}
 --- !u!114 &3839486571342424401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79, type: 2}
   m_name: 
   m_sprite: {fileID: 0}
-  objectHealth: 120
+  objectHealth: 60
   CanScaleChange: 0
   PickObj: 0
   partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
