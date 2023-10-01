@@ -158,9 +158,7 @@ MonoBehaviour:
   baseItem: {fileID: 0}
   lootdrop: []
   finalDrop:
-  - amount: 2
-    loot: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
-  - amount: 2
+  - amount: 1
     loot: {fileID: 11400000, guid: 1bf576bdde949cf4fa986ef7a58c348f, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0

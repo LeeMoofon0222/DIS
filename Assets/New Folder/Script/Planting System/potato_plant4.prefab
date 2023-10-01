@@ -133,9 +133,7 @@ MonoBehaviour:
   baseItem: {fileID: 0}
   lootdrop: []
   finalDrop:
-  - amount: 3
-    loot: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
-  - amount: 3
+  - amount: 4
     loot: {fileID: 11400000, guid: 1bf576bdde949cf4fa986ef7a58c348f, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
@@ -155,7 +153,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79, type: 2}
   m_name: 
   m_sprite: {fileID: 0}
-  objectHealth: 20
+  objectHealth: 10
   CanScaleChange: 0
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: a8ac56953c26d3848849eb587cc4082d,
