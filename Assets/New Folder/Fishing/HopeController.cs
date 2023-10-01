@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEditor.Rendering;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -14,11 +15,15 @@ public class HopeController : MonoBehaviour
     public float speed;
     private Rigidbody rb;
     
+    public Animator anim;
+    
     // Start is called before the first frame update
     void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
+        float flowspeed = Random.Range(0.7f, 1.3f);
+        anim.SetFloat("Speed", flowspeed);
     
     }
 
@@ -33,7 +38,7 @@ public class HopeController : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance < trackingDistance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 20 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2 * Time.deltaTime);
         }
     }
 
