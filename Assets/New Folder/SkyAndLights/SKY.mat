@@ -87,7 +87,7 @@ Material:
     - _BumpScale: 1
     - _CUBEMAPP: 1
     - _CubemapPosition: -0.15
-    - _CubemapTransition: 0.9
+    - _CubemapTransition: 0.8988786
     - _Cubemapp: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -126,5 +126,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tex_HDR: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 0.5402062, g: 0.24740605, b: 0.8, a: 1}
+    - _TintColor: {r: 0.53859794, g: 0.26107782, b: 0.78485006, a: 1}
   m_BuildTextureStacks: []

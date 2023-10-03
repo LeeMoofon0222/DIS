@@ -24,10 +24,13 @@ public class PlayerMoveMent : MonoBehaviour
     public ParticleSystem hopeParticle;
 
 
-    [Header("Respawn")]
+    [Header("Dead & Respawn")]
+    public bool isDead;
     public float respawnHight;
     public Vector3 respawnPoint;
     PlayerAwakeing PA;
+    public healthbar playerhealth;
+    int currentHealth;
 
 
     [Header("UI")]
@@ -63,15 +66,28 @@ public class PlayerMoveMent : MonoBehaviour
         camResetPos = cam.transform.localPosition;
         canMove = true;
         PA = GetComponent<PlayerAwakeing>();
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.y  <= respawnHight && PA.deadOrNot)
+        currentHealth = playerhealth.currentlife;
+        if (player.transform.position.y  <= respawnHight && PA.respawn)
         {
-            PA.wakeUp();
+            isDead= true;
+            
+        }
+        if(currentHealth <= 0 && PA.respawn)
+        {
+            print("dead");
+            isDead = true;
+        }
+
+        if (isDead)
+        {
+            PlayerDead();
         }
 
         v_input = Input.GetAxis("Vertical") * speed;
@@ -156,14 +172,18 @@ public class PlayerMoveMent : MonoBehaviour
 
     }
 
+    public void PlayerDead()
+    {
+        
+        PA.wakeUp();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Hope"))
         {
             hopeParticle.gameObject.SetActive(true);
             hopeParticle.Play();
-
-
         }
     }
 

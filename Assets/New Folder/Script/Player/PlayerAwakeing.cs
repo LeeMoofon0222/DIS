@@ -15,12 +15,13 @@ public class PlayerAwakeing : MonoBehaviour
     ColorAdjustments exposure;
     float _exposure;
 
-    public bool deadOrNot = false;
+    public bool respawn = false;
 
     float u;
     [HideInInspector]public float timer;
 
     PlayerMoveMent pm;
+    healthbar playerhealth;
 
     public void Awake()
     {
@@ -33,15 +34,16 @@ public class PlayerAwakeing : MonoBehaviour
         _exposure = exposure.postExposure.value;
         exposure.postExposure.value = 0f;
 
+        playerhealth = GetComponent<healthbar>();
 
-        deadOrNot = true;
+        respawn = true;
     }
 
     public void Update()
     {
-        if (deadOrNot)
+        if (respawn)
         {
-            timer += Time.deltaTime;
+            if (timer < 10f) timer += Time.deltaTime;
             img.color = new Vector4(0, 0, 0, Mathf.Lerp(1, 0, timer * 2));
 
             volume.profile.TryGet<Vignette>(out vignette);
@@ -53,8 +55,8 @@ public class PlayerAwakeing : MonoBehaviour
 
         }
         else
-        {
-            timer += Time.deltaTime;
+        {   
+            if(timer < 10f ) timer += Time.deltaTime;
             img.color = new Vector4(0, 0, 0, Mathf.Lerp(0, 1, timer * 3));
             
         }
@@ -62,8 +64,8 @@ public class PlayerAwakeing : MonoBehaviour
     }
     public void wakeUp()
     {
-        timer = 0;
-        deadOrNot = false;
+        timer = 0f;
+        respawn = false;
 
         StartCoroutine(deadcountDown());
     }
@@ -83,11 +85,13 @@ public class PlayerAwakeing : MonoBehaviour
         volume.profile.TryGet<ColorAdjustments>(out exposure);
         exposure.postExposure.value = 0f;
 
-        pm.cC.enabled= false;
+        pm.cC.enabled = false;
         pm.player.transform.position = pm.respawnPoint;
-        pm.cC.enabled= true;
+        pm.cC.enabled = true;
 
-        deadOrNot = true;
+        respawn = true;
+        pm.isDead = false;
+        playerhealth.currentlife = playerhealth.maxlife;
         //pm.canMove = true;
     }
 }

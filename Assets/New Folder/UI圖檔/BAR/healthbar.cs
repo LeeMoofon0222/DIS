@@ -39,31 +39,23 @@ public class healthbar : MonoBehaviour
     void Update()
     {
 
-
-
-
         if (currentlife > maxlife)
         {
             currentlife = maxlife;
-
-
         }
 
         for (int k = 1; k <= 20; k++)
         {
             if (currentlife < k)
             {
-
                 heart[k - 1].gameObject.SetActive(false);
                 boolhealth[k - 1] = false;
-
             }
 
 
         }
         for (int n = 0; n < 20; n++)
         {
-
             if (currentlife > n && currentlife < n + 2 && boolhealth[n] == false)
             {
                 for (int a = 0; a < currentlife; a++)
@@ -73,22 +65,16 @@ public class healthbar : MonoBehaviour
                     boolhealth[a] = true;
                 }
             }
-
-
         }
 
 
-        if (currentlife <= 6)
+        if (currentlife <= 6 && currentlife > 0)
         {
-
             LowhealthPanel.SetActive(true);
-
         }
         else
         {
             LowhealthPanel.SetActive(false);
-
-
         }
 
 
