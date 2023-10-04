@@ -22,7 +22,7 @@ public class Plantsys : MonoBehaviour
     public bool doplant = false;
     public void Update()
     {
-        player = GameObject.Find("Player V1.7");
+        player = GameObject.FindWithTag("Player");
         watering = player.GetComponent<PlayerControl>().watering;
         print(watering);
         if(doplant && watering == 1)
