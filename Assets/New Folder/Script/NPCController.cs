@@ -22,7 +22,7 @@ public class NPCController : MonoBehaviour
     bool isDead;
     Quaternion setRotate;
 
-    public healthbar playerhealth;
+    public PlayerHealth playerhealth;
     public Transform guard;
 
     bool goBack;

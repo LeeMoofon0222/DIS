@@ -28,8 +28,8 @@ public class PlayerMoveMent : MonoBehaviour
     public bool isDead;
     public float respawnHight;
     public Vector3 respawnPoint;
-    PlayerAwakeing PA;
-    public healthbar playerhealth;
+    //PlayerAwakeing PA;
+    PlayerHealth playerhealth;
     int currentHealth;
 
 
@@ -65,7 +65,8 @@ public class PlayerMoveMent : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         camResetPos = cam.transform.localPosition;
         canMove = true;
-        PA = GetComponent<PlayerAwakeing>();
+        //PA = GetComponent<PlayerAwakeing>();
+        playerhealth = GetComponent<PlayerHealth>();
         
 
     }
@@ -74,12 +75,12 @@ public class PlayerMoveMent : MonoBehaviour
     void Update()
     {
         currentHealth = playerhealth.currentlife;
-        if (player.transform.position.y  <= respawnHight && PA.respawn)
+        if (player.transform.position.y  <= respawnHight && playerhealth.respawnable)
         {
             isDead= true;
             
         }
-        if(currentHealth <= 0 && PA.respawn)
+        if(currentHealth <= 0 && playerhealth.respawnable)
         {
             print("dead");
             isDead = true;
@@ -175,7 +176,7 @@ public class PlayerMoveMent : MonoBehaviour
     public void PlayerDead()
     {
         
-        PA.wakeUp();
+        playerhealth.Dead();
     }
 
     private void OnTriggerEnter(Collider other)

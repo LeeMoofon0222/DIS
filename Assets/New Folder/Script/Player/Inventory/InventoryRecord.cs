@@ -141,6 +141,7 @@ public class InventoryRecord : ScriptableObject
         }
     }
 
+
     public void breakingItem(Item _item, int _amount, int _Pnum)
     {
         for (int i = 0; i < Container.Count; i++)

@@ -15,13 +15,13 @@ public class PlayerAwakeing : MonoBehaviour
     ColorAdjustments exposure;
     float _exposure;
 
-    public bool respawn = false;
+    public bool respawnable = false;
 
     float u;
     [HideInInspector]public float timer;
 
     PlayerMoveMent pm;
-    healthbar playerhealth;
+    PlayerHealth playerhealth;
 
     public void Awake()
     {
@@ -34,14 +34,14 @@ public class PlayerAwakeing : MonoBehaviour
         _exposure = exposure.postExposure.value;
         exposure.postExposure.value = 0f;
 
-        playerhealth = GetComponent<healthbar>();
+        playerhealth = GetComponent<PlayerHealth>();
 
-        respawn = true;
+        respawnable = true;
     }
 
     public void Update()
     {
-        if (respawn)
+        if (respawnable)
         {
             if (timer < 10f) timer += Time.deltaTime;
             img.color = new Vector4(0, 0, 0, Mathf.Lerp(1, 0, timer * 2));
@@ -65,7 +65,7 @@ public class PlayerAwakeing : MonoBehaviour
     public void wakeUp()
     {
         timer = 0f;
-        respawn = false;
+        respawnable = false;
 
         StartCoroutine(deadcountDown());
     }
@@ -89,7 +89,7 @@ public class PlayerAwakeing : MonoBehaviour
         pm.player.transform.position = pm.respawnPoint;
         pm.cC.enabled = true;
 
-        respawn = true;
+        respawnable = true;
         pm.isDead = false;
         playerhealth.currentlife = playerhealth.maxlife;
         //pm.canMove = true;
