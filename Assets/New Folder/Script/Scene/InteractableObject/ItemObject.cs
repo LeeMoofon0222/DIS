@@ -118,6 +118,10 @@ public class ItemObject : MonoBehaviour
         }
 
     }
+    public void Update()
+    {
+        if(transform.position.y <= -20f) Destroy(gameObject);
+    }
     /*IEnumerator animDig()
     {
         gotDig = true;
@@ -127,7 +131,7 @@ public class ItemObject : MonoBehaviour
         gotDig = false;
 
     }*/
-    
+
     IEnumerator AwakeWait()
     {
         yield return new WaitForEndOfFrame();

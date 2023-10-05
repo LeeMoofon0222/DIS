@@ -30,7 +30,7 @@ Material:
     - _Cubemapp: 1
     - _EnableFog: 0
     - _EnableRotation: 0
-    - _Exposure: 1
+    - _Exposure: 0.77
     - _FogFill: 0.5
     - _FogHeight: 1
     - _FogIntensity: 1
@@ -43,5 +43,5 @@ Material:
     - _Rotationn: 1
     - _SkyboxExtended: 1
     m_Colors:
-    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TintColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_BuildTextureStacks: []
