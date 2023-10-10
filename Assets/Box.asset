@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: Box
+  m_EditorClassIdentifier: 
+  ID: 11005
+  itemHealth: 0
+  stackable: 0
+  itemObject: {fileID: 7312216073829485, guid: 34d05760f1fb61d468d1d5d41307c2a0, type: 3}
+  spawntoscene: {fileID: 7103181585543448103, guid: 7823830312d6c84429d8b4b9dbe41a0a,
+    type: 3}
+  UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
+    type: 3}
+  itemName: Box
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: f0bd32716ba54f242a4e228ef324bcec, type: 3}
+  hitsound: {fileID: 8300000, guid: 14b1389174c866c44a79de01173a825b, type: 3}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 1
+  Preplace: {fileID: 5492926735271976828, guid: e1dfeb5e221729849803e5392c79837b,
+    type: 3}
+  Drop: 

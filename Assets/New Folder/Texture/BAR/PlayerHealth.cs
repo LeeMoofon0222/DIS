@@ -155,7 +155,7 @@ public class PlayerHealth : MonoBehaviour
                     if(envItem.TryGetComponent(out ItemObject io))
                     {
                         io.record_health = inventory.GetItemhealth(_item, pnum);
-                        io.PlayerCanThrow = false;
+                        //io.item.canThrow = false;
                         if (io.item.type == ItemType.Food)
                         {
                             io.record_doneness = inventory.GetBBQStep(_item, pnum);

@@ -77,7 +77,12 @@ public class PlayerControl : MonoBehaviour
     [Header("Cursor")]
     public Image cursor;
 
-    
+    [Header("Storage")]
+    public StorageRecord storages;
+
+    [Header("Audio")]
+    public AudioClip pickClip;
+    public AudioSource playerSource;
 
     public bool anyoptionOn()
     {
@@ -362,18 +367,17 @@ public class PlayerControl : MonoBehaviour
             
             timer = 0;
 
-            if (Physics.SphereCast(ray,0.5f,out hit,maxRange))
+            if (Physics.Raycast(ray,out hit,maxRange))
             {
-                if (hit.transform.TryGetComponent(out ItemObject itenObject))
+                if (hit.transform.TryGetComponent(out ItemObject IO))
                 {
-                    
-                    var IO = hit.transform.GetComponent<ItemObject>();
                     var gain = IO.transform.GetComponent<ResourseGain>();
+                    var hitSound = IO.transform.GetComponent<AudioSource>();
                     if (!IO.canPick)
                     {
                         if(IO.partical != null)
                         {
-                            GameObject particalPrefab = Instantiate(IO.partical, hit.point + hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                            GameObject particalPrefab = Instantiate(IO.partical, hit.point + hit.normal * 0.001f, Quaternion.identity);
                             particalPrefab.transform.LookAt(hit.point + hit.normal);
                         }
 
@@ -393,8 +397,13 @@ public class PlayerControl : MonoBehaviour
                             }
                         }
                         IO.ObjectHealth(10);
+                        
+                        hitSound.PlayOneShot(IO.item.hitsound);
+                        
 
-                        if(itemHolding != null)
+
+
+                        if (itemHolding != null)
                         {
                             m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     //0323
                         }
@@ -425,27 +434,41 @@ public class PlayerControl : MonoBehaviour
         }
         #endregion
 
-
         #region PickUp
         if (Physics.Raycast(ray , out hit, maxRange))
         {
-            if(hit.transform.TryGetComponent(out ItemObject itemObject))
+            if(hit.transform.TryGetComponent(out ItemObject IO))
             {
-                var IO = hit.transform.GetComponent<ItemObject>();
-
                 if (Input.GetKeyDown(KeyCode.F) && !systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy && IO.canPick)
                 {
-                    if (IO.item != null)
-                    {
-                        m_inventory.AddItem(IO.item, 1 , IO.record_health , IO.record_doneness);
-                    }
+                    m_inventory.AddItem(IO.item, 1 , IO.record_health , IO.record_doneness);
                     Destroy(IO.transform.gameObject);
 
+                    playerSource.PlayOneShot(pickClip);
                 }
             }
         }
         #endregion
 
+        #region StorageSystem
+        if (Physics.Raycast(ray, out hit, maxRange))
+        {
+            if (hit.transform.TryGetComponent(out StorageControl storageCtrl))
+            {
+                if (!systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy )
+                {
+                    //Debug.Log("FoundStorage");
+                    PIC.isStorage= true;
+                    PIC.storageNum = storageCtrl.storageNum;
+                }
+            }
+            else
+            {
+                PIC.isStorage = false;
+            }
+        }
+
+        #endregion
 
         /*if (Input.GetMouseButtonUp(1) || 
             Input.GetMouseButton(0) || 
@@ -725,5 +748,7 @@ public class PlayerControl : MonoBehaviour
     private void OnApplicationQuit()
     {
         m_inventory.Container.Clear();
+        storages.Storages.Clear();
+
     }
 }

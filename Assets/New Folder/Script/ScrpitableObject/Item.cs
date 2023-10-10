@@ -36,7 +36,8 @@ public abstract class Item : ScriptableObject
     public int itemWeights;
 
     public Sprite itemIcon;
-    
+
+    public AudioClip hitsound;
 
     public ItemType type;
     

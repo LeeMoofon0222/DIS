@@ -54,7 +54,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510537458070291448}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -132,14 +132,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
+  m_name: Stone
+  m_sprite: {fileID: 21300000, guid: 80dd921c6e1078a4cb6457843b539e7a, type: 3}
   objectHealth: 180
   CanScaleChange: 1
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
   canPick: 0
-  PlayerCanThrow: 0
-  rb: {fileID: 0}
+  rb: {fileID: 1745118472436043076}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -155,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseItem: {fileID: 0}
   lootdrop:
   - Randomweight: 95
     loot:
@@ -182,10 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CrackedObject: {fileID: 6781804643387444106, guid: 50d1e2ca6d72545418c33beef891d44f,
     type: 3}
-  resize: 0
+  resize: 1
 --- !u!95 &1436432759802185072
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,4 +204,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

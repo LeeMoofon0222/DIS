@@ -24,6 +24,7 @@ MonoBehaviour:
   itemName: "\u6728\u982D"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: 7bfc6dfafb87abb409f8a5873feaa9eb, type: 3}
+  hitsound: {fileID: 8300000, guid: 14b1389174c866c44a79de01173a825b, type: 3}
   type: 2
   gainingType: 3
   desciption: 

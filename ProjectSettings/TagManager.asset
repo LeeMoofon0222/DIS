@@ -24,6 +24,8 @@ TagManager:
   - chaser
   - hand-dont-delete
   - watering-can
+  - Hope
+  - Storage
   layers:
   - Default
   - TransparentFX

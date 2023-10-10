@@ -28,7 +28,7 @@ public class ItemObject : MonoBehaviour
     public bool canPick;        //隨時可以被撿起
 
     [Header("Can Throw")]
-    public bool PlayerCanThrow;
+    //public bool PlayerCanThrow;
     public Rigidbody rb;
 
     public bool SceneSpawned;
@@ -53,36 +53,34 @@ public class ItemObject : MonoBehaviour
     void Awake()
     {
         maxOH = objectHealth;
-        
-        if (PlayerCanThrow && !SceneSpawned && !item.placeAble)
+        if(item != null)
         {
-            var playerHolder = GameObject.Find("grabItemHolder");
-            //Debug.Log(playerHolder.transform.position);
-
-            rb.AddForce(this.transform.forward * 2f , ForceMode.Impulse);
-
-            if(item != null && item.type == ItemType.Food)
+            if (item.canThrow && !SceneSpawned && !item.placeAble)
             {
-                /*Material[] oh_Mats = this.gameObject.GetComponent<Renderer>().materials;       //代改
-                FoodObject _item = (FoodObject)item;
-                oh_Mats[0] = _item.roastStep[];
-                this.gameObject.GetComponent<Renderer>().materials = oh_Mats;*/
+                var playerHolder = GameObject.Find("grabItemHolder");
+                //Debug.Log(playerHolder.transform.position);
 
-                //Debug.LogWarning(record_doneness);
-                print("test1");
-                StartCoroutine(AwakeWait());
+                rb.AddForce(this.transform.forward * 2f, ForceMode.Impulse);
 
+                if (item.type == ItemType.Food)
+                {
+                    /*Material[] oh_Mats = this.gameObject.GetComponent<Renderer>().materials;       //代改
+                    FoodObject _item = (FoodObject)item;
+                    oh_Mats[0] = _item.roastStep[];
+                    this.gameObject.GetComponent<Renderer>().materials = oh_Mats;*/
+
+                    //Debug.LogWarning(record_doneness);
+                    //print("test1");
+                    StartCoroutine(AwakeWait());
+
+                }
             }
-
-
-        }
-        if (SceneSpawned)
-        {
-            if(item != null)
+            if (SceneSpawned)
             {
-                record_health = item.itemHealth;
+                 record_health = item.itemHealth;
             }
         }
+
     }
 
     public void ObjectHealth(float num)
@@ -120,7 +118,7 @@ public class ItemObject : MonoBehaviour
     }
     public void Update()
     {
-        if(transform.position.y <= -20f) Destroy(gameObject);
+        if(transform.position.y <= -20f && !SceneSpawned) Destroy(gameObject);
     }
     /*IEnumerator animDig()
     {
@@ -142,13 +140,4 @@ public class ItemObject : MonoBehaviour
 
 
     }
-
-    
-
-
-
-
-
-
-
 }

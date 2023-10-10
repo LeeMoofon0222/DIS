@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8503135811884873960}
   - component: {fileID: 4732983511693391693}
   - component: {fileID: 7370730285263160199}
-  - component: {fileID: 8321620074704025358}
   - component: {fileID: 3051298587009432546}
   - component: {fileID: 8042962544565275496}
+  - component: {fileID: 8321620074704025358}
   - component: {fileID: -6399339080973473795}
   m_Layer: 3
   m_Name: env_ruby
@@ -87,31 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8321620074704025358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9028279455448867410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c104f02a72016d744b21e22132ac84c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 15f44fa17c5eab24299213267e728767, type: 2}
-  m_name: Ruby
-  m_sprite: {fileID: 21300000, guid: 87f185764ed04e546a316dd78cb06e8d, type: 3}
-  objectHealth: 0
-  CanScaleChange: 0
-  PickObj: 1
-  partical: {fileID: 0}
-  canPick: 1
-  PlayerCanThrow: 1
-  rb: {fileID: 0}
-  SceneSpawned: 0
-  record_health: 0
-  record_doneness: 0
 --- !u!64 &3051298587009432546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -142,6 +117,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8321620074704025358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028279455448867410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c104f02a72016d744b21e22132ac84c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 15f44fa17c5eab24299213267e728767, type: 2}
+  m_name: Ruby
+  m_sprite: {fileID: 21300000, guid: 87f185764ed04e546a316dd78cb06e8d, type: 3}
+  objectHealth: 0
+  CanScaleChange: 0
+  PickObj: 1
+  partical: {fileID: 0}
+  canPick: 1
+  rb: {fileID: 0}
+  SceneSpawned: 0
+  record_health: 0
+  record_doneness: 0
 --- !u!65 &-6399339080973473795
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -92,8 +92,8 @@ public class CraftingSystem : MonoBehaviour
                 Destroy(child.gameObject);
             }
 
-            Instantiate(recipeChoose[rcn].output, detectBox.transform.position,Quaternion.identity);
-            
+            GameObject result = Instantiate(recipeChoose[rcn].output, detectBox.transform.position,Quaternion.identity);
+            result.GetComponent<ItemObject>().SceneSpawned = true;
             itemIDs.Clear();
             recipeChoose.Clear();
         }

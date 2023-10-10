@@ -68,6 +68,20 @@ public class InventoryRecord : ScriptableObject
         return 0;
     }
 
+    public int GetItemAmount(Item _item, int _Pnum)
+    {
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item == _item && _Pnum == Container[i].pNum)
+            {
+                //Debug.Log("CheckPoint");
+                //Debug.Log(Container[i].doneness);
+                return Container[i].amount;
+            }
+        }
+        return 0;
+    }
+
     public Item IDtoItem(int id)
     {
         for (int i = 0; i < Container.Count; i++)
@@ -255,7 +269,7 @@ public class InventorySlot
     public int amount;
 
      public int item_Health;      //0322
-    /*[HideInInspector]*/ public int pNum;        //位址 需要固定時間整理一次 基本上就是陣列的第幾位 必須在特定情況丟出 0322
+    [HideInInspector] public int pNum;        //位址 需要固定時間整理一次 基本上就是陣列的第幾位 必須在特定情況丟出 0322
 
     public int doneness;
 
