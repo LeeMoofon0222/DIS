@@ -188,7 +188,6 @@ MonoBehaviour:
   partical: {fileID: 3754859329886564544, guid: 77a9ebbc0db511b4db634833586a292c,
     type: 3}
   canPick: 0
-  PlayerCanThrow: 0
   rb: {fileID: 67526916793424158}
   SceneSpawned: 1
   record_health: 0
@@ -211,10 +210,11 @@ MonoBehaviour:
   recipeChoose: []
   recipes:
   - {fileID: 11400000, guid: 4215e728deb29444c81ff2031ea5361f, type: 2}
+  - {fileID: 11400000, guid: e91ad8d2c57add941b0efa27caacddce, type: 2}
   itemMask:
     serializedVersion: 2
     m_Bits: 8
-  uiContrainer: {fileID: 0}
+  uiContrainer: {fileID: 7959419021127719514}
 --- !u!114 &67526917280207128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 7959419020025392881}
   - component: {fileID: 497493125}
   m_Layer: 12
-  m_Name: "\u5408\u6210\u4ECB\u9762"
+  m_Name: Crafting Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,6 +1059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LavaCrystalPowder
       objectReference: {fileID: 0}
+    - target: {fileID: 308043517883940890, guid: 229813850705a21498e17a5a50848ada,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229813850705a21498e17a5a50848ada, type: 3}
 --- !u!224 &1399591146 stripped
@@ -1078,6 +1083,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IronHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 345899230853255224, guid: 2d157e6df5dc2c5489ed549aea8dcd8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 345899230853255225, guid: 2d157e6df5dc2c5489ed549aea8dcd8e,
         type: 3}
@@ -1309,6 +1319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IronDagger
       objectReference: {fileID: 0}
+    - target: {fileID: 1117748911149806255, guid: 4da01e3bb48e99c48b650f08227bbb02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da01e3bb48e99c48b650f08227bbb02, type: 3}
 --- !u!224 &1102403553 stripped
@@ -1433,6 +1448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IronBoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804759845103582495, guid: c7c1c658e7779ad4faac5006ea62d8f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c1c658e7779ad4faac5006ea62d8f1, type: 3}
@@ -1559,6 +1579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CopperPickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 2870661993557891537, guid: 5aecfd142df3ec441bf4af9d01ed828c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aecfd142df3ec441bf4af9d01ed828c, type: 3}
 --- !u!224 &619698803 stripped
@@ -1578,6 +1603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IronChestplates
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320189177125549884, guid: 50059794ddbbf574fa209bbe27f9fc40,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4320189177125549885, guid: 50059794ddbbf574fa209bbe27f9fc40,
         type: 3}
@@ -1809,6 +1839,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: copperSword
       objectReference: {fileID: 0}
+    - target: {fileID: 4894861015138115549, guid: 78a85cc8c0a12ac468c97d9de0647ce0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a85cc8c0a12ac468c97d9de0647ce0, type: 3}
 --- !u!224 &1930944768 stripped
@@ -1933,6 +1968,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IronPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000068726392299183, guid: 3cb1ef91606d0a44bbd2685317b0f84e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cb1ef91606d0a44bbd2685317b0f84e, type: 3}
@@ -2059,6 +2099,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IronSword
       objectReference: {fileID: 0}
+    - target: {fileID: 5117643798216156643, guid: 74258c3c1b9355a46a2f2301ae3038ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74258c3c1b9355a46a2f2301ae3038ec, type: 3}
 --- !u!224 &94441269 stripped
@@ -2078,6 +2123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IronAxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397863016516569010, guid: 273b95c22f74a464282eb385a5558c75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397863016516569011, guid: 273b95c22f74a464282eb385a5558c75,
         type: 3}
@@ -2204,6 +2254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireRetardCoating
       objectReference: {fileID: 0}
+    - target: {fileID: 8738093886747830605, guid: 1b36338ea94dea742aa53132a871d3df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8738093886747830606, guid: 1b36338ea94dea742aa53132a871d3df,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2328,6 +2383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CopperAxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013194443121661341, guid: aab55f34aa56ff8408ca40dc20b0905c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9013194443121661342, guid: aab55f34aa56ff8408ca40dc20b0905c,
         type: 3}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
-using static UnityEditor.Progress;
+
 
 [CreateAssetMenu(fileName = "Storage", menuName = "Storage System")]
 [Serializable]

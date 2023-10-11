@@ -83,6 +83,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Audio")]
     public AudioClip pickClip;
     public AudioSource playerSource;
+    public AudioSource swing;
 
     public bool anyoptionOn()
     {
@@ -361,6 +362,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetMouseButton(0) && timer >= digCD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected)
         {
             StopAllCoroutines();
+            swing.Play();
             StartCoroutine(_Digging());
             attacking = true;
             
@@ -398,7 +400,7 @@ public class PlayerControl : MonoBehaviour
                         }
                         IO.ObjectHealth(10);
                         
-                        hitSound.PlayOneShot(IO.item.hitsound);
+                        //hitSound.PlayOneShot(IO.item.hitsound);
                         
 
 

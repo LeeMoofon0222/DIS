@@ -19,18 +19,19 @@ MonoBehaviour:
     type: 3}
   spawntoscene: {fileID: 3936831752673409221, guid: b0ba7e4174984e9459b0032c70ed77eb,
     type: 3}
-  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: Apple
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: 21a2a2c8906f4ef449bd3a931abf5975, type: 3}
+  hitsound: {fileID: 0}
   type: 0
   gainingType: 3
   desciption: 
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  healing: 100
+  healing: 10
   satiety: 5
   canbeBBQ: 0
   roastStep:

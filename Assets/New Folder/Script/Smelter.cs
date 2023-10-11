@@ -22,6 +22,8 @@ public class Smelter : MonoBehaviour
 
     public bool issmelting;
 
+    public AudioSource smeltingSound;
+
     [SerializeField] float smeltingTime;
 
     int i;
@@ -47,9 +49,11 @@ public class Smelter : MonoBehaviour
 
     IEnumerator Smelting()
     {
-        Debug.Log("start");
+        //Debug.Log("start");
+        smeltingSound.enabled= true;
         yield return new WaitForSeconds(smeltingTime);
-        Debug.Log("done");
+        smeltingSound.enabled = false;
+        //Debug.Log("done");
 
         SmeltingLight.SetActive(false);
 

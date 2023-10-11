@@ -44,6 +44,7 @@ public class PlayerInventoryController : MonoBehaviour
     public List<GameObject> s_objToShow;
     bool stopupload;
     int storagepos;
+    public bool panelCanOpen;
 
     [Header("Main Hand Item")]
     public Item pre_ItemSlot;
@@ -82,17 +83,19 @@ public class PlayerInventoryController : MonoBehaviour
         craft.SetActive(false);
         informationbar.SetActive(false);
         equip.SetActive(true);
+        storagePanel.SetActive(false);
 
 
-
+        panelCanOpen = false;
     }
     public void Craft()
     {
         craft.SetActive(true);
         informationbar.SetActive(false);
         equip.SetActive(false);
+        storagePanel.SetActive(false);
 
-
+        panelCanOpen = false;
 
     }
     public void Information()
@@ -100,9 +103,19 @@ public class PlayerInventoryController : MonoBehaviour
        
         equip.SetActive(false);
         craft.SetActive(false);
+        storagePanel.SetActive(false);
         informationbar.SetActive(true);
-     
 
+        panelCanOpen = false;
+    }
+
+    public void StorageOpen()
+    {
+        //storagePanel.SetActive(true);
+        panelCanOpen = true;
+        craft.SetActive(false);
+        informationbar.SetActive(false);
+        equip.SetActive(false);
     }
     void Update()
     {
@@ -137,7 +150,8 @@ public class PlayerInventoryController : MonoBehaviour
             cameraLook.enabled = false;
             Cursor.lockState = CursorLockMode.Confined;
 
-            storagePanel.SetActive(isStorage);
+            if(isStorage && panelCanOpen)
+                storagePanel.SetActive(true);
             
         }
         else

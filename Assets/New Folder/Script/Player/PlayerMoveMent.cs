@@ -41,6 +41,10 @@ public class PlayerMoveMent : MonoBehaviour
     [SerializeField] private float sprintingHeadbob;
     [SerializeField] float sprintSpeed_Rate;
 
+    [Header("Audio")]
+    
+    public AudioSource walk;
+    public AudioSource run;
 
 
 
@@ -68,7 +72,7 @@ public class PlayerMoveMent : MonoBehaviour
         //PA = GetComponent<PlayerAwakeing>();
         playerhealth = GetComponent<PlayerHealth>();
         
-
+        
     }
 
     // Update is called once per frame
@@ -96,10 +100,12 @@ public class PlayerMoveMent : MonoBehaviour
         if(v_input != 0 || h_input != 0)
         {
             isMoving = true;
+            
         }
         else
         {
             isMoving = false;
+            
         }
 
 
@@ -108,14 +114,19 @@ public class PlayerMoveMent : MonoBehaviour
         {
             speed = originalSpeed * sprintSpeed_Rate;
             sprintingHeadbob = 1.4f;
+
+            
+            
         }
         else
         {
             speed = originalSpeed;
             sprintingHeadbob = 1;
+
+            
+            
         }
             
-        
 
 
 
@@ -127,6 +138,9 @@ public class PlayerMoveMent : MonoBehaviour
             barcontroller.energybar.fillAmount = Mathf.Lerp(0, 1, (float)(barcontroller.energybar.fillAmount - 0.1));
 
             barcontroller.regen = 0;
+
+            
+            
         }
 
         
@@ -136,6 +150,8 @@ public class PlayerMoveMent : MonoBehaviour
         if (cC.isGrounded && velocity.y < 0)
         {
             velocity.y = -3f;
+            
+
         }
 
         if (canMove)
@@ -168,6 +184,34 @@ public class PlayerMoveMent : MonoBehaviour
             cam.transform.localPosition = Vector3.Lerp(cam.transform.localPosition, camResetPos,  Time.deltaTime);
         }
 
+
+        if (isMoving)
+        {
+            if (!cC.isGrounded)
+            {
+                walk.enabled= false;
+                run.enabled= false;
+            }
+            else
+            {
+                if (isSprinting())
+                {
+                    walk.enabled = false;
+                    run.enabled= true;
+                }
+                else
+                {
+                    walk.enabled = true;
+                    run.enabled = false;
+                }
+            }
+
+        }
+        else
+        {
+            walk.enabled = false;
+            run.enabled = false;
+        }
 
 
 

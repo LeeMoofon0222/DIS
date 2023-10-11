@@ -76,7 +76,7 @@ public class CraftingSystem : MonoBehaviour
                 showed = true;
         }
         
-        if(Input.GetKeyDown(KeyCode.C) && recipeChoose.Count != 0)
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) && recipeChoose.Count != 0)
         {
             foreach (Collider collider in colliderDetected)
             {
