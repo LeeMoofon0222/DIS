@@ -8,6 +8,8 @@ public class SystemsManager : MonoBehaviour
 
     public GameObject optionPanel;
 
+    
+
     public void setSystemOff()
     {   
         foreach(var system in systems)

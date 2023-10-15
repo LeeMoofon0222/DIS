@@ -230,6 +230,10 @@ public class PlayerMoveMent : MonoBehaviour
             hopeParticle.gameObject.SetActive(true);
             hopeParticle.Play();
         }
+        if (other.CompareTag("Lava"))
+        {
+            playerhealth.TakeDamage(100);
+        }
     }
 
 

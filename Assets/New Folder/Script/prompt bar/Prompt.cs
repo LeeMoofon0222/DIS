@@ -102,7 +102,9 @@ public class Prompt : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent(out AnvilUIpanel craft_))
             {
-                craft_.CraftObject.SetActive(true);
+                if(craft_.CraftObject != null)
+                    craft_.CraftObject.SetActive(true);
+
                 craft_.onTrigger = true;
 
                 craft = craft_;
@@ -112,7 +114,9 @@ public class Prompt : MonoBehaviour
                 if(craft_  != null)
                 {
                     craft_.onTrigger = false;
-                    craft_.CraftObject.SetActive(false);
+
+                    if (craft_.CraftObject != null)
+                        craft_.CraftObject.SetActive(false);
 
 
                 }

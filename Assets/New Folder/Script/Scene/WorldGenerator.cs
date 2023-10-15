@@ -76,6 +76,7 @@ public class WorldGenerator : MonoBehaviour
 
     }
 
+
     public bool checkSpawned(Vector3 point)
     {
         int cnt = 0;

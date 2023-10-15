@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - ID: 10009
-    amount: 1
+    amount: 2
   - ID: 10003
-    amount: 1
+    amount: 2
   - ID: 0
     amount: 0
   outputAmount: 1

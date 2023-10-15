@@ -78,8 +78,8 @@ Transform:
   m_GameObject: {fileID: 877795718725991367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8027206204361558814}
   - {fileID: 7959419020025392880}
@@ -108,7 +108,7 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -211,6 +211,9 @@ MonoBehaviour:
   recipes:
   - {fileID: 11400000, guid: 4215e728deb29444c81ff2031ea5361f, type: 2}
   - {fileID: 11400000, guid: e91ad8d2c57add941b0efa27caacddce, type: 2}
+  - {fileID: 11400000, guid: 53e84264eca7728478ecf3ecba2aec60, type: 2}
+  - {fileID: 11400000, guid: 82dbb9f5e2d54d341a77f549a40951e4, type: 2}
+  - {fileID: 11400000, guid: 7252b9c87c82f174fa1661a27a756305, type: 2}
   itemMask:
     serializedVersion: 2
     m_Bits: 8
@@ -229,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CraftButtonPos: {fileID: 7959419021127719517}
   CraftButton:
+  - {fileID: 0}
   - {fileID: 5078311647181240702, guid: 6b24eb08089602b48b0ddd4caeaa7f1f, type: 3}
   - {fileID: 142130115737503441, guid: 8d136023f1a9c8a44bdc5672a0f52232, type: 3}
   - {fileID: 4176286205134198791, guid: c2bbc895a723d1e498a3b9c625f152ef, type: 3}
@@ -240,10 +244,10 @@ MonoBehaviour:
   - {fileID: 6657912348492539445, guid: 5258f9f05495fb9439f20e28e4cfd00b, type: 3}
   currentButton1: {fileID: 0}
   prompt: {fileID: 0}
-  CraftObject: {fileID: 7959419020025392883}
+  CraftObject: {fileID: 0}
   CurrentButton: 0
   onTrigger: 0
-  ScrollView: {fileID: 7959419021127719517}
+  ScrollView: {fileID: 0}
   num: 
 --- !u!114 &4196196659307230787
 MonoBehaviour:

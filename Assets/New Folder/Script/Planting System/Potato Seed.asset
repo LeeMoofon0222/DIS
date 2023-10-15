@@ -19,11 +19,12 @@ MonoBehaviour:
     type: 3}
   spawntoscene: {fileID: 2622205200866454038, guid: 12e2abfcdb6012a438d39672f5d26bcc,
     type: 3}
-  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: potato_plant
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: de0e4ac5558024b4f92d312d6b7d8121, type: 3}
+  hitsound: {fileID: 0}
   type: 3
   gainingType: 3
   desciption: 

@@ -57,7 +57,7 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -136,7 +136,6 @@ MonoBehaviour:
   PickObj: 1
   partical: {fileID: 0}
   canPick: 1
-  PlayerCanThrow: 1
   rb: {fileID: 9158026869692048453}
   SceneSpawned: 0
   record_health: 0

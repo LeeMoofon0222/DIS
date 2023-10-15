@@ -57,7 +57,7 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -130,14 +130,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 1788b832527a6a248b4de064ea23cb7b, type: 2}
-  m_name: 
-  m_sprite: {fileID: 0}
+  m_name: "\u9285\u7A3F\u5B50"
+  m_sprite: {fileID: 21300000, guid: 492b38281ebbb704fb0bc1803e0d873f, type: 3}
   objectHealth: 0
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
   canPick: 1
-  PlayerCanThrow: 1
   rb: {fileID: 3094052437247077272}
   SceneSpawned: 0
   record_health: 0

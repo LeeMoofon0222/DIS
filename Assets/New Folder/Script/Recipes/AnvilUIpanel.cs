@@ -24,7 +24,11 @@ public class AnvilUIpanel : MonoBehaviour
         //ScrollView.transform.position = new Vector2(0, ScrollView.transform.position.y);
         CraftObject.SetActive(false);
 
-        currentButton1 = Instantiate(CraftButton[CurrentButton], CraftButtonPos.transform).GetComponent<Button>();
+        var buttonObject = Instantiate(CraftButton[CurrentButton], CraftButtonPos.transform);
+        if(buttonObject.TryGetComponent(out Button button))
+        {
+            currentButton1 = button;
+        }
 
     }
 

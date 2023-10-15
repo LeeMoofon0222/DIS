@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    public PlayerCameraLook cameraControl;
     public Animator handHolderController;
     //public Animator camHolderController;
     public bool canDig;
@@ -64,7 +65,7 @@ public class PlayerControl : MonoBehaviour
 
     [Header("other option panel")]
     public GameObject optionMenu;
-    public bool OptionPage;
+    public bool optionPage;
 
     [Header("Roasting")]
     public bool bbq;
@@ -157,6 +158,7 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L))
         {
             optionMenu.SetActive(true);
+            optionPage = true;
 
         }
         if(optionMenu.activeInHierarchy) 
@@ -166,7 +168,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         lefthandHolder.SetActive(!anyoptionOn());
-
+        
 
 
         /*if (CallBuildSystem())
@@ -182,7 +184,7 @@ public class PlayerControl : MonoBehaviour
             setItem = Mathf.RoundToInt(nowItem);
         }
 
-
+        cameraControl.canRotate = !optionPage;       //Camera
 
         ChangeonHandItem();
 
@@ -443,7 +445,15 @@ public class PlayerControl : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F) && !systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy && IO.canPick)
                 {
-                    m_inventory.AddItem(IO.item, 1 , IO.record_health , IO.record_doneness);
+                    if (IO.SceneSpawned)
+                    {
+                        m_inventory.AddItem(IO.item, 1, IO.item.itemHealth, IO.record_doneness);
+                    }
+                    else
+                    {
+                        m_inventory.AddItem(IO.item, 1, IO.record_health, IO.record_doneness);
+                    }
+                    
                     Destroy(IO.transform.gameObject);
 
                     playerSource.PlayOneShot(pickClip);
@@ -634,7 +644,7 @@ public class PlayerControl : MonoBehaviour
                     FoodObject _food = (FoodObject)IO.item;
                     
 
-                    Debug.Log(m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem]));
+                    //Debug.Log(m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem]));
                     IO.record_doneness = onhandProperty.itemdoneness;
                     bbqTimer = _food.stepTime[m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem])];
                 }
@@ -677,6 +687,7 @@ public class PlayerControl : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            optionPage = false;
         }
 
     }
@@ -744,7 +755,10 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    
+    public void UIrotateLock(bool tf)
+    {
+        optionPage = tf;
+    }
 
 
     private void OnApplicationQuit()

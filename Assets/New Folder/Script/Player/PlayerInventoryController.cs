@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 
 
 public class PlayerInventoryController : MonoBehaviour
@@ -126,10 +126,6 @@ public class PlayerInventoryController : MonoBehaviour
         numPointing();      //0322
 
         valueSync();
-
-        /*if(!stopupload)
-            UpdateStorage();
-        */
 
         if (Input.GetKeyDown(KeyCode.E))
         {

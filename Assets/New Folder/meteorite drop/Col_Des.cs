@@ -21,6 +21,13 @@ public class Col_Des : MonoBehaviour
         Destroy(obj,10);
         var ce = GameObject.Find("PlayerCamera").GetComponent<CameraEffects>();
         ce.Shake();
-        //ª±®a¦©¦å
+
+        if (collision.transform.CompareTag("Player"))
+        {
+            var player = GameObject.FindWithTag("Player");
+            if (player.TryGetComponent(out PlayerHealth PH)) PH.TakeDamage(10);
+            //ª±®a¦©¦å
+        }
+
     }
 }

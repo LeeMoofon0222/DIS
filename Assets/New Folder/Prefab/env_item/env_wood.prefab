@@ -107,7 +107,6 @@ MonoBehaviour:
   PickObj: 1
   partical: {fileID: 0}
   canPick: 1
-  PlayerCanThrow: 1
   rb: {fileID: 1779519803929984790}
   SceneSpawned: 1
   record_health: 0

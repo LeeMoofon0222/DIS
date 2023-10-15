@@ -23,6 +23,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79,
         type: 2}
+    - target: {fileID: 4042371685056609226, guid: e6b12e59ee2874043868c774d47e23c3,
+        type: 3}
+      propertyPath: GetTradeAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4042371685056609230, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -136,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 4042371685384755309, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}
       propertyPath: m_Text
-      value: 5 Hope to 1 Wood
+      value: 5 Hope to 5 Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4042371685384755309, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}

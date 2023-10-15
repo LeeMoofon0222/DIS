@@ -26,6 +26,7 @@ TagManager:
   - watering-can
   - Hope
   - Storage
+  - Lava
   layers:
   - Default
   - TransparentFX

@@ -15,15 +15,16 @@ MonoBehaviour:
   ID: 20003
   itemHealth: 100
   stackable: 0
-  itemObject: {fileID: 8841919848818520541, guid: eec0486e18ed4504d818f61a9d15f76f,
+  itemObject: {fileID: 2596437282848430851, guid: 660b5f51076769147ac36cf86247702b,
     type: 3}
   spawntoscene: {fileID: 2229758087535260626, guid: f8d2dbb05e77cb8469a16c82744350ca,
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Copper Pickaxe
+  itemName: "\u9285\u93AC\u5B50"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: 492b38281ebbb704fb0bc1803e0d873f, type: 3}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 0
   desciption: 

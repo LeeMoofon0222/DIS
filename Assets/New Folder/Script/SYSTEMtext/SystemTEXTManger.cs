@@ -100,7 +100,7 @@ public class SystemTEXTManger : MonoBehaviour
                 }
             }
             GetItemText = new GameObject[1];
-            Debug.Log("Clear the array");
+            //Debug.Log("Clear the array");
             currentTime = 0f;
 
             n = 0;
