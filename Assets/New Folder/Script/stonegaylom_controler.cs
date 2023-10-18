@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCController : MonoBehaviour
+public class stonegaylom_controler : MonoBehaviour
 {
     public Transform target; // 追逐目标
     public float speed = 5.0f; // 移动速度
