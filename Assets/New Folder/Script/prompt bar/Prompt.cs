@@ -23,6 +23,7 @@ public class Prompt : MonoBehaviour
     public float ItemObjectHealth;
     public Text INformationText;
     public Text Name;
+    public Text TypeText;
 
     [Header("NPC")]
     public Text NPChealth;
@@ -222,10 +223,12 @@ public class Prompt : MonoBehaviour
         if (itemObject.canPick)
         {
             ItemIcon.sprite = _item.itemIcon;
+            TypeText.text = "互動模式:可拾取";
         }
         else
         {
             ItemIcon.sprite = itemObject.m_sprite;
+            TypeText.text = "互動模式:可破壞";
         }
         
         if (_item.type == ItemType.Tool)
