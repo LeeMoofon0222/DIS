@@ -134,10 +134,11 @@ public class ItemObject : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         FoodObject _food = (FoodObject)item;
-        Material[] mats = this.gameObject.GetComponent<Renderer>().materials;
-        mats[0] = _food.roastStep[record_doneness];
-        GetComponent<Renderer>().materials = mats;
-
-
+        if (_food.canbeBBQ)
+        {
+            Material[] mats = this.gameObject.GetComponent<Renderer>().materials;
+            mats[0] = _food.roastStep[record_doneness];
+            GetComponent<Renderer>().materials = mats;
+        }
     }
 }

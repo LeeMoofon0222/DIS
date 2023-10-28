@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5536655666484050279}
   - component: {fileID: 5536655666484050278}
   m_Layer: 12
-  m_Name: IronAxe
+  m_Name: IronAxe - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

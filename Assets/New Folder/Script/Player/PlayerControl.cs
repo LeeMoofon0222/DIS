@@ -407,7 +407,7 @@ public class PlayerControl : MonoBehaviour
 
 
 
-                        if (itemHolding != null)
+                        if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
                         {
                             m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     //0323
                         }
@@ -646,7 +646,8 @@ public class PlayerControl : MonoBehaviour
 
                     //Debug.Log(m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem]));
                     IO.record_doneness = onhandProperty.itemdoneness;
-                    bbqTimer = _food.stepTime[m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem])];
+                    if(_food.canbeBBQ) bbqTimer = _food.stepTime[m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem])];
+
                 }
             }
 

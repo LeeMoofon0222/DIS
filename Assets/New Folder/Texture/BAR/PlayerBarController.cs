@@ -11,6 +11,9 @@ public class PlayerBarController : MonoBehaviour
     public float currentenergy;
     public barController bar;
 
+    [SerializeField] int hungerTime;
+    public float hungrySpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class PlayerBarController : MonoBehaviour
         bar.SetMaxenergy(Maxenergy);
         bar.SetMaxhunger(Maxhunger);
 
-        
+        StartCoroutine(hunger());
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class PlayerBarController : MonoBehaviour
     void Takehunger(int hunger)
     {
         currenthunger -= hunger; 
-        bar.Sethunger(currenthunger);
+        bar.Sethunger(currenthunger / 100);
 
 
     }
@@ -41,5 +44,12 @@ public class PlayerBarController : MonoBehaviour
         bar.Setenergy(currentenergy);
 
 
+    }
+
+    IEnumerator hunger()
+    {
+        yield return new WaitForSeconds(hungerTime);
+        Takehunger((int)(5 * hungrySpeed));
+        StartCoroutine(hunger());
     }
 }
