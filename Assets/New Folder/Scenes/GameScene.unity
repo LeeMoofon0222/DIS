@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.46848872, g: 0.46848872, b: 0.46848872, a: 1}
   m_AmbientIntensity: 1.32
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.3018868, g: 0.2828369, b: 0.2773941, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f08edcf23e883ae418b5536bf79fc126, type: 2}
+  m_SubtractiveShadowColor: {r: 0.1509434, g: 0.13955145, b: 0.13727306, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7f30c556c8ff97c4093d5c2fbbb80a0f, type: 2}
   m_HaloStrength: 1
   m_FlareStrength: 0.739
   m_FlareFadeSpeed: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.48
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1979436145}
-  m_IndirectSpecularColor: {r: 0.018797548, g: 0.00895805, b: 0.046537455, a: 0.48}
+  m_IndirectSpecularColor: {r: 0.06060881, g: 0.026521465, b: 0.340305, a: 0.48}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1069,7 +1069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &141384130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2702,10 +2702,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -454}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358759913
 MonoBehaviour:
@@ -2902,10 +2902,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -151}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369320318
 MonoBehaviour:
@@ -3544,10 +3544,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -555}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419280666
 MonoBehaviour:
@@ -9666,10 +9666,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -353}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934871514
 MonoBehaviour:
@@ -10197,10 +10197,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -50}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951870898
 MonoBehaviour:
@@ -21055,10 +21055,10 @@ RectTransform:
   m_Father: {fileID: 2011884208}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -252}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866459329
 MonoBehaviour:
@@ -22605,7 +22605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1979436145
 Light:
   m_ObjectHideFlags: 0
@@ -22627,7 +22627,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.883
+    m_Strength: 0.928
     m_Bias: 0
     m_NormalBias: 0
     m_NearPlane: 3.75
@@ -22675,14 +22675,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979436144}
-  m_LocalRotation: {x: 0.29385763, y: 0.2817354, z: -0.6567557, w: 0.6347794}
-  m_LocalPosition: {x: -342.5, y: 41.1, z: 56.789993}
+  m_LocalRotation: {x: -0.40447605, y: -0.4126689, z: 0.5770417, w: -0.5771711}
+  m_LocalPosition: {x: 0, y: 41.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 132.001, y: 177.576, z: 86.971}
+  m_LocalEulerAnglesHint: {x: 70.589, y: -358.351, z: -88.82}
 --- !u!114 &1979436147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25517,13 +25517,83 @@ PrefabInstance:
       objectReference: {fileID: 1141023266}
     - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
         type: 3}
+      propertyPath: _skybox
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f30c556c8ff97c4093d5c2fbbb80a0f, type: 2}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: desert.blender
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: cherry.exposure
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: desert.exposure
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: valcano.blender
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
         type: 3}
       propertyPath: valcano.exposure
       value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: cherry.skyColor.b
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: cherry.skyColor.g
+      value: 0.28403345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: cherry.skyColor.r
+      value: 0.53849584
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: desert.skyColor.b
+      value: 0.24969736
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: desert.skyColor.g
+      value: 0.631986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: desert.skyColor.r
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: normal.skyColor.b
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: normal.skyColor.g
+      value: 0.60058033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: normal.skyColor.r
+      value: 0.43447843
       objectReference: {fileID: 0}
     - target: {fileID: 7119964377988974352, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
         type: 3}
@@ -26324,7 +26394,7 @@ PrefabInstance:
     - target: {fileID: 3522930220314977372, guid: 9afcab8536320c84ea96cbbc4295896a,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3522930220380055955, guid: 9afcab8536320c84ea96cbbc4295896a,
         type: 3}
@@ -26416,7 +26486,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.198
       objectReference: {fileID: 0}
+    - target: {fileID: 4333201228501767947, guid: 9afcab8536320c84ea96cbbc4295896a,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4333201228858559081, guid: 9afcab8536320c84ea96cbbc4295896a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333201229562099336, guid: 9afcab8536320c84ea96cbbc4295896a,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -26446,7 +26526,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4333201228501767946, guid: 9afcab8536320c84ea96cbbc4295896a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9afcab8536320c84ea96cbbc4295896a, type: 3}
 --- !u!4 &4333201229032837992 stripped
 Transform:
@@ -26561,7 +26642,7 @@ PrefabInstance:
     - target: {fileID: 1245539803354535904, guid: 279b9238709791047995167f81684ebe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 200
+      value: 139.4
       objectReference: {fileID: 0}
     - target: {fileID: 1245539803354535904, guid: 279b9238709791047995167f81684ebe,
         type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.573
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.030947417, g: 0.018025257, b: 0.5605718, a: 0.573}
+  m_IndirectSpecularColor: {r: 0.085592344, g: 0.021725647, b: 0.53122693, a: 0.573}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -412,7 +412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &277801766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1616,6 +1616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: forest island (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 34864441169584027, guid: 411f4a8b5b3935445be75f9a404a9479,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5461966099544156101, guid: 411f4a8b5b3935445be75f9a404a9479,
         type: 3}
