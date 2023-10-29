@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 874001aab6ec03b48b9d2cc4b197e3f8, type: 2}
-  m_name: "\u71DF\u706B"
+  m_name: Campfire
   m_sprite: {fileID: 21300000, guid: 30ed9f0661530aa458376264fb4b2c9c, type: 3}
   objectHealth: 20
   CanScaleChange: 0
@@ -279,6 +279,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7660618168825959182}
     m_Modifications:
+    - target: {fileID: 1675787343659221250, guid: 8fcb9d2d43929c04f8c70c38581418d4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065908312485665119, guid: 8fcb9d2d43929c04f8c70c38581418d4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6360420542244127404, guid: 8fcb9d2d43929c04f8c70c38581418d4,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

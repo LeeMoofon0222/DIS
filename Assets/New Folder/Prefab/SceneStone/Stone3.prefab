@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1674865555255334854}
   - component: {fileID: 3172157766524855435}
   - component: {fileID: -5588804936420063218}
-  - component: {fileID: 2001743416800898559}
   m_Layer: 0
   m_Name: Stone3
   m_TagString: Untagged
@@ -54,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9021866711252044548}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -132,13 +131,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
+  m_name: stone
+  m_sprite: {fileID: 21300000, guid: 80dd921c6e1078a4cb6457843b539e7a, type: 3}
   objectHealth: 90
   CanScaleChange: 1
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
   canPick: 0
-  PlayerCanThrow: 0
   rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseItem: {fileID: 0}
   lootdrop:
   - Randomweight: 95
     loot:
@@ -183,23 +184,3 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
---- !u!95 &2001743416800898559
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9021866711252044548}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c93278fc52b2ce84cbe30ed9f21408c0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

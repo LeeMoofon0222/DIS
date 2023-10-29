@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
+  m_Name: moonBanana
+  m_EditorClassIdentifier: 
+  ID: 30004
+  itemHealth: 1
+  stackable: 1
+  itemObject: {fileID: 4056308185581932954, guid: 772bbcc18575b5442b5a03b871e2753a,
+    type: 3}
+  spawntoscene: {fileID: 4056308185581932954, guid: 1d3f34bba16fc0d42b70179173cedd73,
+    type: 3}
+  UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
+    type: 3}
+  itemName: "\u6708\u767D\u679C"
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: cccddc7945de5da4980b5d0da510f3d9, type: 3}
+  hitsound: {fileID: 0}
+  type: 0
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  healing: 2
+  satiety: 20
+  canbeBBQ: 0
+  roastStep: []
+  stepTime: []
+  foodWithin: []

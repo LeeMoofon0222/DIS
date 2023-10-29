@@ -54,7 +54,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3274719023001649935}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -132,13 +132,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
+  m_name: 
+  m_sprite: {fileID: 0}
   objectHealth: 90
   CanScaleChange: 1
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
   canPick: 0
-  PlayerCanThrow: 0
   rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
@@ -155,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseItem: {fileID: 0}
   lootdrop:
   - Randomweight: 95
     loot:
@@ -185,7 +187,7 @@ MonoBehaviour:
   resize: 0
 --- !u!95 &678662105977858748
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,4 +204,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

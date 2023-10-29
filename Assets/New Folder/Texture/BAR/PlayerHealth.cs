@@ -123,6 +123,8 @@ public class PlayerHealth : MonoBehaviour
 
             volume.profile.TryGet<ColorAdjustments>(out exposure);
             exposure.postExposure.value = Mathf.Lerp(0, _exposure, timer);
+            
+            
         }
         else
         {

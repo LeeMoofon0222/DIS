@@ -46,8 +46,6 @@ public class barController : MonoBehaviour
 
         hungerbar.fillAmount += value;
 
-
-
     }
     public void SetMaxenergy(float energy)
     {
