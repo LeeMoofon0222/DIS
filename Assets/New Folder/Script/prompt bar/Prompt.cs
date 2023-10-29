@@ -23,11 +23,9 @@ public class Prompt : MonoBehaviour
     public float ItemObjectHealth;
     public Text INformationText;
     public Text Name;
-<<<<<<< Updated upstream
-    public Text TypeText;
-=======
+
     public Text Type;
->>>>>>> Stashed changes
+
 
     [Header("NPC")]
     public Text NPChealth;
@@ -227,20 +225,16 @@ public class Prompt : MonoBehaviour
         if (itemObject.canPick)
         {
             ItemIcon.sprite = _item.itemIcon;
-<<<<<<< Updated upstream
-            TypeText.text = "が笆家Α:珺";
-=======
+
             Type.text = "が笆家Α:珺";
->>>>>>> Stashed changes
+
         }
         else
         {
             ItemIcon.sprite = itemObject.m_sprite;
-<<<<<<< Updated upstream
-            TypeText.text = "が笆家Α:瘆胊";
-=======
+
             Type.text = "が笆家Α:瘆胊";
->>>>>>> Stashed changes
+
         }
         
         if (_item.type == ItemType.Tool)
