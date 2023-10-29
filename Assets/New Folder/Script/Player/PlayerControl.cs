@@ -9,6 +9,13 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    public bool AbsoluteControlRotate = false;
+    public void AbsoluteControlRotateButton(bool n)
+    {
+        AbsoluteControlRotate = n;
+    }
+
+    //for setting
     public PlayerCameraLook cameraControl;
     public Animator handHolderController;
     //public Animator camHolderController;
@@ -121,8 +128,6 @@ public class PlayerControl : MonoBehaviour
         }
         return false;
     }*/
-
-
     
     ResourseGain extraResources;
 
@@ -189,7 +194,14 @@ public class PlayerControl : MonoBehaviour
             setItem = Mathf.RoundToInt(nowItem);
         }
 
-        cameraControl.canRotate = !optionPage;       //Camera
+        if (AbsoluteControlRotate)
+        {
+            cameraControl.canRotate = false;
+        }
+        else
+        {
+            cameraControl.canRotate = !optionPage;  //Camera
+        }
 
         ChangeonHandItem();
 

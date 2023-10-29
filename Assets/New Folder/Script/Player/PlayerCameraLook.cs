@@ -54,5 +54,4 @@ public class PlayerCameraLook : MonoBehaviour
             camAnim.SetBool("Moving", (pm.isMoving || pc.attacking));
         }
     }
-
 }
