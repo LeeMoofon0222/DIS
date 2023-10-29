@@ -86,6 +86,11 @@ public class PlayerControl : MonoBehaviour
     public AudioSource playerSource;
     public AudioSource swing;
 
+    public void SettingmodeForRotate(bool n)
+    {
+        optionPage = n;
+    }
+
     public bool anyoptionOn()
     {
         foreach(var sys in systemsManager.systems)
