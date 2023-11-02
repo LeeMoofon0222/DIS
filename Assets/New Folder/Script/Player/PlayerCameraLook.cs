@@ -54,4 +54,9 @@ public class PlayerCameraLook : MonoBehaviour
             camAnim.SetBool("Moving", (pm.isMoving || pc.attacking));
         }
     }
+
+    public void SettingSensitivity(float reference)
+    {
+        mouseSensitivity = 760*reference + 20;
+    }
 }
