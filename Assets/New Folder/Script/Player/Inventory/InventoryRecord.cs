@@ -9,7 +9,7 @@ using UnityEngine;
 public class InventoryRecord : ScriptableObject
 {
     public List<InventorySlot> Container = new List<InventorySlot>();
-
+    public int weight;
 
     public bool FindItem(Item item)
     {
@@ -102,6 +102,7 @@ public class InventoryRecord : ScriptableObject
             if (Container[i].item == _item && _item.stackable)
             {
                 Container[i].AddAmount(_amount);
+                weight += _item.itemWeights;
                 hasItem = true;
                 break;
 
@@ -110,6 +111,7 @@ public class InventoryRecord : ScriptableObject
         if (!hasItem)
         {
             Container.Add(new InventorySlot(_item,_amount,_health ,_doneness,-1));
+            weight += _item.itemWeights;
         }
         GameObject SystemINformation = GameObject.Find("SystemInformationText");
         SystemTEXTManger systemtextManger = SystemINformation.GetComponent<SystemTEXTManger>();
@@ -127,6 +129,7 @@ public class InventoryRecord : ScriptableObject
                 if (Container[i].amount > 0)
                 {
                     Container[i].decreesAmount(_amount);
+                    weight -= _item.itemWeights;
                     break;
                 }
                 else
@@ -145,6 +148,7 @@ public class InventoryRecord : ScriptableObject
                 if (Container[i].amount > 0)
                 {
                     Container[i].decreesAmount(_amount);
+                    weight -= Container[i].item.itemWeights;
                     break;
                 }
                 else
@@ -228,6 +232,7 @@ public class InventoryRecord : ScriptableObject
                 if (Container[i].amount <= 0 || (Container[i].item_Health <= 0 && (Container[i].item.type == ItemType.Tool || Container[i].item.type == ItemType.Food)))
                 {
                     Container.Remove(Container[i]);
+                    weight -= _item.itemWeights;
                     break;
                 }
 

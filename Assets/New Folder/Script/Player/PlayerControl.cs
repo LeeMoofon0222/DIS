@@ -782,6 +782,7 @@ public class PlayerControl : MonoBehaviour
     private void OnApplicationQuit()
     {
         m_inventory.Container.Clear();
+        m_inventory.weight= 0;
         storages.Storages.Clear();
 
     }

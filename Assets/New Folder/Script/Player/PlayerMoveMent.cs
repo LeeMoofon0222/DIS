@@ -24,6 +24,15 @@ public class PlayerMoveMent : MonoBehaviour
     public ParticleSystem hopeParticle;
 
 
+    public float speedMultiplier;
+
+
+
+
+
+    PlayerBarController bar;
+    PlayerInventoryController pic;
+
     [Header("Dead & Respawn")]
     public bool isDead;
     public float respawnHight;
@@ -46,7 +55,7 @@ public class PlayerMoveMent : MonoBehaviour
     public AudioSource walk;
     public AudioSource run;
 
-
+    
 
     public bool isSprinting() 
     {
@@ -72,6 +81,9 @@ public class PlayerMoveMent : MonoBehaviour
         //PA = GetComponent<PlayerAwakeing>();
         playerhealth = GetComponent<PlayerHealth>();
         
+
+        bar = GetComponent<PlayerBarController>();
+        pic = GetComponent<PlayerInventoryController>();
         
     }
 
@@ -95,8 +107,8 @@ public class PlayerMoveMent : MonoBehaviour
             PlayerDead();
         }
 
-        v_input = Input.GetAxis("Vertical") * speed;
-        h_input = Input.GetAxis("Horizontal") * speed;
+        v_input = Input.GetAxis("Vertical") * speed ;
+        h_input = Input.GetAxis("Horizontal") * speed ;
         if(v_input != 0 || h_input != 0)
         {
             isMoving = true;
@@ -108,15 +120,24 @@ public class PlayerMoveMent : MonoBehaviour
             
         }
 
+        if(bar.isHunger || pic.tooHeavy)
+        {
+            speedMultiplier = 0.1f;
+            jumpHeight = 0;
+        }
+        else
+        {
+            speedMultiplier= 1f;
+            jumpHeight = 2.5f;
+        }
 
+        
 
         if (isSprinting() && barcontroller.energybar.fillAmount > 0)
         {
             speed = originalSpeed * sprintSpeed_Rate;
             sprintingHeadbob = 1.4f;
 
-            
-            
         }
         else
         {
@@ -156,7 +177,7 @@ public class PlayerMoveMent : MonoBehaviour
 
         if (canMove)
         {
-            cC.Move(move * Time.deltaTime * speed);
+            cC.Move(move * Time.deltaTime * speed * speedMultiplier);
         }
 
         cC.Move(velocity * Time.deltaTime);
@@ -165,8 +186,8 @@ public class PlayerMoveMent : MonoBehaviour
 
         if (isMoving && cC.isGrounded && canMove )
         {
-            headbob_x = Mathf.Sin(Time.time * 6 * sprintingHeadbob) * 0.06f;
-            headbob_y = (Mathf.Cos(Time.time * 12 * sprintingHeadbob) * 0.08f * -1 ) ;
+            headbob_x = Mathf.Sin(Time.time * 6 * sprintingHeadbob * speedMultiplier) * 0.06f ;
+            headbob_y = (Mathf.Cos(Time.time * 12 * sprintingHeadbob * speedMultiplier) * 0.08f * -1) ;
 
             if(cam.transform.localPosition == camResetPos)
             {
@@ -235,6 +256,8 @@ public class PlayerMoveMent : MonoBehaviour
             playerhealth.TakeDamage(100);
         }
     }
+
+
 
 
 }

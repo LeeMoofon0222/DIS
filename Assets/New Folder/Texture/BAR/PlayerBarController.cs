@@ -14,6 +14,9 @@ public class PlayerBarController : MonoBehaviour
     [SerializeField] int hungerTime;
     public float hungrySpeed;
 
+    PlayerMoveMent pm;
+    public bool isHunger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,17 @@ public class PlayerBarController : MonoBehaviour
         bar.SetMaxhunger(Maxhunger);
 
         StartCoroutine(hunger());
+
+        //pm = GetComponent<PlayerMoveMent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(currenthunger <= 0)
+        {
+            isHunger = true;
+        }
     }
 
     void Takehunger(int hunger)

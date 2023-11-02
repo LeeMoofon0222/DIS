@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
@@ -15,6 +16,8 @@ public class PlayerInventoryController : MonoBehaviour
 
     public Transform ItemContent;
     
+    public Text showWieght;
+    public bool tooHeavy;
 
     public ItemwheelController ItemwheelController;
 
@@ -165,6 +168,9 @@ public class PlayerInventoryController : MonoBehaviour
             storagePanel.SetActive(false);
         }
 
+        tooHeavy = inventory.weight >= 300?true:false;
+
+
     }
 
 
@@ -219,6 +225,8 @@ public class PlayerInventoryController : MonoBehaviour
                 
             }
         }
+
+        showWieght.text = inventory.weight.ToString(); 
     }
 
     public void UpdateStorage()

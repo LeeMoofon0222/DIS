@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   Container: []
+  weight: 0

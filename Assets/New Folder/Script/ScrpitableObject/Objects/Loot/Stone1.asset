@@ -22,7 +22,7 @@ MonoBehaviour:
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
   itemName: Stone
-  itemWeights: 0
+  itemWeights: 100
   itemIcon: {fileID: 21300000, guid: 80dd921c6e1078a4cb6457843b539e7a, type: 3}
   hitsound: {fileID: 8300000, guid: c4b543426005372479b62249acf44991, type: 3}
   type: 2
