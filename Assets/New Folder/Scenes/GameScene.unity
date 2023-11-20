@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7202976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7153,7 +7153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &703044336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9355,7 +9355,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -12.429199, y: -0.00015258789}
-  m_SizeDelta: {x: -4.1431, y: 178}
+  m_SizeDelta: {x: -4.1431, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &839504603
 MonoBehaviour:
@@ -15502,7 +15502,7 @@ PrefabInstance:
     - target: {fileID: 7103181585543448103, guid: 7823830312d6c84429d8b4b9dbe41a0a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7823830312d6c84429d8b4b9dbe41a0a, type: 3}
@@ -27251,6 +27251,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760581104744218205, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
+        type: 3}
+      propertyPath: PIC
+      value: 
+      objectReference: {fileID: 7632985738494094680}
     - target: {fileID: 760581104744218205, guid: 262853d9c2ac8d94e8c9b4438776a1a8,
         type: 3}
       propertyPath: craftButton

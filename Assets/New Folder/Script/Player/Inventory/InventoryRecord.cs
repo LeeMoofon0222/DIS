@@ -102,7 +102,7 @@ public class InventoryRecord : ScriptableObject
             if (Container[i].item == _item && _item.stackable)
             {
                 Container[i].AddAmount(_amount);
-                weight += _item.itemWeights;
+                weight += _item.itemWeights * _amount;
                 hasItem = true;
                 break;
 
@@ -121,7 +121,9 @@ public class InventoryRecord : ScriptableObject
 
 
     public void DecreesItem(Item _item, int _amount , int _Pnum)        //0322
-    {
+    {   
+
+
         for(int i = 0; i < Container.Count; i++)
         {
             if (Container[i].item == _item && (_Pnum == Container[i].pNum || _Pnum == 0))       //0322
@@ -129,7 +131,7 @@ public class InventoryRecord : ScriptableObject
                 if (Container[i].amount > 0)
                 {
                     Container[i].decreesAmount(_amount);
-                    weight -= _item.itemWeights;
+                    weight -= _item.itemWeights * _amount;
                     break;
                 }
                 else
@@ -138,6 +140,8 @@ public class InventoryRecord : ScriptableObject
                 }
             }
         }
+
+        //Debug.Log("Faild Decrease Item");
     }
     public void DecreesItem(int id, int _amount)        //0322
     {
@@ -148,7 +152,7 @@ public class InventoryRecord : ScriptableObject
                 if (Container[i].amount > 0)
                 {
                     Container[i].decreesAmount(_amount);
-                    weight -= Container[i].item.itemWeights;
+                    weight -= Container[i].item.itemWeights * _amount;
                     break;
                 }
                 else
@@ -274,7 +278,8 @@ public class InventorySlot
     public int amount;
 
      public int item_Health;      //0322
-    [HideInInspector] public int pNum;        //位址 需要固定時間整理一次 基本上就是陣列的第幾位 必須在特定情況丟出 0322
+    //[HideInInspector] 
+    public int pNum;        //位址 需要固定時間整理一次 基本上就是陣列的第幾位 必須在特定情況丟出 0322
 
     public int doneness;
 

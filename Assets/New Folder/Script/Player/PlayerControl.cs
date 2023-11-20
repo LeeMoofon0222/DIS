@@ -317,6 +317,7 @@ public class PlayerControl : MonoBehaviour
 
 
                     m_inventory.DecreesItem(itemHolding.item, 1 , PIC.i_pnum[setItem]);
+                    PIC.UpdateDisplay();
 
                 }
             }
@@ -783,7 +784,7 @@ public class PlayerControl : MonoBehaviour
     {
         m_inventory.Container.Clear();
         m_inventory.weight= 0;
-        storages.Storages.Clear();
+        //storages.Storages.Clear();
 
     }
 }

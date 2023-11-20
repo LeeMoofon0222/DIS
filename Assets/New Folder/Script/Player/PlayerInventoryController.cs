@@ -57,6 +57,7 @@ public class PlayerInventoryController : MonoBehaviour
 
     public List<Item> itemsOnHand;
     public List<variables> itemProperties;
+    public List<UIItemManager> slotproperty;
     public Transform mainHandHolder;
     public List<Image> slotIcon;
     public Sprite none;
@@ -64,6 +65,7 @@ public class PlayerInventoryController : MonoBehaviour
 
     public List<int> i_pnum;     //0322
     public int preset_pnum  = -1;
+    public int pnum_extra = 0;
 
     int removePoint = 0;
     public InformationManger informationManger;
@@ -122,7 +124,7 @@ public class PlayerInventoryController : MonoBehaviour
     }
     void Update()
     {
-        UpdateDisplay();        //背包物品狀態隨時更新
+        //UpdateDisplay();        //背包物品狀態隨時更新
 
         slotIconShow();     //物品設定欄圖示設定
 
@@ -137,6 +139,7 @@ public class PlayerInventoryController : MonoBehaviour
             informationManger.CloseAll();
             if(isStorage) UpdateStorage();
 
+            UpdateDisplay();
         }
         
 
@@ -178,6 +181,45 @@ public class PlayerInventoryController : MonoBehaviour
     {
         for(int i = 0; i < inventory.Container.Count; i++)
         {
+            if (inventory.Container[i].amount <= 0 ||
+               (inventory.Container[i].item_Health <= -1 && (inventory.Container[i].item.type == ItemType.Tool || inventory.Container[i].item.type == ItemType.Food)))    //0323
+            {
+                for (int j = 0; j < itemsOnHand.Count; j++)
+                {
+                    if (itemsOnHand[j] == inventory.Container[i].item)
+                    {
+                        itemsOnHand[j] = null;
+                    }
+                }
+
+                removePoint = i + 1;      //0322
+                numPointing();
+
+
+                /*Destroy(objToShow[i]);
+                objToShow.RemoveAt(i);*/
+
+                for(int a = 0; a < inventory.Container.Count; a++) 
+                {
+                    if(a < objToShow.Count)
+                    {
+                        Destroy(objToShow[a]);
+                    }
+                    
+                    itemDisplayed.Remove(inventory.Container[a]);
+                }
+                objToShow.Clear();
+
+                
+                inventory.Container.Remove(inventory.Container[i]);
+
+                
+
+
+                break;
+            }
+
+
             if ((!itemDisplayed.ContainsKey(inventory.Container[i])) && inventory.Container[i].amount > 0)
             {
                 GameObject obj = Instantiate(inventory.Container[i].item.UIObject, ItemContent);
@@ -194,7 +236,8 @@ public class PlayerInventoryController : MonoBehaviour
                 {
                     uiItemManager.item = inventory.Container[i].item;
 
-                    StartCoroutine(watiFrame(uiItemManager, i));
+                    //StartCoroutine(watiFrame(uiItemManager, i));
+                    uiItemManager.pNum = i + 1;
 
                 }
 
@@ -202,28 +245,7 @@ public class PlayerInventoryController : MonoBehaviour
                 
             }
 
-            if(inventory.Container[i].amount <= 0 || 
-              (inventory.Container[i].item_Health <= 0 && (inventory.Container[i].item.type == ItemType.Tool || inventory.Container[i].item.type == ItemType.Food)))    //0323
-            {   
-                for(int j = 0; j < itemsOnHand.Count; j++)
-                {
-                    if(itemsOnHand[j] == inventory.Container[i].item )      
-                    {
-                        itemsOnHand[j] = null;
-                    }
-                }
 
-                removePoint = i+1;      //0322
-
-
-                Destroy(objToShow[i]);
-                objToShow.RemoveAt(i);
-
-                itemDisplayed.Remove(inventory.Container[i]);
-                inventory.Container.Remove(inventory.Container[i]);
-
-                
-            }
         }
 
         showWieght.text = inventory.weight.ToString(); 
@@ -276,13 +298,13 @@ public class PlayerInventoryController : MonoBehaviour
 
         for(int j = 0; j < i_pnum.Count; j++)
         {
-            if (i_pnum[j] >= removePoint && removePoint != 0)
+            if (i_pnum[j] >= removePoint && removePoint != -1)
             {
-                i_pnum[j]-- ;
+                i_pnum[j] -= (1 + pnum_extra) ;
             }
         }
 
-        removePoint = 0;
+        removePoint = -1;
 
     }
 
