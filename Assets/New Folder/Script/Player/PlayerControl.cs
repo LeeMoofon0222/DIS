@@ -279,6 +279,8 @@ public class PlayerControl : MonoBehaviour
                 {
                     Instantiate(itemHolding.item.spawntoscene, pointHit.point, preplaceObj.transform.rotation );
                     m_inventory.DecreesItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+
+                    PIC.UpdateDisplay();
                 }
             }
             else
@@ -450,7 +452,9 @@ public class PlayerControl : MonoBehaviour
                 //Debug.Log("detected");
                 if (Input.GetMouseButtonDown(1) && itemHolding.item != null && !smelter.issmelting)
                 {
-                    smelter.Smelt(itemHolding.item, m_inventory.GetItemAmount(itemHolding.item));
+                    //smelter.Smelt(itemHolding.item, m_inventory.GetItemAmount(itemHolding.item));
+                    smelter.setToSmelt(itemHolding.item);
+                    PIC.UpdateDisplay();
                 }
             }
         }

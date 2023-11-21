@@ -196,7 +196,8 @@ public class Prompt : MonoBehaviour
             if (craft != null)
             {
                 craft.onTrigger = false;
-                craft.CraftObject.SetActive(false);
+                if(craft.CraftObject != null)
+                    craft.CraftObject.SetActive(false);
 
 
             }

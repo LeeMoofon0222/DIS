@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc70dfe516c920b4a924137e6c99779d, type: 3}
+  m_Name: smelt_gold
+  m_EditorClassIdentifier: 
+  materials:
+  - ID: 10005
+    amount: 1
+  - ID: 10005
+    amount: 1
+  - ID: 10005
+    amount: 1
+  outputAmount: 1
+  output: {fileID: 5274267957764581089, guid: 8486769045c4249408048cd188fe5689, type: 3}
+  Itemoutput: {fileID: 11400000, guid: 24a10caf800c9464293b891a08544e30, type: 2}
+  craftresult: {fileID: 4739137836010170475, guid: f65346fb4b455cf42abe7f73d945993d,
+    type: 3}
+  forsmelting: 1
+  forcooking: 0

@@ -21,5 +21,7 @@ public class CreateRecipe : ScriptableObject
 
     public GameObject craftresult;
 
+    public bool forsmelting;
+    public bool forcooking;
 
 }
