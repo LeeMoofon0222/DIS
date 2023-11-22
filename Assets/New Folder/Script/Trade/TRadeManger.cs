@@ -22,6 +22,10 @@ public class TRadeManger : MonoBehaviour
     public GameObject perfab;
     GameObject InstantiateObject;
     //public Sprite BeselectSprite;
+
+    
+    public Transform generatepoint;
+
     // Start is called before the first frame update
     void Awake()
     {

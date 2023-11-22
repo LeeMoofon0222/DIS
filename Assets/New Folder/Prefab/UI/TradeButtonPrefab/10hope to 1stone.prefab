@@ -156,6 +156,10 @@ MonoBehaviour:
   GetTradeAmount: 1
   inventoryRecord: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   tradeManger: {fileID: 0}
+  generatingPoints: {fileID: 0}
+  SpawnObject: {fileID: 9021866711252044548, guid: 5cbe262e551df924187597b90fb877a7,
+    type: 3}
+  scaler: 4
 --- !u!1 &4042371685384755315
 GameObject:
   m_ObjectHideFlags: 0

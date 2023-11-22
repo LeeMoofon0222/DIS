@@ -17,13 +17,21 @@ public class TradeButtonManger : MonoBehaviour
 
     public InventoryRecord inventoryRecord;
     public TRadeManger tradeManger;
-    
+
+    public Transform generatingPoints;
+    public GameObject SpawnObject;
+
+    public int scaler = 1;
+
     // Start is called before the first frame update
     void Awake()
     {
 
-       /* tradeManger = GameObject.FindGameObjectWithTag("Hook").GetComponent<TRadeManger>(); 
-        fishing = tradeManger.GetComponentInChildren<Fishing>();*/
+        /* tradeManger = GameObject.FindGameObjectWithTag("Hook").GetComponent<TRadeManger>(); 
+         fishing = tradeManger.GetComponentInChildren<Fishing>();*/
+
+
+        generatingPoints = tradeManger.generatepoint;
     }
 
     // Update is called once per frame
@@ -51,8 +59,13 @@ public class TradeButtonManger : MonoBehaviour
         if(HopeSpawnManger.HopeValue >= HopeCost)
         {
             HopeSpawnManger.HopeValue -= HopeCost;
-            inventoryRecord.AddItem(GetTRadeItem, GetTradeAmount, GetTRadeItem.itemHealth, 0);
+            //inventoryRecord.AddItem(GetTRadeItem, GetTradeAmount, GetTRadeItem.itemHealth, 0);
 
+            Transform spawnpoint = GameObject.Find("GeneratePoint").transform;
+
+            GameObject spawned = Instantiate(SpawnObject , spawnpoint.position, Quaternion.identity);
+
+            //spawned.transform.localScale *= scaler;
 
         }
 
