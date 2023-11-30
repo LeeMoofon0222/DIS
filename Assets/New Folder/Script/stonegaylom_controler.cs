@@ -27,6 +27,9 @@ public class stonegaylom_controler : MonoBehaviour
 
     bool goBack;
 
+    
+
+
     [Header("Attack")]
     public float attackCD;
     public int attackValue;
@@ -37,6 +40,15 @@ public class stonegaylom_controler : MonoBehaviour
     bool is_attacking;
     public GameObject AttackArea;
     public GameObject Attackpoint;
+
+    //[Header("Hurt")]
+    private float HurtCD = 0.1f;
+    private bool canbeInjured = true;
+
+
+
+
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -48,7 +60,6 @@ public class stonegaylom_controler : MonoBehaviour
 
     void Update()
     {
-
         timer += Time.deltaTime;
         if (HP <= 0)
         {
@@ -144,6 +155,12 @@ public class stonegaylom_controler : MonoBehaviour
 
         // 移动NPC角色
         controller.Move(moveDirection * Time.deltaTime);
+
+
+        if(timer >= HurtCD)
+        {
+            canbeInjured = true;
+        }
     }
 
     private void Die()
@@ -164,6 +181,32 @@ public class stonegaylom_controler : MonoBehaviour
             Destroy(this.gameObject, 15.0f);
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent(out ItemObject io) && canbeInjured)
+        {
+            if(other.gameObject.layer == 6 )
+            {
+                canbeInjured = false;
+                
+                if(io.item.type == ItemType.Tool)
+                {
+                    ToolObject weapon = (ToolObject)io.item;
+                    HP -= weapon.ToolATK;
+                }
+                else
+                {
+                    HP -= 1;
+                }
+            }
+        }
+    }
+
+
+
+
+
     IEnumerator dead()
     {
         yield return new WaitForSeconds(8f);

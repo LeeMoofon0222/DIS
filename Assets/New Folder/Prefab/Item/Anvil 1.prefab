@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2826064466849842700}
   - component: {fileID: 5305905130938307927}
   - component: {fileID: 2826064466792943117}
+  - component: {fileID: 4399523781135927307}
   m_Layer: 0
   m_Name: Anvil 1
   m_TagString: Untagged
@@ -133,14 +134,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 6c5907ceabacfeb4087bff4d43757654, type: 2}
+  m_name: 
+  m_sprite: {fileID: 0}
   objectHealth: 30
   CanScaleChange: 0
   PickObj: 0
   partical: {fileID: 3754859329886564544, guid: 77a9ebbc0db511b4db634833586a292c,
     type: 3}
+  attacking: 0
   canPick: 1
-  PlayerCanThrow: 1
-  rb: {fileID: 2826064466849842699}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -157,9 +159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectBox: {fileID: 5327179533521798590}
+  uishow: {fileID: 0}
   itemIDs: []
   recipeChoose: []
   recipes: []
+  itemMask:
+    serializedVersion: 2
+    m_Bits: 0
+  uiContrainer: {fileID: 0}
 --- !u!114 &2826064466792943117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +195,21 @@ MonoBehaviour:
   CraftObject: {fileID: 5305905131145294310}
   CurrentButton: 0
   onTrigger: 0
+  ScrollView: {fileID: 0}
   num: 
+--- !u!65 &4399523781135927307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168664389738489042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.871659, y: 2.5124, z: 1}
+  m_Center: {x: -0.035030544, y: 0.7561995, z: 0}
 --- !u!1 &5305905130141484360
 GameObject:
   m_ObjectHideFlags: 0
