@@ -178,6 +178,7 @@ MonoBehaviour:
   itemCheck: 000000
   recipe: {fileID: 0}
   craftButton: {fileID: 0}
+  PIC: {fileID: 0}
 --- !u!114 &760581104744218206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   pm: {fileID: 4530688909699517829}
   pc: {fileID: 7119964377988974372}
   camAnim: {fileID: 760581104228466621}
+  canRotate: 0
 --- !u!95 &760581104228466621
 Animator:
   serializedVersion: 5
@@ -1461,12 +1463,15 @@ MonoBehaviour:
   isMoving: 0
   canMove: 1
   hopeParticle: {fileID: 8626421390613284973}
+  speedMultiplier: 0
   isDead: 0
   respawnHight: -100
   respawnPoint: {x: -2.42, y: 6.33, z: -2.28}
   barcontroller: {fileID: 802452134297079236}
   sprintingHeadbob: 1.6
   sprintSpeed_Rate: 1.4
+  walk: {fileID: 0}
+  run: {fileID: 0}
   cam: {fileID: 8601590636581968439}
 --- !u!114 &7119964377988974372
 MonoBehaviour:
@@ -1480,6 +1485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03190bfcfda2083489ec38cc1cc11c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AbsoluteControlRotate: 0
+  cameraControl: {fileID: 0}
   handHolderController: {fileID: 7119964378002416852}
   canDig: 0
   attacking: 0
@@ -1506,13 +1513,17 @@ MonoBehaviour:
     itemdoneness: 0
     itemhealth: 0
   optionMenu: {fileID: 0}
-  OptionPage: 0
+  optionPage: 0
   bbq: 0
   bbqLayer:
     serializedVersion: 2
     m_Bits: 2048
   BBQsmoke: {fileID: 0}
   cursor: {fileID: 0}
+  storages: {fileID: 0}
+  pickClip: {fileID: 0}
+  playerSource: {fileID: 0}
+  swing: {fileID: 0}
   lefthandHolder: {fileID: 8498478575564516959}
   selectImage: {fileID: 0}
 --- !u!114 &7119964377988974376
@@ -1532,6 +1543,8 @@ MonoBehaviour:
   pc: {fileID: 7119964377988974372}
   cameraLook: {fileID: 5400676078235425930}
   ItemContent: {fileID: 0}
+  showWieght: {fileID: 0}
+  tooHeavy: 0
   ItemwheelController: {fileID: 0}
   objToShow: []
   inventoryOBJ: {fileID: 0}
@@ -1540,7 +1553,22 @@ MonoBehaviour:
   craft: {fileID: 0}
   equip: {fileID: 0}
   informationbar: {fileID: 0}
+  uiSources: {fileID: 0}
+  selectClip: {fileID: 0}
+  isStorage: 0
+  addItemPanel: {fileID: 0}
+  storagePanel: {fileID: 0}
+  storagemode: 0
+  storageRecord: {fileID: 0}
+  storageNum: 0
+  StorageItemContent: {fileID: 0}
+  storageslotObject: {fileID: 0}
+  s_objToShow: []
+  panelCanOpen: 0
   pre_ItemSlot: {fileID: 0}
+  pre_amount: 0
+  pre_itemhealth: 0
+  pre_itemdoneness: 0
   itemsOnHand:
   - {fileID: 0}
   - {fileID: 0}
@@ -1558,6 +1586,7 @@ MonoBehaviour:
     itemhealth: 0
   - itemdoneness: 0
     itemhealth: 0
+  slotproperty: []
   mainHandHolder: {fileID: 3692620361118617661}
   slotIcon:
   - {fileID: 0}
@@ -1568,6 +1597,7 @@ MonoBehaviour:
   none: {fileID: 21300000, guid: 82ce9c06e38999942b4cda2d62ba359d, type: 3}
   i_pnum: 0000000000000000000000000000000000000000
   preset_pnum: -1
+  pnum_extra: 0
   informationManger: {fileID: 0}
 --- !u!114 &802452134297079235
 MonoBehaviour:
@@ -1586,6 +1616,9 @@ MonoBehaviour:
   currenthunger: 0
   currentenergy: 0
   bar: {fileID: 802452134297079236}
+  hungerTime: 0
+  hungrySpeed: 0
+  isHunger: 0
 --- !u!114 &802452134297079236
 MonoBehaviour:
   m_ObjectHideFlags: 0

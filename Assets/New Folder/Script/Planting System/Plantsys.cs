@@ -24,9 +24,10 @@ public class Plantsys : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         watering = player.GetComponent<PlayerControl>().watering;
-        print(watering);
+        //print(watering);
         if(doplant && watering == 1)
         {
+            gameObject.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
             Destroy(plant, period);
             Invoke("PlantPlant", period);
             player.GetComponent<PlayerControl>().watering = 0;
@@ -40,29 +41,6 @@ public class Plantsys : MonoBehaviour
         {
             hasplant = false;
         }
-        /*
-        if (plant == null)
-        {
-            p += 10;
-        }
-        for(int i = 0; i < Plantlist.Count; i++)
-        {
-            print(Plantlist[i]);
-        }
-        if (plant == null && p==1)
-        {
-            print(p);
-            plant = Instantiate(Plantlist[1], plantpoint.transform.position, plantpoint.transform.rotation);
-            plant.GetComponent<Rigidbody>().isKinematic = true;
-            Destroy(plant, period);
-            p++;
-        }
-        if (plant == null && p == 2)
-        {
-            plant = Instantiate(Plantlist[2], plantpoint.transform.position, plantpoint.transform.rotation);
-            plant.GetComponent<Rigidbody>().isKinematic = true;
-            p = 0;
-        }*/
     }
     public void DoPlanting(PlantObject thisseed)
     {
@@ -83,7 +61,7 @@ public class Plantsys : MonoBehaviour
             plantpoint = gameObject.transform.GetChild(1).gameObject;
         }
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantpoint.transform.rotation);
-        gameObject.GetComponent<ParticleSystem>().Play();
+        gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
         planthealth = plant.AddComponent<ItemObject>().objectHealth;
         print(planthealth);
         plant.GetComponent<Rigidbody>().isKinematic = true;
@@ -95,7 +73,7 @@ public class Plantsys : MonoBehaviour
     public void PlantPlant()
     {
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantlist[p].transform.rotation);
-        gameObject.GetComponent<ParticleSystem>().Play();
+        gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
         if (p < step-1)
         {
             doplant = true;
@@ -103,23 +81,3 @@ public class Plantsys : MonoBehaviour
         p += 1;
     }
 }
-/*private IEnumerator planting(Transform PlantPoint, int Plen, int period, List<GameObject> types, GameObject plant, int p)
-    {
-        GameObject j = Instantiate(plant, PlantPoint.position, PlantPoint.rotation);
-        j.SetActive(true);
-        //print(j.name);
-        p += 1;
-        if (p == Plen)
-        {
-            yield return 0;
-        }
-        else
-        {
-            print(period);
-            yield return new WaitForSeconds(period);  // µ¥«Ý()¬í
-            print(period);
-            Destroy(j);
-            plant = types[p];
-            yield return planting(PlantPoint, Plen, period, types, plant, p);
-        }
-    }*/

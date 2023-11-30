@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2622205200866454038
+--- !u!1 &2932600059415940491
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3398002272249311404}
-  - component: {fileID: 1767656829672554249}
-  - component: {fileID: 4567509619114249155}
-  - component: {fileID: 2928070302807873891}
-  - component: {fileID: 2928070302807873889}
-  - component: {fileID: 2928070302807873894}
-  - component: {fileID: 2928070302807873888}
-  m_Layer: 0
-  m_Name: childPotato
-  m_TagString: Untagged
+  - component: {fileID: 2592209283449263921}
+  - component: {fileID: 1465564400604256404}
+  - component: {fileID: 3725123711215955038}
+  - component: {fileID: 3897760796438806293}
+  - component: {fileID: 7552332562636806887}
+  - component: {fileID: -5095929251210861711}
+  - component: {fileID: -760838485535151336}
+  m_Layer: 6
+  m_Name: env_watering_can
+  m_TagString: watering-can
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3398002272249311404
+--- !u!4 &2592209283449263921
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 2932600059415940491}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0.7, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1767656829672554249
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &1465564400604256404
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
-  m_Mesh: {fileID: -6734236012490125393, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
---- !u!23 &4567509619114249155
+  m_GameObject: {fileID: 2932600059415940491}
+  m_Mesh: {fileID: -5495902117074765545, guid: a3fcb085e5cb47d4eb36eb6494106810, type: 3}
+--- !u!23 &3725123711215955038
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
+  m_GameObject: {fileID: 2932600059415940491}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,8 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
-  - {fileID: -3846018093981099296, guid: 340c2f8c397b80e4797be6cec3f1a957, type: 3}
+  - {fileID: 2100000, guid: 74a03a6488aab254695c12aaf81d3865, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,38 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2928070302807873891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c104f02a72016d744b21e22132ac84c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
-  m_name: Child_Potato
-  m_sprite: {fileID: 0}
-  objectHealth: 1
-  CanScaleChange: 0
-  PickObj: 1
-  partical: {fileID: 2961014148580533450, guid: a8ac56953c26d3848849eb587cc4082d,
-    type: 3}
-  canPick: 1
-  rb: {fileID: 2928070302807873889}
-  SceneSpawned: 1
-  record_health: 1
-  record_doneness: 0
---- !u!54 &2928070302807873889
+--- !u!54 &3897760796438806293
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
+  m_GameObject: {fileID: 2932600059415940491}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -129,32 +103,57 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2928070302807873894
+--- !u!65 &7552332562636806887
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
+  m_GameObject: {fileID: 2932600059415940491}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.43053022, y: 0.6049746, z: 0.65576094}
-  m_Center: {x: -0.008634046, y: -0.04532613, z: -0.07903934}
---- !u!114 &2928070302807873888
+  m_Size: {x: 2.655744, y: 2.1468763, z: 1.2079318}
+  m_Center: {x: -0.6800201, y: -1.0529916, z: -0.000000059604645}
+--- !u!114 &-5095929251210861711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2622205200866454038}
+  m_GameObject: {fileID: 2932600059415940491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c104f02a72016d744b21e22132ac84c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 22862b68a9591084ca3502965203aaaa, type: 2}
+  m_name: watering-can
+  m_sprite: {fileID: 21300000, guid: 0c6271a290ef75b4c97d58746c86c5b8, type: 3}
+  objectHealth: 1
+  CanScaleChange: 0
+  PickObj: 1
+  partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
+    type: 3}
+  canPick: 1
+  rb: {fileID: 3897760796438806293}
+  SceneSpawned: 1
+  record_health: 1
+  record_doneness: 0
+--- !u!114 &-760838485535151336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932600059415940491}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 11400000, guid: 6d97a5b5b1341b740bfd1e19f5bdd224, type: 2}
+  baseItem: {fileID: 0}
   lootdrop: []
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}

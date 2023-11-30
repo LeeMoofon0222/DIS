@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
+  m_Name: Watering-Can
+  m_EditorClassIdentifier: 
+  ID: 696969699
+  itemHealth: 1
+  stackable: 0
+  itemObject: {fileID: 2932600059415940491, guid: 7602f46bfed9f7e4bb87fbfbd03e251b,
+    type: 3}
+  spawntoscene: {fileID: 2932600059415940491, guid: 7602f46bfed9f7e4bb87fbfbd03e251b,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: Watering-Can
+  itemWeights: 1
+  itemIcon: {fileID: 21300030, guid: d40c191aa46654db7a426d6a1fa3aa30, type: 3}
+  hitsound: {fileID: 0}
+  type: 1
+  gainingType: 0
+  desciption: 
+  canThrow: 0
+  placeAble: 0
+  Preplace: {fileID: 0}
+  ToolATK: 0
+  ToolDEF: 0
+  ratio: 0
