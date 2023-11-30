@@ -1,0 +1,4 @@
+repository "Dreaming_in_the_sky@Sunrise_Studio@cloud"
+  path "/"
+    br "/main"
+    co "/main"
