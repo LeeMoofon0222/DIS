@@ -94,11 +94,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7312216073829485}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &7732852637501783372
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 7732852637501783372}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0

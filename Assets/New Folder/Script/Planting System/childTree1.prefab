@@ -102,15 +102,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: a93db241807749a478dae87aa722442a, type: 2}
-  m_name: 
-  m_sprite: {fileID: 0}
+  m_name: "\u5C0F\u6A39\u82D7"
+  m_sprite: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
   objectHealth: 5
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
     type: 3}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 5499087609891819294}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0

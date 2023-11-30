@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody))]
 
 public class ItemObject : MonoBehaviour
 {
@@ -24,17 +25,21 @@ public class ItemObject : MonoBehaviour
     public GameObject partical;
     //public Animator anim;
 
+    [Header("For Attack")]
+    public bool attacking;
+
     [Header("Can PickUP")]
     public bool canPick;        //隨時可以被撿起
 
     [Header("Can Throw")]
-    //public bool PlayerCanThrow;
-    public Rigidbody rb;
+    Rigidbody rb;
 
     public bool SceneSpawned;
 
-    [Header("item properties")]
+    //[Header("item properties")]
+    [HideInInspector]
     public int record_health;
+    [HideInInspector]
     public int record_doneness;
 
 

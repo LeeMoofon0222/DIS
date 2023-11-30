@@ -715,6 +715,11 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(cam.transform.forward, cam.transform.position + cam.transform.forward * 6f);
+    }
+
     #region PlayAnimator
     IEnumerator _Digging()
     {
