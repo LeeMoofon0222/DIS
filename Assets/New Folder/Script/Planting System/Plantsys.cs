@@ -61,6 +61,7 @@ public class Plantsys : MonoBehaviour
             plantpoint = gameObject.transform.GetChild(1).gameObject;
         }
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantpoint.transform.rotation);
+        plant.layer = 0;
         gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
         planthealth = plant.AddComponent<ItemObject>().objectHealth;
         print(planthealth);

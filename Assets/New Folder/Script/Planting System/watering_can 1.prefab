@@ -99,7 +99,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -112,7 +112,7 @@ BoxCollider:
   m_GameObject: {fileID: 2932600059415940491}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.655744, y: 2.1468763, z: 1.2079318}
   m_Center: {x: -0.6800201, y: -1.0529916, z: -0.000000059604645}
@@ -136,8 +136,8 @@ MonoBehaviour:
   PickObj: 1
   partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
     type: 3}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 3897760796438806293}
   SceneSpawned: 1
   record_health: 1
   record_doneness: 0

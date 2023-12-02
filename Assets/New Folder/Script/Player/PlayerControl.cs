@@ -351,6 +351,7 @@ public class PlayerControl : MonoBehaviour
                 plantpoint = raycastHit.transform.gameObject.transform.GetChild(0).gameObject;
                 if (onHandItem.CompareTag("watering-can") && hasplant)
                 {
+                    thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
                     watering = 1;
                 }
                 else

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7552332562636806887}
   - component: {fileID: -5095929251210861711}
   - component: {fileID: -760838485535151336}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: env_watering_can
   m_TagString: watering-can
   m_Icon: {fileID: 0}
@@ -136,8 +136,8 @@ MonoBehaviour:
   PickObj: 1
   partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
     type: 3}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 3897760796438806293}
   SceneSpawned: 1
   record_health: 1
   record_doneness: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: 22862b68a9591084ca3502965203aaaa, type: 2}
   lootdrop: []
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
