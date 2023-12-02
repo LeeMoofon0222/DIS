@@ -27,7 +27,7 @@ public class Plantsys : MonoBehaviour
         //print(watering);
         if(doplant && watering == 1)
         {
-            gameObject.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
+            //gameObject.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
             Destroy(plant, period);
             Invoke("PlantPlant", period);
             player.GetComponent<PlayerControl>().watering = 0;
