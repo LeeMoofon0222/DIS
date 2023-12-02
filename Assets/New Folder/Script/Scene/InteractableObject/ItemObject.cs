@@ -48,15 +48,13 @@ public class ItemObject : MonoBehaviour
 
     Animator anim;
 
-    private void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
         resoursegain = GetComponent<ResourseGain>();
         anim = GetComponent<Animator>();
-    }
 
-    void Awake()
-    {
+
         maxOH = objectHealth;
         if(item != null)
         {

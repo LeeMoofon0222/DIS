@@ -23,11 +23,14 @@ public class stonegaylom_controler : MonoBehaviour
     Quaternion setRotate;
 
     public PlayerHealth playerhealth;
+
+    [Header("Guard")]
+    public bool enable_guard;
     public Transform guard;
+    [SerializeField]
+    private float guardDistence = 30f;
 
     bool goBack;
-
-    
 
 
     [Header("Attack")]
@@ -56,6 +59,8 @@ public class stonegaylom_controler : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         canMove = true;
 
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     void Update()
@@ -70,35 +75,37 @@ public class stonegaylom_controler : MonoBehaviour
 
             Die();
         }
-        if (target != null && Vector3.Distance(target.position, this.transform.position) <= detectDistance && !isDead && Vector3.Distance(guard.position, this.transform.position) <= 30 && !goBack)
+
+        if (target != null && Vector3.Distance(target.position, this.transform.position) <= detectDistance && !isDead &&
+            ((Vector3.Distance(guard.position, this.transform.position) <= 30 && !goBack) || !enable_guard))
         {
 
-            //Debug.Log("gay");
+            Debug.Log("gay");
             // 计算NPC角色向目标移动的方向和距离
             Vector3 direction = target.position - transform.position;
             float distance = direction.magnitude;
             direction.y = 0;
 
             // 如果距离大于停止距离，移动NPC角色
-            if (distance > stoppingDistance )
+            if (distance > stoppingDistance)
             {
                 anim.SetBool("isChaserDetected", true);
                 anim.SetBool("isIdle", false);
                 anim.SetBool("isAttack", false);
                 // 旋转NPC角色，面向目标
-                if(!is_attacking)transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 5.0f);
+                if (!is_attacking) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 5.0f);
 
                 // 移动NPC角色
-                if(canMove) moveDirection = direction.normalized * speed;
+                if (canMove) moveDirection = direction.normalized * speed;
 
 
             }
-            else if(!isDead )
+            else if (!isDead)
             {
                 // 距离小于停止距离时，停止移动
                 moveDirection = Vector3.zero;
                 //ATTACK
-                
+
                 if (timer >= attackCD && !is_attacking)
                 {
                     anim.SetBool("isChaserDetected", false);
@@ -107,22 +114,22 @@ public class stonegaylom_controler : MonoBehaviour
 
                     StartCoroutine(attack());
                     timer = 0;
-                    
+
                     area.SetActive(true);
 
                 }
-                
+
             }
         }
-        
-        if(!isDead && Vector3.Distance(target.position, this.transform.position) >= detectDistance)
+
+        if (!isDead && Vector3.Distance(target.position, this.transform.position) >= detectDistance)
         {
             anim.SetBool("isAttack", false);
             anim.SetBool("isChaserDetected", false);
             anim.SetBool("isIdle", true);
         }
 
-        if(!isDead && Vector3.Distance(guard.position, this.transform.position) >= 30)
+        if (!isDead && enable_guard && Vector3.Distance(guard.position, this.transform.position) >= guardDistence)
         {
             goBack = true;
         }
@@ -131,7 +138,7 @@ public class stonegaylom_controler : MonoBehaviour
         {
             anim.SetBool("isChaserDetected", true);
             anim.SetBool("isIdle", false);
-            
+
             Vector3 direction = guard.position - transform.position;
             float distance = direction.magnitude;
             direction.y = 0;
@@ -140,7 +147,7 @@ public class stonegaylom_controler : MonoBehaviour
             // 移动NPC角色
             moveDirection = direction.normalized * speed;
         }
-        if(Vector3.Distance(guard.position, this.transform.position) <= 10)
+        if (Vector3.Distance(guard.position, this.transform.position) <= 10)
         {
             goBack = false;
         }
@@ -157,7 +164,7 @@ public class stonegaylom_controler : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
 
-        if(timer >= HurtCD)
+        if (timer >= HurtCD)
         {
             canbeInjured = true;
         }
