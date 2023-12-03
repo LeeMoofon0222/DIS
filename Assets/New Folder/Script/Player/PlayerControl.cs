@@ -372,6 +372,7 @@ public class PlayerControl : MonoBehaviour
                             }
                         }
                     }
+                    PIC.UpdateDisplay();
                     thisfield.GetComponent<Plantsys>().DoPlanting(thisseed);
                     //yield return planting(PlantPoint, Plen, period, types, plant, p);
                     //planting(pp.transform, Plen, thisseed.period, Plantlist, onHandItem, p)

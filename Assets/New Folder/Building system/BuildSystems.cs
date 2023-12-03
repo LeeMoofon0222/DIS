@@ -4,15 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using Unity.VisualScripting;
-//using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class BuildSystems : MonoBehaviour
 {
     [SerializeField]
     LayerMask mask;
-
-
 
     [SerializeField]
     Transform cam;
@@ -83,7 +80,6 @@ public class BuildSystems : MonoBehaviour
             t = -t;
         }
         T = Mathf.RoundToInt(t);
-        //print(T);
         if (Input.GetKeyUp(KeyCode.B)) 
         {
             nowItem = 0;
@@ -113,9 +109,7 @@ public class BuildSystems : MonoBehaviour
         {
             setItem = -setItem;
         }
-        //print(setItem);
-        //print(setItem);
-        //if(Parts_pb.Count = 1) { }
+
         if (mw != 0)
         {
             GameObject _gameObject = GameObject.FindGameObjectWithTag("prebuildParts");
@@ -128,6 +122,8 @@ public class BuildSystems : MonoBehaviour
         {
             int foundation = LayerMask.NameToLayer("foundation");
             int canBuildOn = LayerMask.NameToLayer("canBuildOn");
+
+            //©î°£
             if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer== canBuildOn || buildhit.transform.gameObject.layer == foundation))
             {
                 if (buildhit.transform.gameObject.layer == foundation)
