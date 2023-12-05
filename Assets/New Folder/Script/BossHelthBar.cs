@@ -10,7 +10,7 @@ public class BossHelthBar : MonoBehaviour
     GameObject Player;
     public Image BossHealth;
     public GameObject BossBar;
-    public stonegaylom_controler NPCController;
+    public NpcController NPCController;
     public LayerMask NPCMask;
     public Collider[] test;
     // Start is called before the first frame update
@@ -38,7 +38,7 @@ public class BossHelthBar : MonoBehaviour
         {
             Debug.Log("have npc in range");
             NearBoss = playerColliders[0].gameObject;
-            NPCController = NearBoss.GetComponent<stonegaylom_controler>();
+            NPCController = NearBoss.GetComponent<NpcController>();
             if (Vector3.Distance(Player.transform.position, NearBoss.transform.position) <= 20)
             {
 

@@ -38,10 +38,7 @@ public class ItemwheelButtonCOntroller : MonoBehaviour
         {
             selectedItem.GetComponent<Image>().sprite = ButtonImage.GetComponent<Image>().sprite;
 
-
-
         }
-
     }
 
     public void Selected()
@@ -79,10 +76,15 @@ public class ItemwheelButtonCOntroller : MonoBehaviour
     }
     public void SetOnHand()
     {
-        playerCOntrol.RepairItemOnHand();
-        
+        StartCoroutine(changehand());
 
     }
 
-    
+    IEnumerator changehand()
+    {
+        playerCOntrol.handHolderController.SetTrigger("change");
+        yield return new WaitForSeconds(0.6f);
+        playerCOntrol.RepairItemOnHand();
+    }
+
 }
