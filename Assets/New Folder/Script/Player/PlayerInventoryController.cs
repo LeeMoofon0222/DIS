@@ -171,7 +171,7 @@ public class PlayerInventoryController : MonoBehaviour
             storagePanel.SetActive(false);
         }
 
-        tooHeavy = inventory.weight >= 300?true:false;
+        tooHeavy = inventory.weight >= 1000?true:false;
 
 
     }

@@ -67,6 +67,8 @@ public class BuildSystems : MonoBehaviour
     }
     void Update()
     {
+        stone_amount = ir.ItemCount(10001, stone_amount);
+        wood_amount = ir.ItemCount(10002, wood_amount);
         bool checkhit = Physics.Raycast(cam.position, cam.forward, out RaycastHit buildhit, 7f, buildMask);
         float mw = Input.GetAxis("Mouse ScrollWheel");
         t += mw * 10f; 
@@ -141,9 +143,10 @@ public class BuildSystems : MonoBehaviour
                         Destroy(buildhit.transform.gameObject);
                         ir.AddItem(ir.IDtoItem(10002), the_wood_Cost[i], 0, 0);
                         ir.AddItem(ir.IDtoItem(10001), the_stone_Cost[i], 0, 0);
-
                     }
                 }
+                stone_amount = ir.ItemCount(10001, stone_amount);
+                wood_amount = ir.ItemCount(10002, wood_amount);
             }
         }
         /*
@@ -207,7 +210,7 @@ public class BuildSystems : MonoBehaviour
         }
         //Debug.Log(isSpawned);
 
-        if ( BuildFoundation)
+        if (BuildFoundation)
         {
 
             //print(T);
