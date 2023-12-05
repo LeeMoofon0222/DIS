@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - ID: 10004
-    amount: 3
-  - ID: 0
-    amount: 0
-  - ID: 0
-    amount: 0
+    amount: 1
+  - ID: 10004
+    amount: 1
+  - ID: 10004
+    amount: 1
   outputAmount: 1
   output: {fileID: 6865186955790792158, guid: 99193badeb2cd704e9789bf9407ba031, type: 3}
   Itemoutput: {fileID: 11400000, guid: 9b97847a82b13a242babab93899ad1f7, type: 2}

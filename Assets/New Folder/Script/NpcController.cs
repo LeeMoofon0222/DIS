@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stonegaylom_controler : MonoBehaviour
+public class NpcController : MonoBehaviour
 {
     public Transform target; // 追逐目标
     public float speed = 5.0f; // 移动速度
@@ -210,6 +210,12 @@ public class stonegaylom_controler : MonoBehaviour
         }
     }
 
+    public void OnHurt(int _damage)
+    {
+        HP -= _damage;
+
+
+    }
 
 
 

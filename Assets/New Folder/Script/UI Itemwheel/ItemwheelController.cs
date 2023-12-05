@@ -38,9 +38,6 @@ public class ItemwheelController : MonoBehaviour
                 itembutton[i].Settingicon();
                 //Debug.Log("test");
             }
-
-            
-
         }
 
 
@@ -54,7 +51,6 @@ public class ItemwheelController : MonoBehaviour
             cl.enabled = false;
             Cursor.lockState = CursorLockMode.Confined;
             anim.SetBool("OpenWeaponWheel", true);
-           
 
         }
         else
@@ -70,8 +66,5 @@ public class ItemwheelController : MonoBehaviour
             Cursor.visible = false;
 
         }
-
     }
-
-
 }

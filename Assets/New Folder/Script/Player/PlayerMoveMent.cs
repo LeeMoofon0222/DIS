@@ -55,6 +55,9 @@ public class PlayerMoveMent : MonoBehaviour
     public AudioSource walk;
     public AudioSource run;
 
+    [Header("Animator")]
+    public Animator holder_anim;
+
     
 
     public bool isSprinting() 
@@ -113,6 +116,7 @@ public class PlayerMoveMent : MonoBehaviour
         {
             isMoving = true;
             
+            
         }
         else
         {
@@ -120,7 +124,9 @@ public class PlayerMoveMent : MonoBehaviour
             
         }
 
-        if(bar.isHunger || pic.tooHeavy)
+        holder_anim.SetBool("ismoving", isMoving);
+
+        if (bar.isHunger || pic.tooHeavy)
         {
             speedMultiplier = 0.1f;
             jumpHeight = 0;
@@ -137,15 +143,16 @@ public class PlayerMoveMent : MonoBehaviour
         {
             speed = originalSpeed * sprintSpeed_Rate;
             sprintingHeadbob = 1.4f;
+            holder_anim.SetFloat("playspeed" ,  1.4f);
 
         }
         else
         {
             speed = originalSpeed;
             sprintingHeadbob = 1;
+            holder_anim.SetFloat("playspeed", 1f);
 
-            
-            
+
         }
             
 
