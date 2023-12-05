@@ -126,37 +126,36 @@ public class BuildSystems : MonoBehaviour
             int canBuildOn = LayerMask.NameToLayer("canBuildOn");
 
             //©î°£
-            if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer== canBuildOn || buildhit.transform.gameObject.layer == foundation))
+            if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer == canBuildOn || buildhit.transform.gameObject.layer == foundation))
             {
-                if (buildhit.transform.gameObject.layer == foundation)
+                if (buildhit.transform.gameObject.layer == foundation && buildhit.transform.gameObject.tag == "Foundation" && buildhit.transform.gameObject.name[0] != 'D')
                 {
                     ir.AddItem(ir.IDtoItem(10001), 3,0,0);
                     Destroy(buildhit.transform.gameObject);
                 }
-                for(int i = 0; i < all_build.Count; i++)
+                else
                 {
-                    string fname = buildhit.transform.gameObject.name;
-                    int a = fname.IndexOf("(");
-                    fname = fname.Substring(0, a);
-                    if (fname == all_build[i].name)
+                    for (int i = 0; i < all_build.Count; i++)
                     {
-                        Destroy(buildhit.transform.gameObject);
-                        ir.AddItem(ir.IDtoItem(10002), the_wood_Cost[i], 0, 0);
-                        ir.AddItem(ir.IDtoItem(10001), the_stone_Cost[i], 0, 0);
+                        string fname = buildhit.transform.gameObject.name;
+                        int a = fname.IndexOf("(");
+                        if (a == -1)
+                        {
+                            a = fname.Length;
+                        }
+                        fname = fname.Substring(0, a);
+                        if (fname == all_build[i].name)
+                        {
+                            Destroy(buildhit.transform.gameObject);
+                            ir.AddItem(ir.IDtoItem(10002), the_wood_Cost[i], 0, 0);
+                            ir.AddItem(ir.IDtoItem(10001), the_stone_Cost[i], 0, 0);
+                        }
                     }
                 }
                 stone_amount = ir.ItemCount(10001, stone_amount);
                 wood_amount = ir.ItemCount(10002, wood_amount);
             }
         }
-        /*
-        if (Parts_pb.Count == 0)
-        {
-            BuildFoundation = true;
-            Destroy(GameObject.FindGameObjectWithTag("prebuildParts"));
-            Destroy(GameObject.FindGameObjectWithTag("prebuildFoundation"));
-            partisSpawned = false;
-        }*/
         if (checkhit && !BuildFoundation)
         {
             whatcanibuild(stone_amount, wood_amount);
@@ -212,8 +211,6 @@ public class BuildSystems : MonoBehaviour
 
         if (BuildFoundation)
         {
-
-            //print(T);
             GameObject preBuildParts = GameObject.FindGameObjectWithTag("prebuildParts");
             Destroy(preBuildParts);
 
@@ -241,15 +238,18 @@ public class BuildSystems : MonoBehaviour
 
         
 
-        if (!BuildFoundation)
+        if (!BuildFoundation && GameObject.FindGameObjectWithTag("prebuildParts")!=null)
         {
             GameObject Tg = GameObject.FindGameObjectWithTag("prebuildParts");
             string Tname = Tg.name;
             int b = Tname.IndexOf("(");
+            if (b == -1)
+            {
+                b = Tname.Length;
+            }
             Tname = Tname.Substring(0, b);
             for (int i = 0; i < Parts_pb.Count; i++)
             {
-
                 if (Tname == Parts_pb[i].name)
                 {
                     break;
@@ -273,7 +273,7 @@ public class BuildSystems : MonoBehaviour
                 Mathf.RoundToInt(hit.point.y) != 0 ? Mathf.RoundToInt(hit.point.y / 1f) * 1f : 0f,
                 Mathf.RoundToInt(hit.point.z) != 0 ? Mathf.RoundToInt(hit.point.z / 12f) * 12f : 12f);
             Vector3 world_pos = preFoundation.transform.position;
-            bool testBox = Physics.CheckBox(new Vector3(preFoundation.transform.position.x, preFoundation.transform.position.y + 6.5f, preFoundation.transform.position.z),
+            bool testBox = Physics.CheckBox(new Vector3(preFoundation.transform.position.x, preFoundation.transform.position.y + 6f, preFoundation.transform.position.z),
               new Vector3(preFoundation.transform.localScale.x / 2 - 0.01f, 6.5f, preFoundation.transform.localScale.z / 2 - 0.01f), Quaternion.identity, mask);
             //bool testBox = Physics.CheckBox(new Vector3(preFoundation.transform.position.x + 6.5f, preFoundation.transform.position.y + 6.5f, preFoundation.transform.position.z + 6.5f),
                 //new Vector3(preFoundation.transform.localScale.x / 2 - 0.01f, 6f, preFoundation.transform.localScale.z / 2 - 0.01f), Quaternion.identity, mask);
@@ -346,6 +346,10 @@ public class BuildSystems : MonoBehaviour
             {
                 string bname = buildObject.name;
                 int a = bname.IndexOf("(");
+                if (a == -1)
+                {
+                    a = bname.Length;
+                }
                 bname = bname.Substring(0, a);
                 if (bname == all_build[i].name)
                 {
@@ -362,7 +366,7 @@ public class BuildSystems : MonoBehaviour
 
     public Vector3 cal_spawnPos(RaycastHit buildhit)
     {   
-        if(buildhit.transform.tag == "Foundation")
+        if(buildhit.transform.tag == "Foundation" || buildhit.transform.tag == "canBuildOn")
         {
             Vector3 min_foundationRange = new Vector3(buildhit.transform.position.x - 6f,
                                           buildhit.transform.position.y,
@@ -392,6 +396,7 @@ public class BuildSystems : MonoBehaviour
     {
         isSpawned = false;
     }
+
     private void OnDisable()
     {
         BuildFoundation = true;
