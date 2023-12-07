@@ -138,8 +138,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 4670208629798091884}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0

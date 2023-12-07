@@ -57,6 +57,7 @@ public class PlayerControl : MonoBehaviour
     public int setItem;
 
     bool isDigging;
+    bool isAttacking;
     bool uiSwitching;
 
     GameObject preplaceObj;
@@ -394,7 +395,7 @@ public class PlayerControl : MonoBehaviour
         #endregion
 
         #region ATK/Mineing
-        if (Input.GetMouseButton(0) && timer >= digCD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected && !isDigging)
+        if (Input.GetMouseButton(0) && timer >= CD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected && !isDigging && !isAttacking)
         {
             StopAllCoroutines();
             //swing.Play();
@@ -403,23 +404,30 @@ public class PlayerControl : MonoBehaviour
             
             timer = 0;
 
-            StartCoroutine(Attack());
+            //StartCoroutine(Attack());
 
-            if (Physics.Raycast(ray, out hit, maxRange))
+            
+            if(itemHolding.item.gainingType == forRatioType.PickAxe)
             {
-                if (hit.transform.TryGetComponent(out ItemObject IO))
-                {
-                    StartCoroutine(_Digging());
-                }
-                else 
-                {
-                    //StartCoroutine(Attack());
-                    
-                }
+                CD = digCD;
+                StartCoroutine(Digging());
+            }
+            else if (itemHolding.item.gainingType == forRatioType.Axe)
+            {
+                CD = 1.01f;
+                float[] checkpoints = { 0.18f, 0.5f, 1f };
+                StartCoroutine(Attack("AxeAttack", "Attack4", checkpoints));
+            }
+            else if (itemHolding.item.gainingType == forRatioType.Sword)
+            {
+                CD = 1.81f;
+                StartCoroutine(Attack());
             }
             else
             {
-                
+                CD = 0.51f;
+                float[] checkpoints = {0f ,0.1f, 0.5f};
+                StartCoroutine(Attack("ItemAttack", "Attack3", checkpoints));
             }
 
         }
@@ -598,6 +606,80 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    public void DetectGameObjects()
+    {
+        if (Physics.Raycast(ray, out hit, maxRange))
+        {
+            if (hit.transform.TryGetComponent(out ItemObject IO))
+            {
+                var gain = IO.transform.GetComponent<ResourseGain>();
+                var hitSound = IO.transform.GetComponent<AudioSource>();
+                if (!IO.canPick)
+                {
+                    if (IO.partical != null)
+                    {
+                        GameObject particalPrefab = Instantiate(IO.partical, hit.point + hit.normal * 0.001f, Quaternion.identity);
+                        particalPrefab.transform.LookAt(hit.point + hit.normal);
+                    }
+
+                    if (IO.item != null)     //判斷有沒有帶Item (他是有意義的)
+                    {
+                        if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.gainingType == gain._forRatioType)
+                        {
+                            if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
+                                gain.GainMoreResources((ToolObject)onHandItem.GetComponent<ItemObject>().item);
+                            /*else
+                            {
+                                if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
+                            }*/
+
+                            //m_inventory.AddItem(IO.item, 1);
+                            gain.tryGetExtraResources();
+                            //Debug.Log("detected");
+                        }
+                        else
+                        {
+                            if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
+                        }
+                    }
+                    IO.ObjectHealth(10);
+
+                    if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
+                    {
+                        m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     
+                        PIC.UpdateDisplay();
+                    }
+                }
+            }
+            else if (hit.transform.TryGetComponent(out NpcController npc))
+            {
+                if (onHandItem != null)
+                {
+                    if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
+                    {
+                        ToolObject weapon = (ToolObject)onHandItem.GetComponent<ItemObject>().item;
+                        npc.OnHurt((int)weapon.ToolATK);            //這邊待改
+                    }
+                    else
+                        npc.OnHurt(1);
+
+                }
+                else
+                {
+                    npc.OnHurt(1);
+                }
+
+
+                if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
+                {
+                    m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     
+                    PIC.UpdateDisplay();
+                }
+            }
+        }
+    }
+
+
     public void ChangeonHandItem()      //主手物體控制
     {
         if (!onhandSpawned)     //取決於我手上是不是空的(我有沒有拿東西 或是不該拿東西的時候有拿東西)
@@ -628,6 +710,8 @@ public class PlayerControl : MonoBehaviour
 
                 onhandProperty.itemhealth = PIC.itemProperties[setItem].itemhealth;
                 onhandProperty.itemdoneness = PIC.itemProperties[setItem].itemdoneness;
+
+                
             }
 
             onhandSpawned = true;
@@ -658,9 +742,28 @@ public class PlayerControl : MonoBehaviour
                     if(_food.canbeBBQ) bbqTimer = _food.stepTime[m_inventory.GetBBQStep(IO.item, PIC.i_pnum[setItem])];
 
                 }
+
+                if(IO.item.gainingType == forRatioType.PickAxe)
+                {
+                    CD = digCD;
+                }
+                else if(IO.item.gainingType == forRatioType.Axe)
+                {
+                    CD = 1.01f;
+                }
+                else if (IO.item.gainingType == forRatioType.Sword)
+                {
+                    CD = 1.81f;
+                }
+                else
+                {
+                    CD = 0.51f;
+                }
             }
 
         }
+
+
 
         if (Input.GetAxis("Mouse ScrollWheel") != 0)        //滾輪移動後重製
         {
@@ -709,7 +812,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     #region PlayAnimator
-    IEnumerator _Digging()
+    IEnumerator Digging()
     {
         isDigging = true;
         //handHolderController.Play("None");
@@ -719,55 +822,12 @@ public class PlayerControl : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
         swing.Play();
-        Debug.Log("1");
+        //Debug.Log("1");
         yield return new WaitForSeconds(0.2f);
-        if (Physics.Raycast(ray, out hit, maxRange))
-        {
-            if (hit.transform.TryGetComponent(out ItemObject IO))
-            {
-                var gain = IO.transform.GetComponent<ResourseGain>();
-                var hitSound = IO.transform.GetComponent<AudioSource>();
-                if (!IO.canPick)
-                {
-                    if (IO.partical != null)
-                    {
-                        GameObject particalPrefab = Instantiate(IO.partical, hit.point + hit.normal * 0.001f, Quaternion.identity);
-                        particalPrefab.transform.LookAt(hit.point + hit.normal);
-                    }
-
-                    if (IO.item != null)     //判斷有沒有帶Item (他是有意義的)
-                    {
-                        if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.gainingType == gain._forRatioType)
-                        {
-                            if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
-                                gain.GainMoreResources((ToolObject)onHandItem.GetComponent<ItemObject>().item);
-                            /*else
-                            {
-                                if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
-                            }*/
-                                
-                            //m_inventory.AddItem(IO.item, 1);
-                            gain.tryGetExtraResources();
-                            //Debug.Log("detected");
-                        }
-                        else
-                        {
-                            if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
-                        }
-                    }
-                    IO.ObjectHealth(10);
-
-                    if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
-                    {
-                        m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     //0323
-                        PIC.UpdateDisplay();
-                    }
-                }
-            }
-        }
-        Debug.Log("2");
+        DetectGameObjects();
+        //Debug.Log("2");
         yield return new WaitForSeconds(0.8f);
-        Debug.Log("3");
+        //Debug.Log("3");
         
         if (pm.GetComponent<PlayerMoveMent>().isMoving)
         {
@@ -840,34 +900,7 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(0.55f);
         swing.Play();
         yield return new WaitForSeconds(0.67f - 0.55f);
-        if (Physics.Raycast(ray , out hit, maxRange))
-        {
-                if(hit.transform.TryGetComponent(out NpcController npc))
-                {
-                    if (onHandItem != null)
-                    {
-                        if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
-                        {
-                            ToolObject weapon = (ToolObject)onHandItem.GetComponent<ItemObject>().item;
-                            npc.OnHurt((int)weapon.ToolATK);            //這邊待改
-                        }    
-                        else
-                            npc.OnHurt(1);
-
-                    }
-                    else
-                    {
-                        npc.OnHurt(1);
-                    }
-
-
-                    if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
-                    {
-                        m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     //0323
-                        PIC.UpdateDisplay();
-                    }
-                }
-        }
+        DetectGameObjects();
 
         yield return new WaitForSeconds(1.8f - (0.67f - 0.55f) - 0.55f);
         if (pm.GetComponent<PlayerMoveMent>().isMoving)
@@ -881,6 +914,40 @@ public class PlayerControl : MonoBehaviour
             cameraControl.camAnim.Play("Breath");
         }
         isDigging = false;
+    }
+
+
+
+    IEnumerator Attack( string holderclip, string camclip , float[] checkpoints)
+    {
+        isAttacking = true;
+
+        float len = 0;
+        foreach(var moment in checkpoints)
+        {
+            len += moment;
+        }
+
+        handHolderController.Play(holderclip);
+        cameraControl.camAnim.Play(camclip);
+
+        yield return new WaitForSeconds(checkpoints[0]);
+        swing.Play();
+        yield return new WaitForSeconds(checkpoints[1] - checkpoints[0]);
+        DetectGameObjects();
+
+        yield return new WaitForSeconds(checkpoints[2] - (checkpoints[1] - checkpoints[0]) - checkpoints[0]);
+        if (pm.GetComponent<PlayerMoveMent>().isMoving)
+        {
+            handHolderController.Play("moving");
+            cameraControl.camAnim.Play("None");
+        }
+        else
+        {
+            handHolderController.Play("Idle");
+            cameraControl.camAnim.Play("Breath");
+        }
+        isAttacking = false;
     }
 
 

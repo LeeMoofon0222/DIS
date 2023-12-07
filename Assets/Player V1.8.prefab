@@ -1472,6 +1472,7 @@ MonoBehaviour:
   sprintSpeed_Rate: 1.4
   walk: {fileID: 0}
   run: {fileID: 0}
+  holder_anim: {fileID: 0}
   cam: {fileID: 8601590636581968439}
 --- !u!114 &7119964377988974372
 MonoBehaviour:
@@ -1490,7 +1491,9 @@ MonoBehaviour:
   handHolderController: {fileID: 7119964378002416852}
   canDig: 0
   attacking: 0
+  CD: 0
   digCD: 0.7
+  attackCD: 0
   fishingPullBack: 0
   watering: 0
   pm: {fileID: 4530688909699517829}
