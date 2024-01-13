@@ -69,6 +69,8 @@ namespace Boxophobic.StyledGUI
                 mType = MessageType.Error;
             }
 
+            message = message.Replace("__", ",");
+
             if (keyword != null)
             {
                 if (material.HasProperty(keyword))
@@ -76,9 +78,9 @@ namespace Boxophobic.StyledGUI
                     if (material.GetFloat(keyword) == value)
                     {
                         GUILayout.Space(top);
-                        //EditorGUI.DrawRect(new Rect(position.x, position.y + Top, position.width, position.height), new Color(1,0,0,0.3f));
+
                         EditorGUILayout.HelpBox(message, mType);
-                        //EditorGUI.HelpBox(new Rect(position.x, position.y + top, position.width, position.height), message, mType);
+
                         GUILayout.Space(down);
 
                     }

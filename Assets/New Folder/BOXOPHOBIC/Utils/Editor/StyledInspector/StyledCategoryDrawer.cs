@@ -14,7 +14,7 @@ namespace Boxophobic.StyledGUI
         {
             a = (StyledCategory)attribute;
 
-            property.boolValue = StyledGUI.DrawInspectorCategory(a.category, property.boolValue, a.top, a.down, a.colapsable);
+            property.boolValue = StyledGUI.DrawInspectorCategory(a.category, property.boolValue, a.colapsable, a.top, a.down);
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

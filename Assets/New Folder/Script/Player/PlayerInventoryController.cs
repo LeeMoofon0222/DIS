@@ -6,6 +6,8 @@ using TMPro;
 
 
 
+
+
 public class PlayerInventoryController : MonoBehaviour
 {
     public InventoryRecord inventory;
@@ -38,6 +40,7 @@ public class PlayerInventoryController : MonoBehaviour
     public bool isStorage;
     public GameObject addItemPanel;
     public GameObject storagePanel;
+    public GameObject storageTag;
     //public GameObject s_CanclePanel;
     public int storagemode;     //0 upload 1 download to/form storage 
     public StorageRecord storageRecord;
@@ -48,6 +51,18 @@ public class PlayerInventoryController : MonoBehaviour
     bool stopupload;
     int storagepos;
     public bool panelCanOpen;
+
+    [Header("CookingSystem")]
+    public bool isCooking;
+    public GameObject cookingPanel;
+    public GameObject cookingTag;
+    [HideInInspector] 
+    public CookingSystem cookingSystem;
+    public Image bowlSlot;
+    
+
+
+
 
     [Header("Main Hand Item")]
     public Item pre_ItemSlot;
@@ -71,6 +86,11 @@ public class PlayerInventoryController : MonoBehaviour
     public InformationManger informationManger;
     //public GameObject Informationpage;
 
+    [Header("UI Slots")]
+    public GameObject[] slots;
+    [HideInInspector]
+    public UIItemManager slotsys_slotproper;
+
    
     
 
@@ -89,7 +109,7 @@ public class PlayerInventoryController : MonoBehaviour
         informationbar.SetActive(false);
         equip.SetActive(true);
         storagePanel.SetActive(false);
-
+        cookingPanel.SetActive(false);
 
         panelCanOpen = false;
     }
@@ -99,6 +119,7 @@ public class PlayerInventoryController : MonoBehaviour
         informationbar.SetActive(false);
         equip.SetActive(false);
         storagePanel.SetActive(false);
+        cookingPanel.SetActive(false);
 
         panelCanOpen = false;
 
@@ -110,6 +131,7 @@ public class PlayerInventoryController : MonoBehaviour
         craft.SetActive(false);
         storagePanel.SetActive(false);
         informationbar.SetActive(true);
+        cookingPanel.SetActive(false);
 
         panelCanOpen = false;
     }
@@ -118,10 +140,26 @@ public class PlayerInventoryController : MonoBehaviour
     {
         //storagePanel.SetActive(true);
         panelCanOpen = true;
+
         craft.SetActive(false);
         informationbar.SetActive(false);
         equip.SetActive(false);
+        cookingPanel.SetActive(false);
     }
+
+
+    public void CookingOpen()
+    {
+        panelCanOpen= true;
+
+        equip.SetActive(false);
+        craft.SetActive(false);
+        storagePanel.SetActive(false);
+        informationbar.SetActive(false);
+
+        cookingPanel.SetActive(true);
+    }
+
     void Update()
     {
         //UpdateDisplay();        //背包物品狀態隨時更新
@@ -137,10 +175,30 @@ public class PlayerInventoryController : MonoBehaviour
 
             inventoryOpen = !inventoryOpen;
             informationManger.CloseAll();
-            if(isStorage) UpdateStorage();
+            if (isStorage)
+            {
+                UpdateStorage();
+                storageTag.SetActive(true);
+            }
+            else
+            {
+                storageTag.SetActive(false);
+            }
+
+            if (isCooking)
+            { 
+                cookingTag.SetActive(true);
+            }
+            else
+            {
+                cookingTag.SetActive(false);
+            }
+
 
             UpdateDisplay();
         }
+
+        
         
 
         if (inventoryOpen && !ItemwheelController.weaponWheelSelected)
@@ -154,7 +212,8 @@ public class PlayerInventoryController : MonoBehaviour
 
             if(isStorage && panelCanOpen)
                 storagePanel.SetActive(true);
-            
+            if(isCooking && panelCanOpen)
+                cookingPanel.SetActive(true);
         }
         else
         {
@@ -169,9 +228,13 @@ public class PlayerInventoryController : MonoBehaviour
             pre_ItemSlot = null;
 
             storagePanel.SetActive(false);
+            storageTag.SetActive(false);
+
+            cookingPanel.SetActive(false);
+            cookingTag.SetActive(false);
         }
 
-        tooHeavy = inventory.weight >= 1000?true:false;
+        tooHeavy = inventory.weight >= 2000?true:false;
 
 
     }
@@ -228,7 +291,6 @@ public class PlayerInventoryController : MonoBehaviour
                 var _itemName = obj.transform.Find("ItemName").GetComponent<Text>();
                 var _itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
                 
-
                 _itemName.text = inventory.Container[i].item.itemName;
                 _itemIcon.sprite = inventory.Container[i].item.itemIcon;
 
@@ -244,8 +306,6 @@ public class PlayerInventoryController : MonoBehaviour
                 itemDisplayed.Add(inventory.Container[i], obj);
                 
             }
-
-
         }
 
         showWieght.text = inventory.weight.ToString(); 
@@ -328,6 +388,57 @@ public class PlayerInventoryController : MonoBehaviour
 
     }
 
+#region cooking
+
+    public void SetCooking(int pos)
+    {
+        if(pre_ItemSlot != null)
+        {
+            if (cookingSystem.materials[pos] == null)
+            {
+                cookingSystem.SetToCook(pre_ItemSlot, pos);
+            }
+            else
+            {
+                inventory.AddItem(cookingSystem.materials[pos] , 1 , 1,0);
+                cookingSystem.SetToCook(pre_ItemSlot, pos);
+            }
+            
+            inventory.DecreesItem(pre_ItemSlot.ID, 1);
+            UpdateDisplay();
+        }
+
+    }
+
+    public void StartCookingf()
+    {
+        StartCoroutine(cookingSystem.Cooking());
+    }
+
+    public void CookingReload()
+    {
+        cookingSystem.Reload();
+    }
+
+    public void BowlSet()
+    {
+        if (pre_ItemSlot == null) return;
+        
+        if (pre_ItemSlot.ID == 10022)        //石頭碗
+        {
+
+            bowlSlot.GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, 1);
+            
+            inventory.DecreesItem(pre_ItemSlot.ID, 1);
+            Cancle(false);
+
+        }
+        UpdateDisplay();
+        //Cancle();
+    }
+
+    #endregion
+
     void slotIconShow()
     {
         for (int i = 0; i < itemsOnHand.Count; i++)
@@ -381,6 +492,8 @@ public class PlayerInventoryController : MonoBehaviour
         storagepos = _storagepos;
 
         addItemPanel.SetActive(true);
+
+
     }
 
     public void StoreItem(int _pos)
@@ -417,18 +530,34 @@ public class PlayerInventoryController : MonoBehaviour
             inventory.AddItem(pre_ItemSlot, pre_amount, pre_itemhealth, pre_itemdoneness);
             addItemPanel.SetActive(false);
 
-            storageRecord.Storages[storageNum].Container[storagepos].item = pre_ItemSlot = null;
-            storageRecord.Storages[storageNum].Container[storagepos].amount = pre_amount = 0;
-            storageRecord.Storages[storageNum].Container[storagepos].doneness = pre_itemdoneness = 0;
-            storageRecord.Storages[storageNum].Container[storagepos].item_Health = pre_itemhealth = 0;
+            if (isStorage)
+            {
+                storageRecord.Storages[storageNum].Container[storagepos].item = pre_ItemSlot = null;
+                storageRecord.Storages[storageNum].Container[storagepos].amount = pre_amount = 0;
+                storageRecord.Storages[storageNum].Container[storagepos].doneness = pre_itemdoneness = 0;
+                storageRecord.Storages[storageNum].Container[storagepos].item_Health = pre_itemhealth = 0;
 
-            storagepos = 0;
+                storagepos = 0;
 
-            storageitemDisplayed.Clear();
-            foreach (var obj in s_objToShow) Destroy(obj);
+                storageitemDisplayed.Clear();
+                foreach (var obj in s_objToShow) Destroy(obj);
+            }
+            if (isCooking)
+            {
+                pre_ItemSlot = null;
+                pre_amount = 0;
+                pre_itemdoneness = 0;
+                pre_itemhealth = 0;
+
+                slotsys_slotproper.RepairUI();
+                slotsys_slotproper = null;
+            }
         }
         Cancle();
-        UpdateStorage();
+
+        if(isStorage) UpdateStorage();
+        
+        UpdateDisplay();
 
     }
 
@@ -442,6 +571,21 @@ public class PlayerInventoryController : MonoBehaviour
         storagepos = 0;
         addItemPanel.SetActive(false);
         UpdateStorage();
+        UpdateDisplay();
+
+    }
+
+    public void Cancle(bool b)        //取消選取
+    {
+        pre_ItemSlot = null;
+        pre_amount = 0;
+        pre_itemdoneness = 0;
+        pre_itemhealth = 0;
+
+        storagepos = 0;
+        
+        UpdateStorage();
+        UpdateDisplay();
 
     }
 
@@ -450,6 +594,32 @@ public class PlayerInventoryController : MonoBehaviour
         informationManger.SetItemType();
 
     }
+
+    public void ItemSetSlot(int pos)
+    {
+        if (pre_ItemSlot == null) return;
+
+        slots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, 1);
+
+        inventory.DecreesItem(pre_ItemSlot.ID, 1);
+        Cancle(false);
+
+        UpdateDisplay();
+
+    }
+
+    public void ItemsSetSlot(int pos)
+    {
+        if (pre_ItemSlot == null) return;
+
+        slots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, pre_amount);
+
+        inventory.DecreesItem(pre_ItemSlot.ID, pre_amount);
+        Cancle(false);
+
+        UpdateDisplay();
+    }
+
 
     IEnumerator watiFrame(UIItemManager uIItemManager, int i)
     {

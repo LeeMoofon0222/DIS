@@ -1,7 +1,7 @@
-using JetBrains.Annotations;
+
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -494,7 +494,36 @@ public class PlayerControl : MonoBehaviour
                 PIC.isStorage = false;
             }
         }
+        else
+        {
+            PIC.isStorage = false;
+        }
 
+        #endregion
+
+        #region CookingSystem
+        if(Physics.Raycast(ray, out hit , maxRange))
+        {
+            if (hit.transform.TryGetComponent(out CookingSystem cookingSystem))
+            {
+                if (!systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy)
+                {
+                    PIC.isCooking = true;
+                    PIC.cookingSystem = cookingSystem;
+
+                }
+            }
+            else
+            {
+                PIC.isCooking = false;
+                PIC.cookingSystem = null;
+            }
+
+        }
+        else
+        {
+            PIC.isCooking = false;
+        }
         #endregion
 
         /*if (Input.GetMouseButtonUp(1) || 

@@ -38,7 +38,7 @@ public class ResourseGain : MonoBehaviour
 
     public int peritemuGet;
 
-
+    public bool getfromother;
 
     private void Start()
     {
@@ -93,13 +93,42 @@ public class ResourseGain : MonoBehaviour
 
     public void GetFinalResources()
     {
-        if(finalDrop.Count > 0)
+        if (finalDrop.Count > 0)
         {
             foreach (var item in finalDrop)
             {
                 m_inventory.AddItem(item.loot, item.amount,item.loot.itemHealth,0);
             }
         }
+
+        /*if (getfromother)
+        {
+            GetOtherFinalResources();
+        }*/
+
+        GetOtherFinalResources();
+    }
+
+    void GetOtherFinalResources()
+    {
+        if(this.TryGetComponent(out CookingSystem cookingSystem))
+        {
+            if (cookingSystem.materials.Count > 0)
+            {
+                foreach (var item in cookingSystem.materials)
+                {
+                    m_inventory.AddItem(item, 1, 1, 0);
+                }
+            }
+        }
+
+        if(this.TryGetComponent(out Smelter smelter))
+        {
+
+        }
+
+
+
     }
 
 

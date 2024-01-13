@@ -1561,6 +1561,7 @@ MonoBehaviour:
   isStorage: 0
   addItemPanel: {fileID: 0}
   storagePanel: {fileID: 0}
+  storageTag: {fileID: 0}
   storagemode: 0
   storageRecord: {fileID: 0}
   storageNum: 0
@@ -1568,6 +1569,10 @@ MonoBehaviour:
   storageslotObject: {fileID: 0}
   s_objToShow: []
   panelCanOpen: 0
+  isCooking: 0
+  cookingPanel: {fileID: 0}
+  cookingTag: {fileID: 0}
+  cookingSystem: {fileID: 0}
   pre_ItemSlot: {fileID: 0}
   pre_amount: 0
   pre_itemhealth: 0
