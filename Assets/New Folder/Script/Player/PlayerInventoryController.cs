@@ -61,9 +61,6 @@ public class PlayerInventoryController : MonoBehaviour
     public Image bowlSlot;
     
 
-
-
-
     [Header("Main Hand Item")]
     public Item pre_ItemSlot;
     public int pre_amount;
@@ -77,7 +74,6 @@ public class PlayerInventoryController : MonoBehaviour
     public List<Image> slotIcon;
     public Sprite none;
     
-
     public List<int> i_pnum;     //0322
     public int preset_pnum  = -1;
     public int pnum_extra = 0;
@@ -87,7 +83,9 @@ public class PlayerInventoryController : MonoBehaviour
     //public GameObject Informationpage;
 
     [Header("UI Slots")]
-    public GameObject[] slots;
+    //public GameObject[] cookingslots;
+
+    public UIItemManager[] cooking_uislot;
     [HideInInspector]
     public UIItemManager slotsys_slotproper;
 
@@ -403,8 +401,8 @@ public class PlayerInventoryController : MonoBehaviour
                 inventory.AddItem(cookingSystem.materials[pos] , 1 , 1,0);
                 cookingSystem.SetToCook(pre_ItemSlot, pos);
             }
-            
-            inventory.DecreesItem(pre_ItemSlot.ID, 1);
+            ItemSetSlot(pos);
+            //inventory.DecreesItem(pre_ItemSlot.ID, 1);
             UpdateDisplay();
         }
 
@@ -595,11 +593,18 @@ public class PlayerInventoryController : MonoBehaviour
 
     }
 
-    public void ItemSetSlot(int pos)
+    public void ItemSetSlot(int pos)        //設定單一物件到儲存格
     {
         if (pre_ItemSlot == null) return;
 
-        slots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, 1);
+
+
+        if (isCooking)
+        {
+            //cookingslots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, 1);
+            cooking_uislot[pos].SetItemOnSlot(pre_ItemSlot, 1);
+        }
+        
 
         inventory.DecreesItem(pre_ItemSlot.ID, 1);
         Cancle(false);
@@ -608,11 +613,15 @@ public class PlayerInventoryController : MonoBehaviour
 
     }
 
-    public void ItemsSetSlot(int pos)
+    public void ItemsSetSlot(int pos)       //設定數個同一物件到儲存格
     {
         if (pre_ItemSlot == null) return;
 
-        slots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, pre_amount);
+        if (isCooking)
+        {
+            //cookingslots[pos].GetComponent<UIItemManager>().SetItemOnSlot(pre_ItemSlot, pre_amount);
+            cooking_uislot[pos].SetItemOnSlot(pre_ItemSlot, pre_amount);
+        }
 
         inventory.DecreesItem(pre_ItemSlot.ID, pre_amount);
         Cancle(false);
@@ -629,7 +638,6 @@ public class PlayerInventoryController : MonoBehaviour
         if (inventory.Container.Count > 0) uIItemManager.pNum = inventory.Container[i].pNum;
 
     }
-
 }
 
 [System.Serializable]

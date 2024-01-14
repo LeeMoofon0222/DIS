@@ -99,6 +99,7 @@ public class UIItemManager : MonoBehaviour
         {
             if (PIC.pre_ItemSlot != null )
             {
+
                 item = _item;
                 amount = _amount;
 
@@ -106,17 +107,19 @@ public class UIItemManager : MonoBehaviour
                 {
                     PIC.cookingSystem.bowl.item = _item;
                     PIC.cookingSystem.bowl.amount += 1;
+
+                    var slot = PIC.bowlSlot;
+                    if (slot.transform.GetChild(0).name == "SlotImage")
+                    {
+                        slot.transform.GetChild(0).GetComponent<Image>().sprite = _item.itemIcon;
+                    }
+
+                    PIC.cookingSystem.Ready();
                 }
                 //PIC.cookingSystem.bowl.item = _item;
                 //PIC.cookingSystem.bowl.amount += 5;
 
 
-
-                var slot = PIC.bowlSlot;
-                if(slot.transform.GetChild(0).name == "SlotImage")
-                {
-                    slot.transform.GetChild(0).GetComponent<Image>().sprite = _item.itemIcon;
-                }
 
                 Debug.Log("Placed");
 
@@ -137,10 +140,10 @@ public class UIItemManager : MonoBehaviour
             return;
         }
 
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player.TryGetComponent(out PlayerInventoryController PIC))
         {
+
             if (PIC.pre_ItemSlot == null && item != null)
             {
                 PIC.addItemPanel.SetActive(true);
@@ -158,17 +161,18 @@ public class UIItemManager : MonoBehaviour
 
                 if(item.ID == 10022)
                 {
-                    if(PIC.cookingSystem.bowl.amount > 1)
+                    PIC.pre_amount = PIC.cookingSystem.bowl.amount;
+
+                    if (PIC.cookingSystem.bowl.amount > 1)
                     {
                         //PIC.cookingSystem.bowl.item = null;
-                        PIC.cookingSystem.bowl.amount -= 1;
+                        PIC.cookingSystem.bowl.amount = 0;        //еiзя
                     }
                     else
                     {
                         PIC.cookingSystem.bowl.item = null;
                         PIC.cookingSystem.bowl.amount -= 1;
                     }
-                    
                 }
 
 
@@ -177,6 +181,7 @@ public class UIItemManager : MonoBehaviour
                 amount= 0;
                 health= 0;
                 doneness= 0;
+                if (PIC.cookingSystem.materials[slotnum] != null) PIC.cookingSystem.materials[slotnum] = null;
 
                 //PIC.uiSources.PlayOneShot(PIC.selectClip);
             }
@@ -228,12 +233,6 @@ public class UIItemManager : MonoBehaviour
                     }
                 }*/
                 ForCookingSys();
-
-
-
-
-
-
 
 
 

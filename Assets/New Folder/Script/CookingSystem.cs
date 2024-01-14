@@ -63,9 +63,11 @@ public class CookingSystem : MonoBehaviour
 
     public void SetToCook( Item item, int index)
     {
-        if(item.ID >= 31000)
+        if(item.ID <= 31000 || item.ID == 31005)
         {
             materials[index] = (FoodObject)item;
+
+            
             OnCall();
         }
         
@@ -79,33 +81,71 @@ public class CookingSystem : MonoBehaviour
             int c = 0;
             foreach (var mat in materials)
             {
-                c++;
+                if(mat != null)
+                {
+                    c++;
+                }
+                
             }
 
-
-            if (c >= 3)
+            
+            if (c >= 2)
             {
-                yield return new WaitForSeconds(outputrecipe != null ? outputrecipe.time : 1f);
+                print("cooking");
+                yield return new WaitForSeconds(outputrecipe != null ? outputrecipe.time : basic.time);
 
                 /*for (int i = 0; i < 5; i++)
                 {
                     materials[i] = null;
                 }*/
+                
                 prepared = true;
+                Ready();
 
             }
         }
         
     }
+    public void Ready()
+    {
+        if (prepared)
+        {
+            print("prepared");
+            if (bowl.amount >= 1)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    materials[i] = outputrecipe != null ? outputrecipe.output : null;
+
+                    if (materials[i] != null)
+                        matIcon[i].sprite = materials[i].itemIcon;
+
+                    repairUI();
+
+
+                    prepared = false;
+
+                }
+            }
+        }
+        
+    }
+
+
 
     public void Reload()
     {
+        
         StopCoroutine(Cooking());
         
         int c = 0;
         foreach (var mat in materials)
         {
-            c++;
+            if (mat != null)
+            {
+                c++;
+            }
+            //c++;
         }
 
         if (c < 3)
@@ -117,18 +157,38 @@ public class CookingSystem : MonoBehaviour
             StartCoroutine(Cooking());
         }
 
-
-
-        if (prepared)
+        if(c == 0)
         {
-            if(bowl.amount >= 5)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    materials[i] = outputrecipe != null? outputrecipe.output : null;
-                }
-            }
+            cooking = false;
+            prepared = false;
+
+
+
         }
+
+        Ready();
+
+
+        
+    }
+
+    void repairUI()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player.TryGetComponent(out PlayerInventoryController PIC))
+        {
+            for(int i = 0;  i<PIC.cooking_uislot.Length; i++)
+            {
+                PIC.cooking_uislot[i].item = materials[i];
+                PIC.cooking_uislot[i].RepairUI();
+            }
+            
+
+
+
+        }
+        
+
     }
 
 

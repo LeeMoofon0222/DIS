@@ -406,23 +406,25 @@ public class PlayerControl : MonoBehaviour
 
             //StartCoroutine(Attack());
 
-            
-            if(itemHolding.item.gainingType == forRatioType.PickAxe)
+            if(itemHolding != null)
             {
-                CD = digCD;
-                StartCoroutine(Digging());
-            }
-            else if (itemHolding.item.gainingType == forRatioType.Axe)
-            {
-                CD = 1.01f;
-                float[] checkpoints = { 0.18f, 0.5f, 1f };
-                StartCoroutine(Attack("AxeAttack", "Attack4", checkpoints));
-            }
-            else if (itemHolding.item.gainingType == forRatioType.Sword)
-            {
-                CD = 1.81f;
-                StartCoroutine(Attack());
-            }
+                if (itemHolding.item.gainingType == forRatioType.PickAxe)
+                {
+                    CD = digCD;
+                    StartCoroutine(Digging());
+                }
+                else if (itemHolding.item.gainingType == forRatioType.Axe)
+                {
+                    CD = 1.01f;
+                    float[] checkpoints = { 0.18f, 0.5f, 1f };
+                    StartCoroutine(Attack("AxeAttack", "Attack4", checkpoints));
+                }
+                else if (itemHolding.item.gainingType == forRatioType.Sword)
+                {
+                    CD = 1.81f;
+                    StartCoroutine(Attack());
+                }
+            }    
             else
             {
                 CD = 0.51f;
@@ -891,6 +893,12 @@ public class PlayerControl : MonoBehaviour
         else
         {
             m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+
+            if(itemHolding.record_health <= 0)
+            {
+                m_inventory.DecreesItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+            }
+
             PIC.UpdateDisplay();
         }
         
