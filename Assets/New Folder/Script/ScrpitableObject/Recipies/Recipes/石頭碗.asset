@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc70dfe516c920b4a924137e6c99779d, type: 3}
-  m_Name: "\u9435\u7827"
+  m_Name: "\u77F3\u982D\u7897"
   m_EditorClassIdentifier: 
   materials:
-  - ID: 10006
-    amount: 5
-  - ID: 10002
-    amount: 2
+  - ID: 10001
+    amount: 3
+  - ID: 0
+    amount: 0
   - ID: 0
     amount: 0
   outputAmount: 1
-  output: {fileID: 7087267112577102593, guid: f1dfc8677204f464fba24529dea0f9f4, type: 3}
-  Itemoutput: {fileID: 11400000, guid: 6c5907ceabacfeb4087bff4d43757654, type: 2}
+  output: {fileID: 0}
+  Itemoutput: {fileID: 11400000, guid: 223ec20291e327b4d90c48f9995bc5e8, type: 2}
   craftresult: {fileID: 0}
   forsmelting: 0
   forcooking: 0

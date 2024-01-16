@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
+  m_Name: Pot
+  m_EditorClassIdentifier: 
+  ID: 11006
+  itemHealth: 0
+  stackable: 1
+  itemObject: {fileID: 110240250911296206, guid: b2d9ef5c8487ef34596a7647a72b4ec3,
+    type: 3}
+  spawntoscene: {fileID: 7709162189791995965, guid: d97f89a8aa3e96e47b3a09564521a53d,
+    type: 3}
+  UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
+    type: 3}
+  itemName: "\u5927\u934B\u7210"
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 22c7207453525b24c8783876e5fe6d07, type: 3}
+  hitsound: {fileID: 0}
+  type: 2
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 1
+  Preplace: {fileID: 1055222162720686877, guid: c7fdd03fff375f947bf555e9afd230ee,
+    type: 3}
+  Drop: 
