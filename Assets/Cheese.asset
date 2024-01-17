@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
+  m_Name: Cheese
+  m_EditorClassIdentifier: 
+  ID: 30012
+  itemHealth: 0
+  stackable: 1
+  itemObject: {fileID: 6390676440806368339, guid: 4a7368963595abb48902ab022e366f80,
+    type: 3}
+  spawntoscene: {fileID: 5472144117362644473, guid: 96330e297cadf2d4a913869e69930438,
+    type: 3}
+  UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
+    type: 3}
+  itemName: "\u8D77\u53F8"
+  itemWeights: 0
+  itemIcon: {fileID: 21300000, guid: 10bf0d1ac9276c343848f310040f35bb, type: 3}
+  hitsound: {fileID: 0}
+  type: 0
+  gainingType: 3
+  desciption: 
+  canThrow: 1
+  placeAble: 0
+  Preplace: {fileID: 0}
+  healing: 0
+  satiety: 0
+  canbeBBQ: 0
+  roastStep: []
+  stepTime: []
+  foodWithin: []

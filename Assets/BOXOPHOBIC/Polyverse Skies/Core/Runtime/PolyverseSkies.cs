@@ -3,8 +3,7 @@
 using UnityEngine;
 using Boxophobic.StyledGUI;
 
-namespace PolyverseSkiesAsset
-{
+
     [HelpURL("https://docs.google.com/document/d/1z7A_xKNa2mXhvTRJqyu-ZQsAtbV32tEZQbO1OmPS_-s/edit?usp=sharing")]
     [DisallowMultipleComponent]
     [ExecuteInEditMode]
@@ -88,4 +87,4 @@ namespace PolyverseSkiesAsset
         }
 #endif
     }
-}
+
