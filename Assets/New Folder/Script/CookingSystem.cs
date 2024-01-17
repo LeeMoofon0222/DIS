@@ -29,10 +29,35 @@ public class CookingSystem : MonoBehaviour
     bool cooking;
     bool prepared;
 
+    public bool canCook;
+
+    public BoxCollider area;
+    public LayerMask mask;
+    BoxCollider save;
+
     // Start is called before the first frame update
     void Awake()
     {
         api = GetComponent<CraftingAPI>();
+
+       // LayerMask mask ;
+        Collider[] collides = Physics.OverlapBox(this.transform.position, area.size / 2, Quaternion.identity, mask);
+        if(collides.Length != 0)
+        {
+            canCook = true;
+            foreach (var col in collides)
+            {
+                if (col.isTrigger)
+                {
+                    col.enabled = false;
+                    save = (BoxCollider)col;
+                }
+                
+            }
+        }
+        
+
+
 
     }
 
@@ -195,5 +220,6 @@ public class CookingSystem : MonoBehaviour
     private void OnDestroy()
     {
         StopCoroutine(Cooking());
+        if(save != null ) save.enabled = true;
     }
 }

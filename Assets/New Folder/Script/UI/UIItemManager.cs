@@ -4,22 +4,25 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
+using UnityEngine.EventSystems;
+using TMPro;
 
-
-public class UIItemManager : MonoBehaviour
+public class UIItemManager : MonoBehaviour, 
+    IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
     public int pNum;        //0322
+    public Text amoutText;
 
     public int amount;
     public int doneness;
     public int health;
 
     public int pos;
-
+    
     public AudioClip select;
     public AudioSource source;
-
+    
     [Header("For SlotSystem")]
     GameObject player;
     public bool generated;
@@ -28,6 +31,16 @@ public class UIItemManager : MonoBehaviour
     bool fromslot;
     PlayerInventoryController PIC;
 
+    InventoryRecord Inventory;
+    int ThisNum;
+
+
+
+    private void Start()
+    {
+        amoutText.text = " ";
+        
+    }
     public void OnClick()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -38,8 +51,37 @@ public class UIItemManager : MonoBehaviour
             PIC.IdiotInformationManger();
 
             PIC.uiSources.PlayOneShot(PIC.selectClip);
-
+            
         }
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log("in");
+        if (player.TryGetComponent(out PlayerInventoryController PIC))
+        {
+           
+            if (!generated)
+            {
+
+                Inventory = PIC.inventory;
+                ThisNum = Inventory.ItemAmount(pNum);
+                amoutText.text = ThisNum.ToString();
+
+
+            }
+        }
+
+        
+        
+
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+
+        Debug.Log("out");
+        if(!generated)
+            amoutText.text = " ";
     }
 
     public void getPos()        //¦sªF¦è

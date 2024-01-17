@@ -11,6 +11,24 @@ public class InventoryRecord : ScriptableObject
     public List<InventorySlot> Container = new List<InventorySlot>();
     public int weight;
 
+
+    public int ItemAmount(int pNum)
+    {
+        
+        for(int i = 0; i < Container.Count; i++)
+        {
+            if (pNum == Container[i].pNum)
+            {
+
+                return Container[i].amount;
+
+            }
+
+        }
+        return 0;
+
+    }
+
     public bool FindItem(Item item)
     {
         for (int i = 0; i < Container.Count; i++)
@@ -305,7 +323,8 @@ public class InventorySlot
     public void consumeing(int value)       //0323
     {
         item_Health -= value;
-    }
+    } 
+
 
 
 }

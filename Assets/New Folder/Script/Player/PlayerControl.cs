@@ -424,6 +424,12 @@ public class PlayerControl : MonoBehaviour
                     CD = 1.81f;
                     StartCoroutine(Attack());
                 }
+                else
+                {
+                    CD = 0.51f;
+                    float[] checkpoints = { 0f, 0.1f, 0.5f };
+                    StartCoroutine(Attack("ItemAttack", "Attack3", checkpoints));
+                }
             }    
             else
             {
@@ -510,9 +516,12 @@ public class PlayerControl : MonoBehaviour
             {
                 if (!systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy)
                 {
-                    PIC.isCooking = true;
-                    PIC.cookingSystem = cookingSystem;
+                    if (cookingSystem.canCook)
+                    {
+                        PIC.isCooking = true;
+                        PIC.cookingSystem = cookingSystem;
 
+                    }
                 }
             }
             else

@@ -151,8 +151,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 0
   partical: {fileID: 0}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 7660618168825959183}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!82 &998061353
 AudioSource:
   m_ObjectHideFlags: 0
@@ -282,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 1675787343659221250, guid: 8fcb9d2d43929c04f8c70c38581418d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6065908312485665119, guid: 8fcb9d2d43929c04f8c70c38581418d4,
         type: 3}
