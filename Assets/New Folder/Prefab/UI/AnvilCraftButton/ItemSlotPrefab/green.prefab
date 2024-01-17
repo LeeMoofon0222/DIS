@@ -317,7 +317,6 @@ MonoBehaviour:
   generated: 0
   slotnum: 0
   noneSprite: {fileID: 0}
-  Inventory: {fileID: 0}
 --- !u!1 &4579970516974877966
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -386,11 +385,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6445d43aa82a03f4b8b4fbd8372898d7, type: 3}
-    m_FontSize: 65
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 65
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

@@ -31,8 +31,9 @@ public class CookingSystem : MonoBehaviour
 
     public bool canCook;
 
-   public BoxCollider area;
+    public BoxCollider area;
     public LayerMask mask;
+    BoxCollider save;
 
     // Start is called before the first frame update
     void Awake()
@@ -49,6 +50,7 @@ public class CookingSystem : MonoBehaviour
                 if (col.isTrigger)
                 {
                     col.enabled = false;
+                    save = (BoxCollider)col;
                 }
                 
             }
@@ -218,5 +220,6 @@ public class CookingSystem : MonoBehaviour
     private void OnDestroy()
     {
         StopCoroutine(Cooking());
+        if(save != null ) save.enabled = true;
     }
 }
