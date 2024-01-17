@@ -38,7 +38,8 @@ public class UIItemManager : MonoBehaviour,
 
     private void Start()
     {
-        amoutText.text = " ";
+        if(!generated)
+            amoutText.text = " ";
         
     }
     public void OnClick()

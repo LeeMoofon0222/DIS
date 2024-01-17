@@ -22,7 +22,7 @@ public class CookingSystem : MonoBehaviour
     public FoodRecipe outputrecipe;
     public FoodRecipe basic;
 
-    public List<Image> matIcon;
+    List<Image> _matIcon;
 
     CraftingAPI api;
 
@@ -40,7 +40,15 @@ public class CookingSystem : MonoBehaviour
     {
         api = GetComponent<CraftingAPI>();
 
-       // LayerMask mask ;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player.TryGetComponent(out PlayerInventoryController PIC))
+        {
+            _matIcon = PIC.matIcon;
+
+        }
+
+
+        // LayerMask mask ;
         Collider[] collides = Physics.OverlapBox(this.transform.position, area.size / 2, Quaternion.identity, mask);
         if(collides.Length != 0)
         {
@@ -55,18 +63,15 @@ public class CookingSystem : MonoBehaviour
                 
             }
         }
-        
-
-
-
+       
     }
 
     public void OnCall()
     {
-        for(int i = 0; i < matIcon.Count; i++)
+        for(int i = 0; i < _matIcon.Count; i++)
         {
             if (materials[i] != null)
-                matIcon[i].sprite = materials[i].itemIcon;
+                _matIcon[i].sprite = materials[i].itemIcon;
         }
 
         outputrecipe = api.CheckRecipe(recipes, materials);
@@ -143,7 +148,7 @@ public class CookingSystem : MonoBehaviour
                     materials[i] = outputrecipe != null ? outputrecipe.output : null;
 
                     if (materials[i] != null)
-                        matIcon[i].sprite = materials[i].itemIcon;
+                        _matIcon[i].sprite = materials[i].itemIcon;
 
                     repairUI();
 

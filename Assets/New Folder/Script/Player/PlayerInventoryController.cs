@@ -59,7 +59,8 @@ public class PlayerInventoryController : MonoBehaviour
     [HideInInspector] 
     public CookingSystem cookingSystem;
     public Image bowlSlot;
-    
+    public List<Image> matIcon;
+
 
     [Header("Main Hand Item")]
     public Item pre_ItemSlot;
@@ -402,6 +403,10 @@ public class PlayerInventoryController : MonoBehaviour
                 cookingSystem.SetToCook(pre_ItemSlot, pos);
             }
             ItemSetSlot(pos);
+            foreach (var slot in cooking_uislot)
+            {
+                slot.RepairUI();
+            }
             //inventory.DecreesItem(pre_ItemSlot.ID, 1);
             UpdateDisplay();
         }
@@ -416,6 +421,10 @@ public class PlayerInventoryController : MonoBehaviour
     public void CookingReload()
     {
         cookingSystem.Reload();
+        foreach(var slot in cooking_uislot)
+        {
+            slot.RepairUI();
+        }
     }
 
     public void BowlSet()
