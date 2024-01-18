@@ -30,7 +30,7 @@ public class Plantsys : MonoBehaviour
         //print(watering);
         if (watering == 1 && test1 && doplant)
         {
-            slider.gameObject.SetActive(true);
+            //slider.gameObject.SetActive(true);
             Invoke("ReduceBar", 1);
             test1 = false;
         }
@@ -54,7 +54,20 @@ public class Plantsys : MonoBehaviour
         if(slider.value == 0)
         {
             slider.value = period;
+            //slider.gameObject.SetActive(false);
+        }
+        if (p!=0 && p == plantlist.Count)
+        {
             slider.gameObject.SetActive(false);
+        }
+        if (!doplant)
+        {
+            player.GetComponent<PlayerControl>().watering = 0;
+        }
+        if (!hasplant)
+        {
+            slider.gameObject.SetActive(true);
+
         }
     }
     public void DoPlanting(PlantObject thisseed)

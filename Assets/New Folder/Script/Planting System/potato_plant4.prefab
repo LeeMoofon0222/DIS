@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6683911592493546544}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.24, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &2910412533155701413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,9 +159,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: a8ac56953c26d3848849eb587cc4082d,
     type: 3}
+  attacking: 0
   canPick: 0
-  PlayerCanThrow: 0
-  rb: {fileID: 3285351979799271714}
   SceneSpawned: 0
   record_health: 50
   record_doneness: 0

@@ -360,7 +360,7 @@ public class PlayerControl : MonoBehaviour
                 GameObject thisfield = raycastHit.transform.gameObject;
                 bool hasplant = thisfield.GetComponent<Plantsys>().hasplant;
                 plantpoint = raycastHit.transform.gameObject.transform.GetChild(0).gameObject;
-                if (onHandItem.CompareTag("watering-can") && hasplant)
+                if (onHandItem.CompareTag("watering-can") && hasplant && watering==0)
                 {
                     thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
                     watering = 1;
