@@ -1573,6 +1573,8 @@ MonoBehaviour:
   cookingPanel: {fileID: 0}
   cookingTag: {fileID: 0}
   cookingSystem: {fileID: 0}
+  bowlSlot: {fileID: 0}
+  matIcon: []
   pre_ItemSlot: {fileID: 0}
   pre_amount: 0
   pre_itemhealth: 0
@@ -1607,6 +1609,8 @@ MonoBehaviour:
   preset_pnum: -1
   pnum_extra: 0
   informationManger: {fileID: 0}
+  cooking_uislot: []
+  slotsys_slotproper: {fileID: 0}
 --- !u!114 &802452134297079235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1657,21 +1661,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal:
     skyColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-    exposure: 0.37
-    blender: 0.86
+    EquatorColor: {r: 0, g: 0, b: 0, a: 0}
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+    equator_height: 0
+    equator_smoothness: 0
   desert:
     skyColor: {r: 0.6792453, g: 0.5791605, b: 0.34859377, a: 1}
-    exposure: 0.32
-    blender: 0.19
+    EquatorColor: {r: 0, g: 0, b: 0, a: 0}
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+    equator_height: 0
+    equator_smoothness: 0
   cherry:
     skyColor: {r: 0.5402063, g: 0.24742265, b: 0.8, a: 1}
-    exposure: 0.37
-    blender: 0.9
+    EquatorColor: {r: 0, g: 0, b: 0, a: 0}
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+    equator_height: 0
+    equator_smoothness: 0
   valcano:
     skyColor: {r: 0.19811317, g: 0, b: 0.031040303, a: 1}
-    exposure: 0.27
-    blender: 0.485
+    EquatorColor: {r: 0, g: 0, b: 0, a: 0}
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+    equator_height: 0
+    equator_smoothness: 0
   _skybox: {fileID: 2100000, guid: 80409556bc24b4c4581d0de77b2edabc, type: 2}
+  biomechoose: 0
+  skyControl: {fileID: 0}
 --- !u!114 &6826474522330897022
 MonoBehaviour:
   m_ObjectHideFlags: 0

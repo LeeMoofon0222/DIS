@@ -90,6 +90,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &3515085015584229649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,11 +109,10 @@ MonoBehaviour:
   objectHealth: 60
   CanScaleChange: 0
   PickObj: 0
-  partical: {fileID: 7271034450535363041, guid: afe3aba75bfdfdf409c43420d13a1a23,
+  partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  PlayerCanThrow: 0
-  rb: {fileID: -3117017212341835142}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
