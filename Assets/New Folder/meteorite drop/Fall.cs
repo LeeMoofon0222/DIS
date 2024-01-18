@@ -10,11 +10,18 @@ public class Fall : MonoBehaviour
     public Transform SpawnMeteoritePosition;
     GameObject _planeObj;
     public GameObject[] _planeMovePos;
-    public Camera _camera;
+    //public Camera _camera;
     private int _posIndex;
     private bool Mov;
     public bool vol=false;
-    public GameObject player;
+    GameObject player;
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+    }
+
 
     public void Update()
     {

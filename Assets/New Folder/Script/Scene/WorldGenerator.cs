@@ -42,7 +42,7 @@ public class WorldGenerator : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         player = GameObject.FindWithTag("Player");
 

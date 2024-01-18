@@ -23,7 +23,7 @@ MonoBehaviour:
     type: 3}
   itemName: "\u78A7\u7389"
   itemWeights: 5
-  itemIcon: {fileID: 21300000, guid: a668cc2d3c026b444bba7e93ba88083d, type: 3}
+  itemIcon: {fileID: 21300000, guid: 02a4faa148f3cd1489d533a460bc6ed0, type: 3}
   hitsound: {fileID: 0}
   type: 2
   gainingType: 3

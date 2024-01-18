@@ -9,6 +9,7 @@ public class AnvilUIpanel : MonoBehaviour
     public Button[] CraftButton;
     public Button currentButton1;
     public Prompt prompt;
+    [HideInInspector]
     public GameObject CraftObject;
     public int CurrentButton = 0;
     public bool onTrigger;
@@ -20,15 +21,20 @@ public class AnvilUIpanel : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        CraftButton[0].Select();
+        if(CraftButton[0] != null) CraftButton[0].Select();
         //ScrollView.transform.position = new Vector2(0, ScrollView.transform.position.y);
-        CraftObject.SetActive(false);
+        //CraftObject.SetActive(false);
 
-        var buttonObject = Instantiate(CraftButton[CurrentButton], CraftButtonPos.transform);
-        if(buttonObject.TryGetComponent(out Button button))
+        if(CraftButton[CurrentButton] != null)
         {
-            currentButton1 = button;
+            var buttonObject = Instantiate(CraftButton[CurrentButton], CraftButtonPos.transform);
+
+            if (buttonObject.TryGetComponent(out Button button))
+            {
+                currentButton1 = button;
+            }
         }
+            
 
     }
 
