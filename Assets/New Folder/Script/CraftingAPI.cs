@@ -189,6 +189,65 @@ public class CraftingAPI : MonoBehaviour
         return output;
     }
 
+    public List<CreateRecipe> CheckRecipe(List<CreateRecipe> recipe, List<IDandAmount> checklist, int checkpoints)
+    {
+        /*===========================================================
+
+           recipe示合成表 ，這邊是偵測待測陣列checklist
+
+          ============================================================*/
+
+        List<CreateRecipe> output = new List<CreateRecipe>();
+
+        for (int i = 0; i < recipe.Count; i++)
+        {
+            int itemcheck = 0;
+            foreach (var material in recipe[i].materials)
+            {
+                if (material.ID != 0)
+                {
+                    if (checklist.Count != 0)
+                    {
+                        foreach (var item in checklist)
+                        {
+                            if (item.itemID == material.ID && item.amount >= material.amount && item.itemID != -1)
+                            {
+                                itemcheck += 1;
+
+                                break;
+                            }
+                        }
+
+                        if (itemcheck >= checkpoints)
+                        {
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    itemcheck += 1;
+                }
+
+                if (itemcheck >= checkpoints)
+                {
+                    break;
+                }
+            }
+
+
+            if (itemcheck == checkpoints)
+            {
+                output.Add(recipe[i]);
+                //print("GET1");
+            }
+        }
+        print(output.Count);
+        return output;
+    }
+
+
+
     public FoodRecipe CheckRecipe(List<FoodRecipe> recipes, List<Item> materials)
     {
         /*===========================================================

@@ -61,9 +61,10 @@ public class ItemObject : MonoBehaviour
             if (item.canThrow && !SceneSpawned && !item.placeAble)
             {
                 var playerHolder = GameObject.Find("grabItemHolder");
+                Transform player = GameObject.FindGameObjectWithTag("Player").transform;
                 //Debug.Log(playerHolder.transform.position);
 
-                rb.AddForce(this.transform.forward * 2f, ForceMode.Impulse);
+                rb.AddForce(player.forward * 2f, ForceMode.Impulse);
 
                 if (item.type == ItemType.Food)
                 {

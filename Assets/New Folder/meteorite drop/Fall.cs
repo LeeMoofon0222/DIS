@@ -25,18 +25,22 @@ public class Fall : MonoBehaviour
 
     public void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= 50 && vol)
+        if(Vector3.Distance(this.transform.position , player.transform.position) <= 100)
         {
-            StartCoroutine(SpawnMeteorite());
+            if (Vector3.Distance(player.transform.position, transform.position) <= 50 && vol)
+            {
+                StartCoroutine(SpawnMeteorite());
+            }
+            else if (Vector3.Distance(player.transform.position, transform.position) > 50)
+            {
+                vol = true;
+            }
+            if (Mov)
+            {
+                MovePos(_posIndex);
+            }
         }
-        else if(Vector3.Distance(player.transform.position, transform.position) > 50)
-        {
-            vol = true;
-        }
-        if (Mov)
-        {
-            MovePos(_posIndex);
-        }
+        
     }
     void MovePos(int _posIndex)
     {

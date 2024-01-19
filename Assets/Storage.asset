@@ -115,3 +115,105 @@ MonoBehaviour:
       item_Health: 0
       doneness: 0
     assigned: 0
+  - Container:
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    - item: {fileID: 0}
+      amount: 0
+      item_Health: 0
+      doneness: 0
+    assigned: 0

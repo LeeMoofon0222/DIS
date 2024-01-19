@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc70dfe516c920b4a924137e6c99779d, type: 3}
+  m_Name: jadehammer 1
+  m_EditorClassIdentifier: 
+  materials:
+  - ID: 10023
+    amount: 1
+  - ID: 10001
+    amount: 3
+  - ID: 10003
+    amount: 4
+  outputAmount: 1
+  output: {fileID: 596911749439532872, guid: acbbb96e69c275b4cb6d98f434741fa4, type: 3}
+  Itemoutput: {fileID: 11400000, guid: edd8677da79331a4fa236201118c8f35, type: 2}
+  craftresult: {fileID: 596911749439532872, guid: acbbb96e69c275b4cb6d98f434741fa4,
+    type: 3}
+  forsmelting: 0
+  forcooking: 0
