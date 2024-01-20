@@ -22,7 +22,7 @@ public class IDandAmount
         {
            item = ir.IDtoItem(_itemID);
         }
-        if(_item != null && ir != null)
+        if(_item != null)
         {
             itemID = item.ID;
         }

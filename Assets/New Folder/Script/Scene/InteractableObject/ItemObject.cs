@@ -64,7 +64,7 @@ public class ItemObject : MonoBehaviour
                 Transform player = GameObject.FindGameObjectWithTag("Player").transform;
                 //Debug.Log(playerHolder.transform.position);
 
-                rb.AddForce(player.forward * 2f, ForceMode.Impulse);
+                //rb.AddForce(player.forward * 2f, ForceMode.Impulse);
 
                 if (item.type == ItemType.Food)
                 {

@@ -316,6 +316,7 @@ public class PlayerControl : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Q) && itemHolding != null && itemHolding.item.canThrow && !systemsManager.systems[0].activeInHierarchy && !systemsManager.systems[1].activeInHierarchy)
                 {
                     GameObject itm = Instantiate(itemHolding.item.spawntoscene, ItemHolder.position, ItemHolder.rotation);
+                    itm.GetComponent<Rigidbody>().AddForce(transform.forward * 2f, ForceMode.Impulse);
 
                     var io = itm.GetComponent<ItemObject>();
                     if(io != null)
@@ -750,6 +751,11 @@ public class PlayerControl : MonoBehaviour
 
                 onhandProperty.itemhealth = PIC.itemProperties[setItem].itemhealth;
                 onhandProperty.itemdoneness = PIC.itemProperties[setItem].itemdoneness;
+
+                if(onHandItem.GetComponent<ItemObject>().item.type == ItemType.Plant)
+                {
+                    onHandItem.gameObject.layer = 6;
+                }
 
                 
             }

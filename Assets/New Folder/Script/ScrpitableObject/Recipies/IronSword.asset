@@ -20,7 +20,9 @@ MonoBehaviour:
   - ID: 0
     amount: 0
   outputAmount: 1
-  output: {fileID: 8305969486903082858, guid: 222fe63a8026e99489d9b61a7dabe784, type: 3}
+  output: {fileID: 2413488214783039987, guid: 3c1d611168995184fb51105e89e2ad67, type: 3}
   Itemoutput: {fileID: 11400000, guid: 11f57d03ff888e34fa84bc02e3e0cd38, type: 2}
   craftresult: {fileID: 5117643798216156643, guid: 74258c3c1b9355a46a2f2301ae3038ec,
     type: 3}
+  forsmelting: 0
+  forcooking: 0
