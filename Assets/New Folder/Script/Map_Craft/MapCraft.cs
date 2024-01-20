@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(CraftingAPI))]
-public class map_craft : MonoBehaviour
+public class MapCraft : MonoBehaviour
 {
     CraftingAPI craftingAPI;
     public List<CreateRecipe> recipes;
@@ -105,6 +105,7 @@ public class map_craft : MonoBehaviour
                     colliders[s].transform.localPosition = Vector3.zero;
 
                     colliders[s].GetComponent<Rigidbody>().isKinematic = true;
+                    colliders[s].isTrigger= true;
 
                     //Destroy(colliders[s]);
 
