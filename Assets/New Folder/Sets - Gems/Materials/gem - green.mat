@@ -12,7 +12,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -38,13 +38,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emission: 0.832
+    - _Emission: 1.712
     - _Emissive: 0
-    - _EnvironmentLight: 1.769
+    - _EnvironmentLight: 1.51
     - _IndexOfRefraction: 2.14
-    - _ReflectionStrength: 1.513
+    - _ReflectionStrength: 1.1
     m_Colors:
-    - _Color: {r: 0, g: 0.8784314, b: 0, a: 1}
+    - _Color: {r: 0.46970576, g: 0.8784314, b: 0, a: 0.8745098}
   m_BuildTextureStacks: []
 --- !u!1002 &2100001
 EditorExtensionImpl:
