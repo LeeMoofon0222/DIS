@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+
+
 using UnityEngine;
 
 [System.Serializable]
@@ -17,8 +19,8 @@ public class LootandWeight
     public int needpoint;
     public int weight;
 
-    //[ColorUsage(true)]
-    public Material lootColor;
+    [ColorUsage(true,true)]
+    public Color lootColor;
 
 }
 
@@ -32,7 +34,7 @@ public class MapLottery : MonoBehaviour
     [SerializeField]
     Collider[] colliders;
 
-    bool reload;
+    bool isworking;
 
     public LayerMask detections;
 
@@ -48,6 +50,13 @@ public class MapLottery : MonoBehaviour
     public List<LootandWeight> reward;
     public GameObject mask1;
     public Material mask1color;
+    [ColorUsage(true, true)]
+    public Color og_color;
+    public Animator maskAnimator;
+
+    public Animator glowing;
+
+    PlayerMoveMent PM;
 
 
 
@@ -101,10 +110,12 @@ public class MapLottery : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U) && !isworking)
         {
+            totalpoint= 0;
             for(int i = 0; i < items.Count; i++)
             {
+                
                 for (int j = 0; j < point.Count; j++)
                 {
                     if (items[i].itemID == point[j].ID)
@@ -117,13 +128,56 @@ public class MapLottery : MonoBehaviour
 
             }
 
+            DestroyItem();
             Randomizor();
         }
 
     }
 
+    public void SystemStart()
+    {
+        if (!isworking)
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            PM = player.GetComponent<PlayerMoveMent>();
+            PM.canMove= false;
+
+
+
+            totalpoint = 0;
+            for (int i = 0; i < items.Count; i++)
+            {
+                for (int j = 0; j < point.Count; j++)
+                {
+                    if (items[i].itemID == point[j].ID)
+                    {
+                        totalpoint += point[j].weight * items[i].amount;
+                        break;
+                    }
+
+                }
+            }
+
+            DestroyItem();
+            Randomizor();
+        }
+    }
+
+
+    void DestroyItem()
+    {
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            Destroy(colliders[i].gameObject);
+        }
+
+    }
+
+
+
     void Randomizor()
     {
+        if (isworking) return;
 
         int RandNum = Random.Range(1, 100);
 
@@ -141,14 +195,18 @@ public class MapLottery : MonoBehaviour
                     return;
                 }
 
-                Material[] mats = mask1.gameObject.GetComponent<MeshRenderer>().materials;
-                mats[0] = reward[i].lootColor;
-                mask1.GetComponent<MeshRenderer>().materials = mats;
+                //Material[] mats = mask1.gameObject.GetComponent<Material>().colo;
+                //mats[0] = reward[i].lootColor;
+                //mask1.GetComponent<MeshRenderer>().materials = mats;
+
+                //mask1color.SetColor("_EmissionColor", reward[i].lootColor);
 
                 StartCoroutine(WaitEffectes());
+                maskAnimator.SetInteger("Color", i);
 
                 if (reward[i].item[0] != null)
                 {
+                    
                     if (reward[i].item.Count > 1)
                     {
                         int rand = Random.Range(0, reward[i].item.Count - 1);
@@ -175,13 +233,20 @@ public class MapLottery : MonoBehaviour
     
     IEnumerator WaitEffectes()
     {
+        glowing.Play("Glowing");
+        maskAnimator.SetTrigger("Glow");
+        isworking = true;
+        yield return new WaitForSeconds(6f);
 
-        yield return new WaitForSeconds(3f);
-        Material[] mats = mask1.gameObject.GetComponent <MeshRenderer >().materials;
-        mats[0] = mask1color;
-        mask1.GetComponent<MeshRenderer>().materials = mats;
+        //Material[] mats = mask1.gameObject.GetComponent <MeshRenderer >().materials;
+        //mats[0] = mask1color;
+        //mask1.GetComponent<MeshRenderer>().materials = mats;
+        mask1color.SetColor("_EmissionColor", og_color);
 
+        //Instantiate()
 
+        isworking= false;
+        if(PM != null) PM.canMove = true;
 
     }
     
