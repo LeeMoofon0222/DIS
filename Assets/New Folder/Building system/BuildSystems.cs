@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +20,7 @@ public class BuildSystems : MonoBehaviour
     [SerializeField]
     public List<GameObject> foundation;
     [SerializeField]
-    public Text building_materials;
+    public TMP_Text building_materials;
     public GameObject building_ui;
     public LayerMask buildMask;
 
@@ -133,10 +134,18 @@ public class BuildSystems : MonoBehaviour
             //拆除
             if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer == canBuildOn || buildhit.transform.gameObject.layer == foundation))
             {
-                if (buildhit.transform.gameObject.layer == foundation && buildhit.transform.gameObject.tag == "Foundation" && buildhit.transform.gameObject.name[0] != 'D')
+
+                if (buildhit.transform.gameObject.layer == foundation)
                 {
-                    ir.AddItem(ir.IDtoItem(10001), 3,0,0);
-                    Destroy(buildhit.transform.gameObject);
+                    if (buildhit.transform.gameObject.tag == "Foundation" && buildhit.transform.gameObject.name[0] != 'D')
+                    {
+                        ir.AddItem(ir.IDtoItem(10001), 3, 0, 0);
+                        Destroy(buildhit.transform.gameObject);
+                    }
+                    else
+                    {
+                        Destroy(buildhit.transform.gameObject);
+                    }
                 }
                 else
                 {
@@ -176,7 +185,7 @@ public class BuildSystems : MonoBehaviour
                     {
                         setItem = 0;
                     }
-                    building_materials.text = "石頭: " + stone_cost[setItem] + "木頭: " + wood_cost[setItem];
+                    building_materials.text = "石頭: " + stone_cost[setItem] + " 木頭: " + wood_cost[setItem];
                     Instantiate(Parts_pb[setItem]);
                     /*
                     try

@@ -15,9 +15,9 @@ MonoBehaviour:
   ID: 30018
   itemHealth: 1
   stackable: 1
-  itemObject: {fileID: 7690761589985113636, guid: 7eb7a89c5fd7895428eb78780c60328c,
+  itemObject: {fileID: 2201939589813955010, guid: 6620035f75f6dcf4882f5c77e6cdb73d,
     type: 3}
-  spawntoscene: {fileID: 7690761589985113636, guid: 7eb7a89c5fd7895428eb78780c60328c,
+  spawntoscene: {fileID: 2201939589813955010, guid: 6620035f75f6dcf4882f5c77e6cdb73d,
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
