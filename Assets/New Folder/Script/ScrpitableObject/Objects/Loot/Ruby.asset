@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
   m_Name: Ruby
   m_EditorClassIdentifier: 
-  ID: 100021
+  ID: 10021
   itemHealth: 1
   stackable: 1
   itemObject: {fileID: 1947875453777213082, guid: 69fe6d6a5ff61e04784d0dacc08caeda,

@@ -15,14 +15,14 @@ public class MapCraft : MonoBehaviour
 
 
     //public bool canCraft;
-    public bool regenerate_item;
+    //public bool regenerate_item;
     public LayerMask detections;
 
     public List<IDandAmount> items;
     public List<Transform> floating_pos;
 
     Dictionary<Item, int> recorded = new Dictionary<Item, int>();
-    public int pos;
+    int pos;
 
     void Start()
     {
