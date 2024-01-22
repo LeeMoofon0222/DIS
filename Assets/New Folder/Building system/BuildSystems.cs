@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildSystems : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class BuildSystems : MonoBehaviour
     public List<GameObject> preFoundationObj;
     [SerializeField]
     public List<GameObject> foundation;
-
+    [SerializeField]
+    public Text building_materials;
+    public GameObject building_ui;
     public LayerMask buildMask;
 
     public int wood_amount = 0;
@@ -32,6 +35,7 @@ public class BuildSystems : MonoBehaviour
     public List<GameObject> still_pre;
     [SerializeField]
     public List<GameObject> all_build;
+    
     public InventoryRecord ir;
 
 
@@ -64,6 +68,7 @@ public class BuildSystems : MonoBehaviour
     {
         stone_amount = ir.ItemCount(10001, stone_amount);
         wood_amount = ir.ItemCount(10002, wood_amount);
+        
     }
     void Update()
     {
@@ -171,6 +176,7 @@ public class BuildSystems : MonoBehaviour
                     {
                         setItem = 0;
                     }
+                    building_materials.text = "石頭: " + stone_cost[setItem] + "木頭: " + wood_cost[setItem];
                     Instantiate(Parts_pb[setItem]);
                     /*
                     try
@@ -221,6 +227,7 @@ public class BuildSystems : MonoBehaviour
                 if (T == 0)
                 {
                     //print("spawn");
+                    building_materials.text = "石頭: 3";
                     Instantiate(preFoundationObj[0]);
                     isSpawned = true;
                     partisSpawned = false;
@@ -228,6 +235,7 @@ public class BuildSystems : MonoBehaviour
                 if (T == 1)
                 {
                     //print("spawn");
+                    building_materials.text = "無須耗費材料";
                     Instantiate(preFoundationObj[1]);
                     isSpawned = true;
                     partisSpawned = false;
@@ -291,11 +299,12 @@ public class BuildSystems : MonoBehaviour
                     if (ir.FindItem(10001 , 3) && T == 0)
                     {
                         ir.DecreesItem(10001, 3);
-
+                        
                         Instantiate(foundation[T], preFoundation.transform.position, preFoundation.transform.rotation);
                     }
                     else if (T == 1)
                     {
+                        
                         Instantiate(foundation[T], preFoundation.transform.position, preFoundation.transform.rotation);
                     }
                 }
@@ -395,10 +404,12 @@ public class BuildSystems : MonoBehaviour
     private void OnEnable()
     {
         isSpawned = false;
+        building_ui.SetActive(true);
     }
 
     private void OnDisable()
     {
+        building_ui.SetActive(false);
         BuildFoundation = true;
         Parts_pb.Clear();
         buildingParts.Clear();
