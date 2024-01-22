@@ -37,6 +37,7 @@ public class ItemwheelController : MonoBehaviour
             {
                 itembutton[i].Settingicon();
                 //Debug.Log("test");
+               
             }
         }
 

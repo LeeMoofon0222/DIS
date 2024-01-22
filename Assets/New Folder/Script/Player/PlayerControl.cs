@@ -396,7 +396,7 @@ public class PlayerControl : MonoBehaviour
         #endregion
 
         #region ATK/Mineing
-        if (Input.GetMouseButton(0) && timer >= CD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected && !isDigging && !isAttacking)
+        if (Input.GetMouseButton(0) && timer >= CD && !anyoptionOn() && !PIC.inventoryOpen && !IWC.weaponWheelSelected && !isDigging && !isAttacking && !optionPage)
         {
             StopAllCoroutines();
             //swing.Play();
