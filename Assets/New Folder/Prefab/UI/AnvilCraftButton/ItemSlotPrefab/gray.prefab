@@ -241,7 +241,6 @@ MonoBehaviour:
   generated: 0
   slotnum: 0
   noneSprite: {fileID: 0}
-  Inventory: {fileID: 0}
 --- !u!1 &2330490699800688972
 GameObject:
   m_ObjectHideFlags: 0
