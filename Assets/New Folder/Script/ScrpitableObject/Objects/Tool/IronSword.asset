@@ -21,9 +21,10 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Iron Sword
-  itemWeights: 0
+  itemName: "\u9435\u528D"
+  itemWeights: 5
   itemIcon: {fileID: 21300000, guid: 7f45486571919944da6be0eba424025b, type: 3}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 2
   desciption: 

@@ -20,9 +20,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
-  itemName: Sand Stone
+  itemName: "\u7802\u5CA9"
   itemWeights: 0
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 

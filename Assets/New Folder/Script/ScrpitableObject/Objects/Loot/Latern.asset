@@ -22,8 +22,9 @@ MonoBehaviour:
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: "\u71C8\u7C60"
-  itemWeights: 0
+  itemWeights: 6
   itemIcon: {fileID: 21300000, guid: 3ad275e3acf3a404fb1959808e7b9b75, type: 3}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 

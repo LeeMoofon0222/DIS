@@ -18,9 +18,10 @@ MonoBehaviour:
   itemObject: {fileID: 0}
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 0}
-  itemName: Leather
+  itemName: "\u76AE\u9769"
   itemWeights: 0
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 

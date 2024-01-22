@@ -19,9 +19,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Iron Dagger
-  itemWeights: 0
+  itemName: "\u9435\u5315\u9996"
+  itemWeights: 3
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 3
   desciption: 

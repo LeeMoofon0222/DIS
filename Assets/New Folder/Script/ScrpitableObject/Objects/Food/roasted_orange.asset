@@ -20,9 +20,10 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
-  itemName: orange
+  itemName: "\u70E4\u6A58\u5B50"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: d067ce88bd172544aa60d482695c6a44, type: 3}
+  hitsound: {fileID: 0}
   type: 0
   gainingType: 3
   desciption: 

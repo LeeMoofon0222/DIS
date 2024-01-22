@@ -21,12 +21,14 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
     type: 3}
-  itemName: Anvil
-  itemWeights: 0
+  itemName: "\u9435\u7827"
+  itemWeights: 15
   itemIcon: {fileID: 21300000, guid: 4eee94c439d21094cad2d53a459408d5, type: 3}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 
+  canThrow: 0
   placeAble: 1
   Preplace: {fileID: 3521731097982496575, guid: 315f9b1882e97af4495834bbd899c99a,
     type: 3}

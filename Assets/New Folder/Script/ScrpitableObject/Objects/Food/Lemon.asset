@@ -20,9 +20,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
-  itemName: Lemon
+  itemName: "\u6AB8\u6AAC"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: 32f16c753dea9dc4da46799c4671757a, type: 3}
+  hitsound: {fileID: 0}
   type: 0
   gainingType: 3
   desciption: 

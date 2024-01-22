@@ -61,7 +61,7 @@ public class InformationManger : MonoBehaviour
         itemCOunt.text = "¼Æ¶q:" + ammount.ToString();
         ItemInformation.text = PlayerInventoryController.pre_ItemSlot.desciption;
         Title.text = PlayerInventoryController.pre_ItemSlot.itemName;
-
+        Name.SetActive(true);
 
     }
     public void SetItemType()
