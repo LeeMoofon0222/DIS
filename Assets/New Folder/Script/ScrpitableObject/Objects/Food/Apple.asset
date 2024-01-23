@@ -21,7 +21,7 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Apple
+  itemName: "\u860B\u679C"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: 21a2a2c8906f4ef449bd3a931abf5975, type: 3}
   hitsound: {fileID: 0}

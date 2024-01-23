@@ -19,9 +19,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
-  itemName: Torch
-  itemWeights: 0
+  itemName: "\u706B\u628A"
+  itemWeights: 3
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 3
   desciption: 

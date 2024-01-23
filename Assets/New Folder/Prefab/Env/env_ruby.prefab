@@ -136,8 +136,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -150,7 +150,7 @@ BoxCollider:
   m_GameObject: {fileID: 9028279455448867410}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.54837173, y: 0.5613761, z: 0.5182924}
   m_Center: {x: -0.012000561, y: 0.006807193, z: -0.00376831}

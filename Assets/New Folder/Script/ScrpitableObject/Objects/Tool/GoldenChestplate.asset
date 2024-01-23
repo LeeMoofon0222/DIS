@@ -19,9 +19,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Golden Chestplate
+  itemName: "\u91D1\u7532"
   itemWeights: 0
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 0
   desciption: 

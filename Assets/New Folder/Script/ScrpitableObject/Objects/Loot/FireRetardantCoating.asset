@@ -19,9 +19,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Fire Retardant Coating
+  itemName: "\u9632\u706B\u5857\u6599"
   itemWeights: 0
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 

@@ -19,9 +19,10 @@ MonoBehaviour:
   spawntoscene: {fileID: 0}
   UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
     type: 3}
-  itemName: Lave Crystal Powder
+  itemName: "\u7194\u5CA9\u6C34\u6676\u7C89"
   itemWeights: 0
   itemIcon: {fileID: 0}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 

@@ -21,9 +21,10 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: Iron Axe
-  itemWeights: 0
+  itemName: "\u9435\u65A7"
+  itemWeights: 4
   itemIcon: {fileID: 21300000, guid: e3c48f70620beec4e93de1e83d334eb1, type: 3}
+  hitsound: {fileID: 0}
   type: 1
   gainingType: 1
   desciption: 

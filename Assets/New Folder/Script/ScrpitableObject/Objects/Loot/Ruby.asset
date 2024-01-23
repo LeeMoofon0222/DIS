@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f11173bcada58147b705054355abf14, type: 3}
   m_Name: Ruby
   m_EditorClassIdentifier: 
-  ID: 100021
+  ID: 10021
   itemHealth: 1
   stackable: 1
   itemObject: {fileID: 1947875453777213082, guid: 69fe6d6a5ff61e04784d0dacc08caeda,
@@ -21,9 +21,10 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
     type: 3}
-  itemName: Ruby
-  itemWeights: 0
+  itemName: "\u7D05\u5BF6\u77F3"
+  itemWeights: 1
   itemIcon: {fileID: 21300000, guid: 87f185764ed04e546a316dd78cb06e8d, type: 3}
+  hitsound: {fileID: 0}
   type: 2
   gainingType: 3
   desciption: 
