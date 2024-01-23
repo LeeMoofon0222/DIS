@@ -67,16 +67,18 @@ namespace DitzeGames.Effects
 
             //one time
             instance.destroyAfterPlay = true;
-            instance.Shake();
+            instance.Shake(1,1);
         }
 
         /// <summary>
         /// Do the shake
         /// </summary>
-        public void Shake()
+        public void Shake(int duration, float level)
         {
             ResetCam();
-            time = Duration;
+            time = duration;
+            Amount = new Vector3(level, level, level);
+            Speed = level * 3;
         }
 
         private void LateUpdate()
