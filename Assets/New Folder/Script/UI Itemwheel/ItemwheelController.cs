@@ -16,7 +16,7 @@ public class ItemwheelController : MonoBehaviour
     public List<ItemwheelButtonCOntroller> itembutton;
     public PlayerMoveMent pm;
     public PlayerInventoryController playerInventoryController;
-
+    
     public List<Button> buttons;
     
     // Start is called before the first frame update
