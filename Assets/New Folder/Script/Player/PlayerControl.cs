@@ -1,4 +1,5 @@
 
+using DitzeGames.Effects;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -153,6 +154,12 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            var ce = GameObject.Find("PlayerCamera").GetComponent<CameraEffects>();
+            ce.Shake(1, 5);
+        }*/
         timer += Time.deltaTime;
         RaycastHit hitInfo;
 
