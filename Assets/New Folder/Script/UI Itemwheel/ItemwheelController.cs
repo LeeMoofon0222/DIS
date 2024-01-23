@@ -42,7 +42,7 @@ public class ItemwheelController : MonoBehaviour
         }
 
 
-        if (weaponWheelSelected )
+        if (weaponWheelSelected && playerInventoryController.inventoryOpen == false)
         {
             foreach(var button in buttons)
                 button.enabled= true;

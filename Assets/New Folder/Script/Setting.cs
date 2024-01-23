@@ -25,7 +25,7 @@ public class Setting : MonoBehaviour
 
     public Slider Sensitivity;
     public Slider FOV;
-
+    public ItemwheelController ItemwheelController;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +56,7 @@ public class Setting : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
-        else
+        else if(!opening && !ItemwheelController.weaponWheelSelected)
         {
             Closing();
         }
