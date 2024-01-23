@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using DitzeGames.Effects;
 
 using UnityEngine;
 
@@ -57,6 +57,10 @@ public class MapLottery : MonoBehaviour
     public Animator glowing;
 
     PlayerMoveMent PM;
+
+    public ParticleSystem particle;
+
+    CameraEffects CE;
 
 
 
@@ -150,7 +154,7 @@ public class MapLottery : MonoBehaviour
             PM = player.GetComponent<PlayerMoveMent>();
             PM.canMove= false;
 
-
+            CE = GameObject.Find("PlayerCamera").GetComponent<CameraEffects>();
 
             totalpoint = 0;
             for (int i = 0; i < items.Count; i++)
@@ -166,8 +170,12 @@ public class MapLottery : MonoBehaviour
                 }
             }
 
-            DestroyItem();
-            Randomizor();
+            if(totalpoint != 0)
+            {
+                DestroyItem();
+                Randomizor();
+
+            }
         }
     }
 
@@ -268,6 +276,10 @@ public class MapLottery : MonoBehaviour
     {
         glowing.Play("Glowing");
         maskAnimator.SetTrigger("Glow");
+        particle.Play();
+
+        CE.Shake(5,1);
+
         isworking = true;
         yield return new WaitForSeconds(6f);
 
