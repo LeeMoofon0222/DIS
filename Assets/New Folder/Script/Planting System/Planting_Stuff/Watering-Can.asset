@@ -19,16 +19,16 @@ MonoBehaviour:
     type: 3}
   spawntoscene: {fileID: 2932600059415940491, guid: 6cb43985702b8754e9a797299c127102,
     type: 3}
-  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+  UIObject: {fileID: 8171476313501535594, guid: 62a3d1dd59cb5414ba6cbf2a968489ad,
     type: 3}
   itemName: Watering-Can
   itemWeights: 1
-  itemIcon: {fileID: 21300030, guid: d40c191aa46654db7a426d6a1fa3aa30, type: 3}
+  itemIcon: {fileID: 21300000, guid: 4659c7a2af9126147afbe6d10994f89f, type: 3}
   hitsound: {fileID: 0}
   type: 1
-  gainingType: 0
+  gainingType: 3
   desciption: 
-  canThrow: 0
+  canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
   ToolATK: 0

@@ -159,6 +159,6 @@ MonoBehaviour:
   - amount: 1
     loot: {fileID: 11400000, guid: 5a8a2b16e043c3e4a85a314ca3684f3c, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
-  _forRatioType: 0
-  peritemuGet: 1
+  _forRatioType: 3
+  peritemuGet: 0
   getfromother: 0
