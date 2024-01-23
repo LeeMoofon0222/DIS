@@ -25,6 +25,7 @@ public class SkyChanger : MonoBehaviour
     public biomes desert;
     public biomes cherry;
     public biomes valcano;
+    public biomes autumn;
     
 
     public Material _skybox;
@@ -128,7 +129,15 @@ public class SkyChanger : MonoBehaviour
                     _skybox.SetFloat("_EquatorSmoothness", Mathf.Lerp(_skybox.GetFloat("_EquatorSmoothness"), valcano.equator_smoothness, Time.deltaTime / timescale));
 
                     break;
+                case 3:
+                    _skybox.SetColor("_SkyColor", Vector4.Lerp(_skybox.GetColor("_SkyColor"), autumn.skyColor, Time.deltaTime));
+                    _skybox.SetColor("_EquatorColor", Vector4.Lerp(_skybox.GetColor("_EquatorColor"), autumn.EquatorColor, Time.deltaTime));
+                    _skybox.SetColor("_GroundColor", Vector4.Lerp(_skybox.GetColor("_GroundColor"), autumn.GroundColor, Time.deltaTime));
 
+                    _skybox.SetFloat("_EquatorHeight", Mathf.Lerp(_skybox.GetFloat("_EquatorHeight"), autumn.equator_height, Time.deltaTime / timescale));
+                    _skybox.SetFloat("_EquatorSmoothness", Mathf.Lerp(_skybox.GetFloat("_EquatorSmoothness"), autumn.equator_smoothness, Time.deltaTime / timescale));
+
+                    break;
 
             }
         }
@@ -165,6 +174,13 @@ public class SkyChanger : MonoBehaviour
             //_skybox.SetColor("_TintColor", Vector4.Lerp(_skybox.GetColor("_TintColor"), cherry.skyColor, Time.deltaTime));
         }
 
+        if (other.CompareTag("FallIsland"))
+        {
+            biomeNum = 3;
+            exitArea = false;
+            //_skybox.SetColor("_TintColor", Vector4.Lerp(_skybox.GetColor("_TintColor"), cherry.skyColor, Time.deltaTime));
+        }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -175,8 +191,6 @@ public class SkyChanger : MonoBehaviour
         {
             exitArea = true;
         }
-        
-
 
     }
 
