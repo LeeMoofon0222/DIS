@@ -20,7 +20,7 @@ public class Col_Des : MonoBehaviour
         GameObject obj = Instantiate(stone_crack, pos, Quaternion.identity);
         Destroy(obj,10);
         var ce = GameObject.Find("PlayerCamera").GetComponent<CameraEffects>();
-        ce.Shake();
+        ce.Shake(1);
 
         if (collision.transform.CompareTag("Player"))
         {
