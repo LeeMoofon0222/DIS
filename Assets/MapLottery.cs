@@ -69,6 +69,14 @@ public class MapLottery : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isworking)
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            PM = player.GetComponent<PlayerMoveMent>();
+            PM.canMove = false;
+        }
+
+
         colliders = new Collider[0];
 
         recorded.Clear();
@@ -211,14 +219,39 @@ public class MapLottery : MonoBehaviour
                     {
                         int rand = Random.Range(0, reward[i].item.Count - 1);
 
-                        Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position, Quaternion.identity);
+                        if(RandNum <= 52 && rand != 1)
+                        {
+                            Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position, Quaternion.identity);
+                        }
+                        else
+                        {
+                            for(int k = 0; k <= RandNum % 3; k++)
+                            {
+                                Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position + new Vector3(k / 6, 0, 0), Quaternion.identity);
+                            }
+                        }
+                        
 
 
                     }
                     else
                     {
                         // m_inventory.AddItem(lootdrop[i].loot[0], 1, 1, 0);
-                        Instantiate(reward[i].item[0].spawntoscene, generatePoint.position, Quaternion.identity);
+                        if(RandNum >= 96)
+                        {
+                            Instantiate(reward[i].item[0].spawntoscene, generatePoint.position, Quaternion.identity);
+                            
+                        }
+                        else
+                        {
+                            for (int k = 0; k <= RandNum % 3; k++)
+                            {
+                                Instantiate(reward[i].item[0].spawntoscene, generatePoint.position + new Vector3(k/6,0,0), Quaternion.identity);
+                            }
+                        }
+
+                        
+                        
 
                     }
                 }
