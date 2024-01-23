@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: jadehammer 1
   m_EditorClassIdentifier: 
   materials:
-  - ID: 10023
-    amount: 1
   - ID: 10001
     amount: 3
   - ID: 10003
     amount: 4
+  - ID: 10023
+    amount: 1
   outputAmount: 1
   output: {fileID: 596911749439532872, guid: acbbb96e69c275b4cb6d98f434741fa4, type: 3}
   Itemoutput: {fileID: 11400000, guid: edd8677da79331a4fa236201118c8f35, type: 2}

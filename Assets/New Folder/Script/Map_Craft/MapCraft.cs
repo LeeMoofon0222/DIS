@@ -1,6 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(CraftingAPI))]
@@ -24,6 +27,14 @@ public class MapCraft : MonoBehaviour
     Dictionary<Item, int> recorded = new Dictionary<Item, int>();
     int pos;
 
+    bool isworking;
+
+    public ParticleSystem craftingVFX;
+    public Animator craftAnim;
+    public Transform generatepoint;
+
+
+
     void Start()
     {
         craftingAPI = GetComponent<CraftingAPI>();
@@ -32,7 +43,7 @@ public class MapCraft : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (/*Input.GetKeyDown(KeyCode.U)*/ reload)
+        if (/*Input.GetKeyDown(KeyCode.U)*/ reload && !isworking)
         {
             print("reload");
 
@@ -48,7 +59,8 @@ public class MapCraft : MonoBehaviour
                 var child = gameObject.transform.GetChild(i);
                 SphereCollider col = child.GetComponent<SphereCollider>();
 
-                Collider[] childColliders = Physics.OverlapSphere(child.position,col.radius , detections );
+                Collider[] childColliders = Physics.OverlapSphere(child.position, col.radius * transform.lossyScale.x , detections );
+                //print(col.radius);
                 colliders = colliders.Concat(childColliders).ToArray();
 
                 
@@ -99,10 +111,12 @@ public class MapCraft : MonoBehaviour
             int s = 0;
             while (colliders.Length != 0)
             {
-                if(s < colliders.Length && s < 7)
+                if(s < colliders.Length && s < 8)
                 {
                     colliders[s].transform.parent = floating_pos[s];
                     colliders[s].transform.localPosition = Vector3.zero;
+
+   
 
                     colliders[s].GetComponent<Rigidbody>().isKinematic = true;
                     colliders[s].isTrigger= true;
@@ -120,7 +134,8 @@ public class MapCraft : MonoBehaviour
 
             if(output.Count != 0)
             {
-                StartCraft();
+                StartCoroutine(CraftingEffects());
+                //StartCraft();
             }
 
 
@@ -150,16 +165,29 @@ public class MapCraft : MonoBehaviour
             Destroy(colliders[i].gameObject);
         }
 
-        Vector3 generatepoint = transform.position + new Vector3(0, 2, 0);
-        print(generatepoint);
+        //Vector3 generatepoint = transform.position + new Vector3(0, 2, 0);
+        //print(generatepoint);
 
-        GameObject resualt = Instantiate(output[0].output, generatepoint, Quaternion.identity);
+        GameObject resualt = Instantiate(output[0].output, generatepoint);
         resualt.layer = 0;
         resualt.GetComponent<ItemObject>().SceneSpawned = true;
+        resualt.GetComponent<Rigidbody>().isKinematic = true;
 
         reload = true;
 
 
+    }
+
+    IEnumerator CraftingEffects()
+    {
+        isworking = true;
+        craftAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1.5f);
+        craftingVFX.Play();
+        StartCraft();
+        yield return new WaitForSeconds(1.9f);
+
+        isworking= false;
     }
 
 }
