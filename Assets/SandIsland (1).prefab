@@ -11864,7 +11864,8 @@ MonoBehaviour:
     loot:
     - {fileID: 11400000, guid: 2833ea2e28bfb4049b73c01efdee73f0, type: 2}
   - Randomweight: 30
-    loot: []
+    loot:
+    - {fileID: 0}
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
@@ -13537,7 +13538,8 @@ MonoBehaviour:
     loot:
     - {fileID: 11400000, guid: 2833ea2e28bfb4049b73c01efdee73f0, type: 2}
   - Randomweight: 30
-    loot: []
+    loot:
+    - {fileID: 0}
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0

@@ -121,7 +121,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.29
+  m_Radius: 0.84
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &423363910
 GameObject:
@@ -269,7 +269,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.31
+  m_Radius: 1.52
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1099726859
 MonoBehaviour:
@@ -14621,6 +14621,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 82eca130b798212409d2b49b6043e601,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 82eca130b798212409d2b49b6043e601,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 82eca130b798212409d2b49b6043e601,
         type: 3}

@@ -71,7 +71,7 @@ public class BlockCrossing : MonoBehaviour
         setnum = Mathf.RoundToInt(nowmw);
         _setnum = Mathf.RoundToInt(_nowmw);
 
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        if (Input.GetKeyDown(KeyCode.Backslash) || Input.GetKeyDown(KeyCode.B))
         {
             state = state == 1 ? 0 : 1;
         }

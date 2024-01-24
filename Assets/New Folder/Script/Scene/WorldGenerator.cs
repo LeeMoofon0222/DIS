@@ -117,7 +117,7 @@ public class WorldGenerator : MonoBehaviour
         {
             for(int j = -1; j < 2; j++)
             {   
-                Vector3 generation_point = new Vector3(point.x + i * IslandSpawningMagnifaction, Random.Range(-100f,100f), point.z + j * IslandSpawningMagnifaction);
+                Vector3 generation_point = new Vector3(point.x + i * IslandSpawningMagnifaction, Random.Range(-20f,20f), point.z + j * IslandSpawningMagnifaction);
 
                 if (!checkSpawned(generation_point))
                 {

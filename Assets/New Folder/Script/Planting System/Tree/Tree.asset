@@ -21,7 +21,7 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: tree
+  itemName: "\u5C0F\u6A39\u82D7"
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
   hitsound: {fileID: 0}

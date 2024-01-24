@@ -28,7 +28,7 @@ MonoBehaviour:
   type: 0
   gainingType: 3
   desciption: 
-  canThrow: 0
+  canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
   healing: 5

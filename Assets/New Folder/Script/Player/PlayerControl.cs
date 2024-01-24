@@ -184,7 +184,7 @@ public class PlayerControl : MonoBehaviour
             cursor.GetComponent<Image>().color = Color.white;
         }
 
-        if(Input.GetKeyDown(KeyCode.L))
+        if(Input.GetKeyDown(KeyCode.L) || Input.GetKey(KeyCode.LeftControl))
         {
             optionMenu.SetActive(true);
             optionPage = true;
@@ -620,6 +620,7 @@ public class PlayerControl : MonoBehaviour
                     Input.GetKey(KeyCode.E) ||
                     Input.GetKey(KeyCode.Q) ||
                     Input.GetKey(KeyCode.F) ||
+                    Input.GetKey(KeyCode.LeftControl) ||
                     Input.GetKey(KeyCode.Tab)) && bbq)
                 {
                     //fork.SetActive(false);

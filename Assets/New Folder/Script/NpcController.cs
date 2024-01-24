@@ -79,12 +79,13 @@ public class NpcController : MonoBehaviour
 
             Die();
         }
+        if (guard == null) guard = this.transform;
 
         if (target != null && Vector3.Distance(target.position, this.transform.position) <= detectDistance && !isDead &&
-            ((Vector3.Distance(guard.position, this.transform.position) <= 30 && !goBack) || !enable_guard))
+            ((!enable_guard || Vector3.Distance(guard.position, this.transform.position) <= 30 && !goBack) ))
         {
 
-            Debug.Log("gay");
+            //Debug.Log("gay");
             // 计算NPC角色向目标移动的方向和距离
             Vector3 direction = target.position - transform.position;
             float distance = direction.magnitude;

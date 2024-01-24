@@ -86,7 +86,7 @@ public class CraftingSystem : MonoBehaviour
                 showed = true;
         }
         
-        if(Input.GetKeyDown(KeyCode.Return) && recipeChoose.Count != 0)
+        if(Input.GetKeyDown(KeyCode.R) && recipeChoose.Count != 0)
         {
             anvilCraft.Play();
             foreach (Collider collider in colliderDetected)
