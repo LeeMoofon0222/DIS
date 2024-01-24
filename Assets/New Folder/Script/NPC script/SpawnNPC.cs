@@ -42,8 +42,5 @@ public class SpawnNPC : MonoBehaviour
             NPC[NPcCOunt] = Instantiate(spawnGameObject, spawnPoints[spawnpoint].position, transform.rotation);
             NPcCOunt++;
         }
-        
-
-
     }
 }
