@@ -15,6 +15,7 @@ public class PlayerInventoryController : MonoBehaviour
     public PlayerMoveMent pm;
     public PlayerControl pc;
     public PlayerCameraLook cameraLook;
+    public CursorControl cursorControl;
 
     public Transform ItemContent;
     
@@ -205,9 +206,10 @@ public class PlayerInventoryController : MonoBehaviour
             inventoryOBJ.SetActive(true);
             blurPanel.SetActive(true);
             pm.canMove = false;
-            Cursor.visible = true;
+            //Cursor.visible = true;
             cameraLook.enabled = false;
-            Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.lockState = CursorLockMode.Confined;
+            cursorControl.pic_cursor = true;
 
             if(isStorage && panelCanOpen)
                 storagePanel.SetActive(true);
@@ -221,6 +223,7 @@ public class PlayerInventoryController : MonoBehaviour
             pm.canMove = true;
             cameraLook.enabled = true;
             //Cursor.lockState = CursorLockMode.Locked;
+            cursorControl.pic_cursor = false;
             craft.SetActive(false);
             equip.SetActive(false);
             informationbar.SetActive(false);

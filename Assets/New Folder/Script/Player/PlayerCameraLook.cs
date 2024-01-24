@@ -18,12 +18,15 @@ public class PlayerCameraLook : MonoBehaviour
     public Animator camAnim;
 
     public bool canRotate;
+    public CursorControl cursorControl;    
 
     // Start is called before the first frame update
     void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;*/
+
+        cursorControl.cam_cursor = false;
         m_camera = this.gameObject.transform;
        
     }

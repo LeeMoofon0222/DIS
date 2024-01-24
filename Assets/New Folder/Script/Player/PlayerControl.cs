@@ -40,6 +40,7 @@ public class PlayerControl : MonoBehaviour
     public InventoryRecord m_inventory;
     public barController bc;
     public ItemwheelController IWC;
+    public CursorControl cursorControl;
 
     public GameObject plantpoint;
 
@@ -191,8 +192,9 @@ public class PlayerControl : MonoBehaviour
         }
         if(optionMenu.activeInHierarchy) 
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+            /*Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;*/
+            cursorControl.pc_cursor = true;
         }
 
         lefthandHolder.SetActive(!anyoptionOn());
@@ -852,8 +854,10 @@ public class PlayerControl : MonoBehaviour
             IWC.weaponWheelSelected = false;
 
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            /*Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;*/
+            cursorControl.pc_cursor = false;
+
             optionPage = false;
         }
 

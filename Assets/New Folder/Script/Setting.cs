@@ -14,8 +14,11 @@ public class Setting : MonoBehaviour
     public GameObject cursor;
     public GameObject Player;
     public Camera FovCamera;
+
     private PlayerControl PlayerScript;
     private PlayerCameraLook PlayerCameraScript;
+    public CursorControl cursorControl;
+
     public bool opening = false;
     public Volume volume;
     MotionBlur blur;
@@ -36,8 +39,9 @@ public class Setting : MonoBehaviour
         Transform cameraHolderTransform = Player.transform.Find("CameraHolder");
         PlayerCameraScript = cameraHolderTransform.GetComponent<PlayerCameraLook>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;*/
+        cursorControl.setting_cursor = false;
 
     }
 
@@ -53,8 +57,9 @@ public class Setting : MonoBehaviour
             Player.GetComponent<PlayerControl>().SettingmodeForRotate(true);
             cursor.SetActive(false);
             SetGround.SetActive(true);
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.visible = true;
+            cursorControl.setting_cursor = true;
         }
         else
         {
@@ -93,8 +98,9 @@ public class Setting : MonoBehaviour
         Player.GetComponent<PlayerControl>().SettingmodeForRotate(false);
         cursor.SetActive(true);
         SetGround.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        cursorControl.setting_cursor = false;
 
     }
     /*public void SettingClose()
