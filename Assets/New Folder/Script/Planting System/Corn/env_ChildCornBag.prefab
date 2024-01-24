@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 5a8a2b16e043c3e4a85a314ca3684f3c, type: 2}
   m_name: Corn_Seed
-  m_sprite: {fileID: 21300000, guid: f47ff72e99e82824893f03613b63c97e, type: 3}
+  m_sprite: {fileID: 21300000, guid: 38bed298f1792e845b0d4be82df2c8c5, type: 3}
   objectHealth: 1
   CanScaleChange: 0
   PickObj: 1

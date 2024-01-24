@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: a93db241807749a478dae87aa722442a, type: 2}
-  m_name: "\u5C0F\u6A39\u82D7"
+  m_name: "\u5C0F\u679C\u6A39\u82D7"
   m_sprite: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
-  objectHealth: 5
+  objectHealth: 1
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
