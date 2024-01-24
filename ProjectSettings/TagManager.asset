@@ -27,6 +27,7 @@ TagManager:
   - Hope
   - Storage
   - Lava
+  - FallIsland
   layers:
   - Default
   - TransparentFX

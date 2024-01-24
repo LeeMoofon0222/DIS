@@ -40,6 +40,7 @@ public class PlayerControl : MonoBehaviour
     public InventoryRecord m_inventory;
     public barController bc;
     public ItemwheelController IWC;
+    public CursorControl cursorControl;
 
     public GameObject plantpoint;
 
@@ -191,8 +192,9 @@ public class PlayerControl : MonoBehaviour
         }
         if(optionMenu.activeInHierarchy) 
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+            /*Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;*/
+            cursorControl.pc_cursor = true;
         }
 
         lefthandHolder.SetActive(!anyoptionOn());
@@ -356,7 +358,7 @@ public class PlayerControl : MonoBehaviour
         {
             onhandSpawned = false;
         }
-
+        
 
 
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
@@ -370,7 +372,12 @@ public class PlayerControl : MonoBehaviour
                 plantpoint = raycastHit.transform.gameObject.transform.GetChild(0).gameObject;
                 if (onHandItem.CompareTag("watering-can") && hasplant && watering==0)
                 {
-                    thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
+                    //thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
+
+                    var _v = onHandItem.GetComponent<OnHandVFX>().vfx;      //取得水粒子
+                    StartCoroutine(Watering(_v));       //動畫播放 (總共4.2秒左右)
+
+
                     watering = 1;
                 }
                 else
@@ -852,8 +859,10 @@ public class PlayerControl : MonoBehaviour
             IWC.weaponWheelSelected = false;
 
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            /*Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;*/
+            cursorControl.pc_cursor = false;
+
             optionPage = false;
         }
 
@@ -962,6 +971,31 @@ public class PlayerControl : MonoBehaviour
         DetectGameObjects();
 
         yield return new WaitForSeconds(1.8f - (0.67f - 0.55f) - 0.55f);
+        if (pm.GetComponent<PlayerMoveMent>().isMoving)
+        {
+            handHolderController.Play("moving");
+            cameraControl.camAnim.Play("None");
+        }
+        else
+        {
+            handHolderController.Play("Idle");
+            cameraControl.camAnim.Play("Breath");
+        }
+        isDigging = false;
+    }
+
+    IEnumerator Watering(ParticleSystem _vfx)
+    {
+        isDigging = true;
+        handHolderController.Play("Watering");
+        //cameraControl.camAnim.Play("Attack2");
+        yield return new WaitForSeconds(0.85f);
+        //swing.Play();
+        _vfx.Play();
+        yield return new WaitForSeconds(4.2f - 0.855f);
+        
+
+        
         if (pm.GetComponent<PlayerMoveMent>().isMoving)
         {
             handHolderController.Play("moving");

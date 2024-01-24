@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631937420009182999}
-  m_LocalRotation: {x: 0.6842474, y: 0.27184498, z: -0.1968133, w: 0.6474337}
+  m_LocalRotation: {x: 0.117450126, y: 0.717, z: 0.11826304, w: 0.67685324}
   m_LocalPosition: {x: 0.241, y: -0.214, z: 0.002}
-  m_LocalScale: {x: 0.012, y: 0.012, z: 0.012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 83.224, y: 135.523, z: 96.746}
+  m_LocalEulerAnglesHint: {x: -0.607, y: 93.197, z: 19.18}
 --- !u!33 &1045733341177299464
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631937420009182999}
-  m_Mesh: {fileID: 2320819251788351820, guid: 8015d9bb4cfbe9c45ba8976b2d079114, type: 3}
+  m_Mesh: {fileID: -4224193870148154796, guid: 8015d9bb4cfbe9c45ba8976b2d079114, type: 3}
 --- !u!23 &2983572798241715906
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -99,7 +99,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2320819251788351820, guid: 8015d9bb4cfbe9c45ba8976b2d079114, type: 3}
+  m_Mesh: {fileID: -4224193870148154796, guid: 8015d9bb4cfbe9c45ba8976b2d079114, type: 3}
 --- !u!54 &6213955205903652659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,9 +135,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  PlayerCanThrow: 1
-  rb: {fileID: 6213955205903652659}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0

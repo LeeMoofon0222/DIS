@@ -48,7 +48,7 @@ public class SystemTEXTManger : MonoBehaviour
         var GetItem = GetItemText[n].transform.Find("GetItem");
         var _itemText = GetItem.transform.Find("ItemText").GetComponent<Text>();
         var _itemIcon = GetItem.transform.Find("ItemIcon").GetComponent<Image>();
-        _itemText.text = _item.name + "กั" + _amount.ToString();
+        _itemText.text = _item.itemName + "กั" + _amount.ToString();
         _itemIcon.sprite = _item.itemIcon;
 
         n++;

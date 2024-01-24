@@ -28,6 +28,9 @@ public class CraftingSystem : MonoBehaviour
     bool regenerateUI;
 
 
+    public ParticleSystem anvilCraft;
+
+
     //public MonoScript script;
 
     void Awake()
@@ -85,6 +88,7 @@ public class CraftingSystem : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Return) && recipeChoose.Count != 0)
         {
+            anvilCraft.Play();
             foreach (Collider collider in colliderDetected)
             {
                 if (collider.gameObject.TryGetComponent(out ItemObject IO))
@@ -99,7 +103,7 @@ public class CraftingSystem : MonoBehaviour
                 Destroy(child.gameObject);
             }
 
-            GameObject result = Instantiate(recipeChoose[rcn].output, detectBox.transform.position,Quaternion.identity);
+            GameObject result = Instantiate(recipeChoose[rcn].output, anvilCraft.transform.position, Quaternion.identity);
             result.GetComponent<ItemObject>().SceneSpawned = true;
             itemIDs.Clear();
             recipeChoose.Clear();

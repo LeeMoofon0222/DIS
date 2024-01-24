@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
+  m_Name: Bread
+  m_EditorClassIdentifier: 
+  ID: 30005
+  itemHealth: 1
+  stackable: 1
+  itemObject: {fileID: 8651084177729518266, guid: 7c14f0492c760314484c1e94d3d1add6,
+    type: 3}
+  spawntoscene: {fileID: 6549943282130457228, guid: 976a4c81bc00c0642931d497cc6f2606,
+    type: 3}
+  UIObject: {fileID: 8125446791376874469, guid: b69d50355f1827844b3ec340ef27b8d2,
+    type: 3}
+  itemName: "\u9762\u5305"
+  itemWeights: 2
+  itemIcon: {fileID: 21300000, guid: ae22446e15112d64eb89ad9cb7cf669f, type: 3}
+  hitsound: {fileID: 0}
+  type: 0
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 0
+  Preplace: {fileID: 0}
+  healing: 5
+  satiety: 10
+  canbeBBQ: 0
+  roastStep: []
+  stepTime: []
+  foodWithin: []

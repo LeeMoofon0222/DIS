@@ -17,6 +17,8 @@ public class ItemwheelController : MonoBehaviour
     public PlayerMoveMent pm;
     public PlayerInventoryController playerInventoryController;
 
+    public CursorControl cursorControl;
+    
     public List<Button> buttons;
     
     // Start is called before the first frame update
@@ -42,15 +44,17 @@ public class ItemwheelController : MonoBehaviour
         }
 
 
-        if (weaponWheelSelected )
+        if (weaponWheelSelected && playerInventoryController.inventoryOpen == false)
         {
             foreach(var button in buttons)
                 button.enabled= true;
             
             //pm.canMove = false; 
-            Cursor.visible = true;
+            
             cl.enabled = false;
-            Cursor.lockState = CursorLockMode.Confined;
+            /*Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;*/
+            cursorControl.wc_cursor = true;
             anim.SetBool("OpenWeaponWheel", true);
 
         }
@@ -62,9 +66,11 @@ public class ItemwheelController : MonoBehaviour
 
             //pm.canMove = true;
             cl.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
+            
             anim.SetBool("OpenWeaponWheel", false);
-            Cursor.visible = false;
+            /*Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;*/
+            cursorControl.wc_cursor = false;
 
         }
     }
