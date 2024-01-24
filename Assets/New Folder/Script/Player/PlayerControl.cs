@@ -466,7 +466,7 @@ public class PlayerControl : MonoBehaviour
             if (hitInfo.transform.TryGetComponent(out Smelter smelter))
             {
                 //Debug.Log("detected");
-                if (Input.GetMouseButtonDown(1) && itemHolding.item != null && !smelter.issmelting)
+                if (Input.GetMouseButtonDown(1) && itemHolding != null && !smelter.issmelting)
                 {
                     //smelter.Smelt(itemHolding.item, m_inventory.GetItemAmount(itemHolding.item));
                     smelter.setToSmelt(itemHolding.item);

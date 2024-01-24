@@ -2735,8 +2735,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -2760,6 +2760,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &5239388093398712902
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322481032904984312}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &1095076639977118786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -4445,8 +4462,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -4470,6 +4487,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &7046417846113286861
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282195148967088838}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &621881932807260284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -4705,8 +4739,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -4730,6 +4764,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &5130386174669434493
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268981493443771895}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &644100038950053709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -6862,6 +6913,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &327042135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6882,8 +6934,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -7243,6 +7295,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &437951592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7263,8 +7316,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -7434,6 +7487,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &445900071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7454,8 +7508,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -7799,6 +7853,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &1024237389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7819,11 +7874,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &6111349975138445373
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916380116667793}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391477182240555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -8049,6 +8120,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &944365359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8069,11 +8141,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &7938291624965182421
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916380036632055}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391477102237517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -8204,6 +8292,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &973946545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8224,11 +8313,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &8458458995470794694
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916380066311285}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391477064775375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -8449,6 +8554,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &759807167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,11 +8575,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &5802679421577351636
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916380388978279}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476917679325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -8699,6 +8821,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &795849323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8719,11 +8842,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &7667699872143458420
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916380424757427}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476882160137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -9175,8 +9314,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -9202,6 +9341,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!4 &2189391476626561150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8265265dca7cea349bd218d6f0bde1ec,
@@ -9803,6 +9943,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &1128060105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9823,11 +9964,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &4934622649318661594
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916379683587613}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476407360679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -9958,8 +10115,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -9983,6 +10140,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &4466713942327230178
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916379841146518}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476351005740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -10113,6 +10287,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &1320501338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10133,11 +10308,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &8736475482959250756
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916379877020300}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476315572278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -10509,8 +10700,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -10534,6 +10725,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!4 &2189391476207139966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6650b3696e93056459f5eacc588c5044,
@@ -10779,6 +10971,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &2084132228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10799,11 +10992,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &7977287883911266651
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916379028981594}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391476088298976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -11024,6 +11233,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &2052006695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11044,11 +11254,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
+--- !u!54 &2656894546075719729
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524916378996634111}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2189391475995093829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee74c8853bb352f4eb66db3b0c7d8a48,
@@ -11430,6 +11656,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &1828138712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11450,8 +11677,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -14171,8 +14398,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -14196,6 +14423,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &1044580107557169057
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426559759409424027}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2592555764076628536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15085,8 +15329,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 299509322931716639}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -31252,6 +31496,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 1
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &339190713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31272,8 +31517,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 5398580384027667318, guid: d138d1c13ece2b341981a7f74d5f9af4,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -35811,8 +36056,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -35836,6 +36081,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &5467435274907473670
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2508395477449485106}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2991600479041155464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -37212,8 +37474,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -37237,6 +37499,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &2091478255935127834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152357739076945735}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &3856870131316841949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38466,8 +38745,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -38491,6 +38770,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &5210984186184168867
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013727676502015357}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &4393385280904505287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -38852,6 +39148,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &7479534691192602979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38872,11 +39169,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &6974284801051766329
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601011463930856959}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &4229597431660355397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -40053,6 +40366,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &8200121618757889541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40073,11 +40387,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &3934724210335334216
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503635036615919231}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &4714204161404222084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42633,6 +42963,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &9161821559741061579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42653,11 +42984,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &1273537157014363881
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132499349477216947}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &5508355736275716105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -44008,8 +44355,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 270158223016453593}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -45127,8 +45474,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 25822083565824414}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -46291,8 +46638,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -46316,6 +46663,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &4829664674218643515
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140531150253931176}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &6808418031562874898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -46561,8 +46925,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 3249861988609455204}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -50026,6 +50390,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &4197185414216494852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50046,11 +50411,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &2618075758061027339
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635957126306782641}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &7311536333299017767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50361,6 +50742,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &6906048454294431149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50381,11 +50763,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &9114054682043599878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601430735035234852}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &7362695389788042007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51090,8 +51488,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 3282399350058606063}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -51494,8 +51892,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
@@ -51519,6 +51917,23 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
+--- !u!54 &6704509357191484715
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453415667052618230}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &7792364953485245260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
@@ -55185,6 +55600,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 3
   peritemuGet: 0
+  getfromother: 0
 --- !u!114 &9002330507280368857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55205,11 +55621,27 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 1229902209472512600, guid: 100531ea6af20744bb09027ffd68031d,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
+--- !u!54 &2985336386833116562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298857967364774822}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &8674117560414945564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdc08ff32dbff764f956d657ffa99703,
