@@ -9,6 +9,8 @@ public class ObjectCrack : MonoBehaviour
     Vector3 scale;
 
     public bool resize;
+
+    public bool recolor;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,7 +22,27 @@ public class ObjectCrack : MonoBehaviour
     private void OnDestroy()
     {
         GameObject obj = Instantiate(CrackedObject , this.transform.position , this.transform.rotation );
+
+        if (recolor)
+        {
+            Material[] thismat = this.GetComponent<MeshRenderer>().materials;
+            if (obj.TryGetComponent(out MeshRenderer MR))
+            {
+                
+                MR.materials = thismat;
+            }
+            else
+            {
+                for(int i = 0; i < obj.transform.childCount; i++)
+                {
+                    obj.transform.GetChild(i).GetComponent<MeshRenderer>().materials = thismat;
+                }
+            }
+            
+        }
         
+
+
         if (resize)
         {
             obj.transform.localScale = new Vector3(this.transform.lossyScale.x * 0.01f, this.transform.lossyScale.y * 0.01f, this.transform.lossyScale.z * 0.01f);
