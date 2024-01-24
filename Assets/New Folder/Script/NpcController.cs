@@ -51,6 +51,7 @@ public class NpcController : MonoBehaviour
     public Item loot;
 
     public GameObject hurtparticle;
+    public ParticleSystem attackParticle;
 
 
 
@@ -244,6 +245,7 @@ public class NpcController : MonoBehaviour
         yield return new WaitForSeconds(3);
         Destroy(Attackpartical);
         Collider[] collide = Physics.OverlapSphere(area.transform.position, area.GetComponent<SphereCollider>().radius, playermask);
+        attackParticle.Play();
         Debug.Log(collide);
         if (collide.Length > 0) playerhealth.currentlife -= attackValue;
 

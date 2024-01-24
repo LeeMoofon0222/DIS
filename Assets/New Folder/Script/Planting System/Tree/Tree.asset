@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
   m_Name: Tree
   m_EditorClassIdentifier: 
-  ID: 798789
+  ID: 40001
   itemHealth: 1
   stackable: 1
   itemObject: {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403,
@@ -31,7 +31,7 @@ MonoBehaviour:
   canThrow: 0
   placeAble: 0
   Preplace: {fileID: 0}
-  period: 10
+  period: 120
   plantstep:
   - {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403, type: 3}
   - {fileID: 4751039627884398626, guid: 27444f773b5c2f84c83243edf561a9d3, type: 3}

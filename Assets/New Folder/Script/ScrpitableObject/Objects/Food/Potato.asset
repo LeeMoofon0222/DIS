@@ -31,8 +31,8 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  healing: 0
-  satiety: 0
+  healing: 2
+  satiety: 2
   canbeBBQ: 1
   roastStep:
   - {fileID: 2100000, guid: 9976d9ed5228ed44d830dec4837bfe03, type: 2}

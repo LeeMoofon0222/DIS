@@ -34,8 +34,6 @@ MonoBehaviour:
   healing: 3
   satiety: 5
   canbeBBQ: 0
-  roastStep:
-  - {fileID: 0}
-  stepTime:
-  - 0
+  roastStep: []
+  stepTime: []
   foodWithin: []

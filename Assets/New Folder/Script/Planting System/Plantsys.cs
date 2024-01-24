@@ -22,7 +22,12 @@ public class Plantsys : MonoBehaviour
     public bool hasplant = true;
     public bool doplant = false;
     public Slider slider;
-    private bool test1=true;
+    private bool test1 = true;
+
+    public void Start()
+    {
+        slider.gameObject.SetActive(true);
+    }
     public void Update()
     {
         player = GameObject.FindWithTag("Player");
@@ -43,6 +48,11 @@ public class Plantsys : MonoBehaviour
             player.GetComponent<PlayerControl>().watering = 0;
             doplant = false;
         }
+        /*
+        if(plant == null)
+        {
+            slider.gameObject.SetActive(false);
+        }*/
         if (plant != null)
         {
             hasplant = true;
@@ -51,12 +61,12 @@ public class Plantsys : MonoBehaviour
         {
             hasplant = false;
         }
-        if(slider.value == 0)
+        if (slider.value == 0)
         {
             slider.value = period;
             //slider.gameObject.SetActive(false);
         }
-        if (p!=0 && p == plantlist.Count)
+        if (p != 0 && p == plantlist.Count)
         {
             slider.gameObject.SetActive(false);
         }
@@ -67,7 +77,8 @@ public class Plantsys : MonoBehaviour
         if (!hasplant)
         {
             slider.gameObject.SetActive(true);
-
+            slider.maxValue = period;
+            slider.value = period;
         }
     }
     public void DoPlanting(PlantObject thisseed)
@@ -80,18 +91,26 @@ public class Plantsys : MonoBehaviour
         step = plantlist.Count;
         id = thisseed.ID;
 
-        if (id == 798789)
+        if (id == 40001)
         {
             plantpoint = gameObject.transform.GetChild(0).gameObject;
 
         }
-        if (id == 788888)
+        if (id == 40002)
         {
             plantpoint = gameObject.transform.GetChild(1).gameObject;
         }
-        if (id == 30018)
+        if (id == 40003)
         {
             plantpoint = gameObject.transform.GetChild(1).gameObject;
+        }
+        if (id == 40004)
+        {
+            plantpoint = gameObject.transform.GetChild(1).gameObject;
+        }
+        if (id == 40005)
+        {
+            plantpoint = gameObject.transform.GetChild(0).gameObject;
         }
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantpoint.transform.rotation);
         plant.layer = 0;
@@ -109,7 +128,7 @@ public class Plantsys : MonoBehaviour
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantlist[p].transform.rotation);
         test1 = true;
         gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
-        if (p < step-1)
+        if (p < step - 1)
         {
             doplant = true;
         }
@@ -119,7 +138,7 @@ public class Plantsys : MonoBehaviour
     public void ReduceBar()
     {
         slider.value -= 1;
-        if(slider.value != 0)
+        if (slider.value != 0)
         {
             Invoke("ReduceBar", 1);
         }

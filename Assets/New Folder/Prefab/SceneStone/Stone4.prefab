@@ -139,8 +139,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 0}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &2964408067469324892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +186,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 6568322030605346445, guid: 7e93091930ad34a408898fdce34e1c98,
     type: 3}
   resize: 0
+  recolor: 1
 --- !u!95 &678662105977858748
 Animator:
   serializedVersion: 5

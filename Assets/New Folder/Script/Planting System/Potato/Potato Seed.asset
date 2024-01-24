@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
   m_Name: Potato Seed
   m_EditorClassIdentifier: 
-  ID: 788888
+  ID: 40002
   itemHealth: 1
   stackable: 1
   itemObject: {fileID: 2622205200866454038, guid: 933c5ea9ff1b0a3458fff01fca0956d4,
@@ -31,7 +31,7 @@ MonoBehaviour:
   canThrow: 0
   placeAble: 0
   Preplace: {fileID: 0}
-  period: 10
+  period: 40
   plantstep:
   - {fileID: 2622205200866454038, guid: 12e2abfcdb6012a438d39672f5d26bcc, type: 3}
   - {fileID: 1181710413938556512, guid: 6b3ae362fed0cec4ebd79848144fe914, type: 3}

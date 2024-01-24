@@ -220,9 +220,9 @@ public class PlayerControl : MonoBehaviour
 
         if (!uiSwitching && !anyoptionOn())
         {
-            float mw = Input.GetAxis("Mouse ScrollWheel");
+            /*float mw = Input.GetAxis("Mouse ScrollWheel");
             nowItem += mw * 10f;
-            nowItem = Mathf.Repeat(nowItem, PIC.itemsOnHand.Count - 0.5f);
+            nowItem = Mathf.Repeat(nowItem, PIC.itemsOnHand.Count - 0.5f);*/
             setItem = Mathf.RoundToInt(nowItem);
         }
 
@@ -879,8 +879,8 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") != 0)        //滾輪移動後重製
         {
-            RepairItemOnHand();
-            handHolderController.SetTrigger("change");
+            //RepairItemOnHand();
+            //handHolderController.SetTrigger("change");
         }
 
     }

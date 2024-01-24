@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
+  m_Name: Tree (no apple)
+  m_EditorClassIdentifier: 
+  ID: 40005
+  itemHealth: 1
+  stackable: 1
+  itemObject: {fileID: 2301210909669753363, guid: 92f9ea8e9040b7c4baa1b062790eac34,
+    type: 3}
+  spawntoscene: {fileID: 2301210909669753363, guid: 92f9ea8e9040b7c4baa1b062790eac34,
+    type: 3}
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
+    type: 3}
+  itemName: "\u5C0F\u6A39\u82D7"
+  itemWeights: 1
+  itemIcon: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
+  hitsound: {fileID: 0}
+  type: 3
+  gainingType: 3
+  desciption: 
+  canThrow: 0
+  placeAble: 0
+  Preplace: {fileID: 0}
+  period: 10
+  plantstep:
+  - {fileID: 2301210909669753363, guid: 92f9ea8e9040b7c4baa1b062790eac34, type: 3}
+  - {fileID: 4751039627884398626, guid: 0d8db617d2894b148afabffccfabaf19, type: 3}
+  - {fileID: 684691319753315937, guid: 681b5e00ed4780f48b393ee4246d763b, type: 3}
