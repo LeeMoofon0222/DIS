@@ -22,7 +22,7 @@ MonoBehaviour:
   UIObject: {fileID: 2330490699582418190, guid: 2ef726caa2470bb4591268e80142a70d,
     type: 3}
   itemName: "\u7897"
-  itemWeights: 0
+  itemWeights: 2
   itemIcon: {fileID: 21300000, guid: 2735f5c0e42c0fe419adaa6eefaa0789, type: 3}
   hitsound: {fileID: 0}
   type: 2

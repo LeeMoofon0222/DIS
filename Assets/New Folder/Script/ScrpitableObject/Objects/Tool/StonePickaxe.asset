@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StonePickaxe
   m_EditorClassIdentifier: 
   ID: 20001
-  itemHealth: 100
+  itemHealth: 30
   stackable: 0
   itemObject: {fileID: 5496272067764909646, guid: 000e79f9a8be7314fa9a7b0b280bb542,
     type: 3}
@@ -31,6 +31,6 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  ToolATK: 1
+  ToolATK: 5
   ToolDEF: 0
   ratio: 3

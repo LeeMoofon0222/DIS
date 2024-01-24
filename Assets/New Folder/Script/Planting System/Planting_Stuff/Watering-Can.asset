@@ -21,7 +21,7 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 8171476313501535594, guid: 62a3d1dd59cb5414ba6cbf2a968489ad,
     type: 3}
-  itemName: Watering-Can
+  itemName: "\u6F86\u6C34\u5668"
   itemWeights: 1
   itemIcon: {fileID: 21300000, guid: 4659c7a2af9126147afbe6d10994f89f, type: 3}
   hitsound: {fileID: 0}

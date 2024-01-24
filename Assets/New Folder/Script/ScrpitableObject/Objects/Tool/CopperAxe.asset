@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CopperAxe
   m_EditorClassIdentifier: 
   ID: 20004
-  itemHealth: 100
+  itemHealth: 45
   stackable: 0
   itemObject: {fileID: 8841919848818520541, guid: eec0486e18ed4504d818f61a9d15f76f,
     type: 3}
@@ -31,6 +31,6 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  ToolATK: 1
+  ToolATK: 8
   ToolDEF: 0
   ratio: 4

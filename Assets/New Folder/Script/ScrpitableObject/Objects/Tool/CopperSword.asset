@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CopperSword
   m_EditorClassIdentifier: 
   ID: 20006
-  itemHealth: 100
+  itemHealth: 60
   stackable: 0
   itemObject: {fileID: 7783908026505054396, guid: 6e9a816165a52894e99a17271ce9efbe,
     type: 3}
@@ -31,6 +31,6 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  ToolATK: 2
+  ToolATK: 10
   ToolDEF: 0
   ratio: 1
