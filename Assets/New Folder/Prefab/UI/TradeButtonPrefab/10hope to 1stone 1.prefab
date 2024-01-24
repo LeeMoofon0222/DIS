@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4042371685056609225}
   - component: {fileID: 4042371685056609226}
   m_Layer: 12
-  m_Name: 10hope to 1stone
+  m_Name: 10hope to 1stone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   TradeItem: {fileID: 0}
   GetTRadeItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   HopeSpawnManger: {fileID: 0}
-  HopeCost: 10
+  HopeCost: 5
   TradeAmount: 0
   GetTradeAmount: 1
   inventoryRecord: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}

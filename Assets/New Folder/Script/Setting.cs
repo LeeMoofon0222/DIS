@@ -29,6 +29,9 @@ public class Setting : MonoBehaviour
     public Slider Sensitivity;
     public Slider FOV;
     public ItemwheelController ItemwheelController;
+    public PlayerInventoryController PIC;
+    public ItemwheelController wc;
+    public PlayerControl PC;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,8 +52,11 @@ public class Setting : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !PIC.inventoryOpen && !wc.weaponWheelSelected && !PC.gayL)
             opening = !opening;
+
+        
+            
 
         if (opening)//KeyCode.Escape
         { 

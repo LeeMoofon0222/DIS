@@ -231,10 +231,11 @@ MonoBehaviour:
   TradeItem: {fileID: 0}
   GetTRadeItem: {fileID: 11400000, guid: 24a10caf800c9464293b891a08544e30, type: 2}
   HopeSpawnManger: {fileID: 0}
-  HopeCost: 30
+  HopeCost: 35
   TradeAmount: 0
   GetTradeAmount: 1
   inventoryRecord: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   tradeManger: {fileID: 0}
-  SpawnObject: {fileID: 0}
+  SpawnObject: {fileID: 2301210909669753363, guid: 71441f36196361b43b9f8b48cbea8dfb,
+    type: 3}
   scaler: 1
