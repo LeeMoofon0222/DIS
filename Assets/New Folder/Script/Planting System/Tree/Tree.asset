@@ -19,11 +19,12 @@ MonoBehaviour:
     type: 3}
   spawntoscene: {fileID: 2301210909669753363, guid: 0dfd367f7e3a00b45b6cca3671392403,
     type: 3}
-  UIObject: {fileID: 4149208445933986330, guid: f56418658e8fa0b4bb7537f18c67b3ed,
+  UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: tree
   itemWeights: 0
   itemIcon: {fileID: 21300000, guid: faee087568c02cc42920d3d1597e257f, type: 3}
+  hitsound: {fileID: 0}
   type: 3
   gainingType: 3
   desciption: 
