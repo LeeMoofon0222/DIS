@@ -21,9 +21,9 @@ MonoBehaviour:
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
-  itemName: corn
+  itemName: "\u7389\u7C73\u7A2E\u5B50"
   itemWeights: 0
-  itemIcon: {fileID: 21300000, guid: f47ff72e99e82824893f03613b63c97e, type: 3}
+  itemIcon: {fileID: 21300000, guid: 216d9aafe7713cd40a8e5e23c917ff1b, type: 3}
   hitsound: {fileID: 0}
   type: 3
   gainingType: 3

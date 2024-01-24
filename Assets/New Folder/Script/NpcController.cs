@@ -22,7 +22,7 @@ public class NpcController : MonoBehaviour
     bool isDead;
     Quaternion setRotate;
 
-    public PlayerHealth playerhealth;
+    PlayerHealth playerhealth;
 
     [Header("Guard")]
     public bool enable_guard;
@@ -36,7 +36,7 @@ public class NpcController : MonoBehaviour
     [Header("Attack")]
     public float attackCD;
     public int attackValue;
-    public GameObject player;
+    GameObject player;
     public LayerMask playermask;
     public GameObject area;
     bool canMove;
@@ -47,6 +47,8 @@ public class NpcController : MonoBehaviour
     //[Header("Hurt")]
     private float HurtCD = 0.1f;
     private bool canbeInjured = true;
+
+    public Item loot;
 
 
 
@@ -60,6 +62,8 @@ public class NpcController : MonoBehaviour
         canMove = true;
 
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        playerhealth = target.GetComponent<PlayerHealth>();
+        player = target.gameObject;
 
     }
 
@@ -222,6 +226,8 @@ public class NpcController : MonoBehaviour
 
     IEnumerator dead()
     {
+        Instantiate(loot.spawntoscene, transform.position, Quaternion.identity);
+
         yield return new WaitForSeconds(8f);
         rb.isKinematic = false;
 
