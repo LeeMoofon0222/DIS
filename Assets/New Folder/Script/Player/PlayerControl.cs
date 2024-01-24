@@ -174,6 +174,10 @@ public class PlayerControl : MonoBehaviour
             {
                 cursor.GetComponent<Image>().color = Color.green;
             }
+            else if (hitInfo.transform.TryGetComponent(out NpcController npcC))
+            {
+                cursor.GetComponent<Image>().color = Color.red;
+            }
             else
             {
                 cursor.GetComponent<Image>().color = Color.white;
@@ -709,6 +713,15 @@ public class PlayerControl : MonoBehaviour
             }
             else if (hit.transform.TryGetComponent(out NpcController npc))
             {
+                if (npc.hurtparticle != null)
+                {
+                    GameObject particalPrefab = Instantiate(npc.hurtparticle, hit.point + hit.normal * 0.001f, Quaternion.identity);
+                    particalPrefab.transform.LookAt(hit.point + hit.normal);
+
+                    Destroy(particalPrefab , 3f);
+                }
+
+
                 if (onHandItem != null)
                 {
                     if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)

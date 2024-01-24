@@ -7797,7 +7797,8 @@ MonoBehaviour:
   baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -8104,10 +8105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -8706,10 +8708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -9021,7 +9024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
     loot: []
@@ -9336,10 +9339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -9545,10 +9549,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -10287,7 +10292,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fb0c10ef16ba4644a980ff120009d313,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.24
+      value: -20.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb0c10ef16ba4644a980ff120009d313,
         type: 3}
@@ -10389,7 +10394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
     loot: []
@@ -10621,7 +10626,8 @@ MonoBehaviour:
   baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -12142,10 +12148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}
@@ -20866,7 +20873,8 @@ MonoBehaviour:
   baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 60
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 40
     loot:
     - {fileID: 11400000, guid: 15f44fa17c5eab24299213267e728767, type: 2}
@@ -23477,10 +23485,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8f89354012eb341a90e350492530d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseItem: {fileID: 0}
+  baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
   - Randomweight: 95
-    loot: []
+    loot:
+    - {fileID: 0}
   - Randomweight: 5
     loot:
     - {fileID: 11400000, guid: db729da857afa43418c472f7ef4678e6, type: 2}

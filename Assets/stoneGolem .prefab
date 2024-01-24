@@ -776,7 +776,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7638488562328918692}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51, y: 4.8, z: -205.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   guard: {fileID: 0}
   guardDistence: 30
   attackCD: 5
-  attackValue: 1
+  attackValue: 10
   playermask:
     serializedVersion: 2
     m_Bits: 8192
@@ -876,6 +876,8 @@ MonoBehaviour:
     type: 3}
   Attackpoint: {fileID: 4382277792741057197}
   loot: {fileID: 11400000, guid: 3a4631d7c57c2ea44814c076ee518b98, type: 2}
+  hurtparticle: {fileID: 3274811440442846137, guid: b72500f042a5279458f5cd6b136d24a1,
+    type: 3}
 --- !u!1 &7875765219789690257
 GameObject:
   m_ObjectHideFlags: 0
