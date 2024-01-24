@@ -216,7 +216,7 @@ public class PlayerInventoryController : MonoBehaviour
             if(isCooking && panelCanOpen)
                 cookingPanel.SetActive(true);
         }
-        else
+        else 
         {
             inventoryOBJ.SetActive(false);
             blurPanel.SetActive(false);
