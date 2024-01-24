@@ -27,6 +27,11 @@ public class Makecount : MonoBehaviour
     }
     public void Minus()
     {
+        if(Count == 0)
+        {
+            return;
+        }
+
         Count--;
         Count_text.text = Count.ToString();
 
