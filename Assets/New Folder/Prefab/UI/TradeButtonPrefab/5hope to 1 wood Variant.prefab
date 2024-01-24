@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.78431374
       objectReference: {fileID: 0}
+    - target: {fileID: 4042371685056609225, guid: e6b12e59ee2874043868c774d47e23c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4042371685056609226, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}
       propertyPath: HopeCost
@@ -141,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 4042371685384755309, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}
       propertyPath: m_Text
-      value: 5 Hope to 5 Wood
+      value: "5 \u5E0C\u671B => 1 \u6728\u982D"
       objectReference: {fileID: 0}
     - target: {fileID: 4042371685384755309, guid: e6b12e59ee2874043868c774d47e23c3,
         type: 3}

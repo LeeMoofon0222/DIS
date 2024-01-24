@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    TRadeManger trade;
+    public bool cant = true;
     public bool AbsoluteControlRotate = false;
     public void AbsoluteControlRotateButton(bool n)
     {
@@ -358,9 +360,39 @@ public class PlayerControl : MonoBehaviour
         {
             onhandSpawned = false;
         }
-        
+
+        #region HopeTrade
+
+        if (Physics.Raycast(ray, out hit, 5f))
+        {
+            if (hit.collider.gameObject.TryGetComponent(out TRadeManger Trade))
+            {
+                Trade.TradeObject.SetActive(true);
+                Trade.onTrigger = true;
+                trade = Trade;
+                if (cant == true)
+                {
 
 
+                    Trade.RandomButton();
+
+
+                }
+
+
+
+            }
+            else
+            {
+                if (trade != null)
+                {
+                    cant = true;
+                    trade.onTrigger = false;
+                    trade.TradeObject.SetActive(false);
+                }
+            }
+        }
+        #endregion
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
         #region Planting
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit raycastHit, maxRange))

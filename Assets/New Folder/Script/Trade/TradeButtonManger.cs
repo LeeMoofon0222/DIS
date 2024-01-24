@@ -18,7 +18,7 @@ public class TradeButtonManger : MonoBehaviour
     public InventoryRecord inventoryRecord;
     public TRadeManger tradeManger;
 
-    public Transform generatingPoints;
+    //public Transform generatingPoints;
     public GameObject SpawnObject;
 
     public int scaler = 1;
@@ -31,7 +31,7 @@ public class TradeButtonManger : MonoBehaviour
          fishing = tradeManger.GetComponentInChildren<Fishing>();*/
 
 
-        generatingPoints = tradeManger.generatepoint;
+        //generatingPoints = tradeManger.generatepoint;
     }
 
     // Update is called once per frame
