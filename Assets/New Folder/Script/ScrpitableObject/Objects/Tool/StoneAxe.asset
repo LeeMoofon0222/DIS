@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StoneAxe
   m_EditorClassIdentifier: 
   ID: 20002
-  itemHealth: 100
+  itemHealth: 35
   stackable: 0
   itemObject: {fileID: 5737653263424484250, guid: 2b7a679aeaa899744b22cbcbfecabada,
     type: 3}
@@ -31,6 +31,6 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  ToolATK: 1
+  ToolATK: 6
   ToolDEF: 0
   ratio: 4

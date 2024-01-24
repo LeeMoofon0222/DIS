@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    TRadeManger trade;
+    public bool cant = true;
     public bool AbsoluteControlRotate = false;
     public void AbsoluteControlRotateButton(bool n)
     {
@@ -174,6 +176,10 @@ public class PlayerControl : MonoBehaviour
             {
                 cursor.GetComponent<Image>().color = Color.green;
             }
+            else if (hitInfo.transform.TryGetComponent(out NpcController npcC))
+            {
+                cursor.GetComponent<Image>().color = Color.red;
+            }
             else
             {
                 cursor.GetComponent<Image>().color = Color.white;
@@ -208,9 +214,9 @@ public class PlayerControl : MonoBehaviour
 
         if (!uiSwitching && !anyoptionOn())
         {
-            float mw = Input.GetAxis("Mouse ScrollWheel");
+            /*float mw = Input.GetAxis("Mouse ScrollWheel");
             nowItem += mw * 10f;
-            nowItem = Mathf.Repeat(nowItem, PIC.itemsOnHand.Count - 0.5f);
+            nowItem = Mathf.Repeat(nowItem, PIC.itemsOnHand.Count - 0.5f);*/
             setItem = Mathf.RoundToInt(nowItem);
         }
 
@@ -358,9 +364,39 @@ public class PlayerControl : MonoBehaviour
         {
             onhandSpawned = false;
         }
-        
+
+        #region HopeTrade
+
+        if (Physics.Raycast(ray, out hit, 5f))
+        {
+            if (hit.collider.gameObject.TryGetComponent(out TRadeManger Trade))
+            {
+                Trade.TradeObject.SetActive(true);
+                Trade.onTrigger = true;
+                trade = Trade;
+                if (cant == true)
+                {
 
 
+                    Trade.RandomButton();
+
+
+                }
+
+
+
+            }
+            else
+            {
+                if (trade != null)
+                {
+                    cant = true;
+                    trade.onTrigger = false;
+                    trade.TradeObject.SetActive(false);
+                }
+            }
+        }
+        #endregion
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
         #region Planting
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit raycastHit, maxRange))
@@ -709,6 +745,15 @@ public class PlayerControl : MonoBehaviour
             }
             else if (hit.transform.TryGetComponent(out NpcController npc))
             {
+                if (npc.hurtparticle != null)
+                {
+                    GameObject particalPrefab = Instantiate(npc.hurtparticle, hit.point + hit.normal * 0.001f, Quaternion.identity);
+                    particalPrefab.transform.LookAt(hit.point + hit.normal);
+
+                    Destroy(particalPrefab , 3f);
+                }
+
+
                 if (onHandItem != null)
                 {
                     if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
@@ -828,8 +873,8 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") != 0)        //滾輪移動後重製
         {
-            RepairItemOnHand();
-            handHolderController.SetTrigger("change");
+            //RepairItemOnHand();
+            //handHolderController.SetTrigger("change");
         }
 
     }

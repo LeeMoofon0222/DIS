@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cheese
   m_EditorClassIdentifier: 
   ID: 30012
-  itemHealth: 0
+  itemHealth: 3
   stackable: 1
   itemObject: {fileID: 6390676440806368339, guid: 4a7368963595abb48902ab022e366f80,
     type: 3}
@@ -31,8 +31,8 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  healing: 0
-  satiety: 0
+  healing: 4
+  satiety: 7
   canbeBBQ: 0
   roastStep: []
   stepTime: []

@@ -22,7 +22,7 @@ MonoBehaviour:
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: "\u860B\u679C"
-  itemWeights: 0
+  itemWeights: 1
   itemIcon: {fileID: 21300000, guid: 21a2a2c8906f4ef449bd3a931abf5975, type: 3}
   hitsound: {fileID: 0}
   type: 0
@@ -31,8 +31,8 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  healing: 10
-  satiety: 5
+  healing: 1
+  satiety: 3
   canbeBBQ: 0
   roastStep:
   - {fileID: 2100000, guid: 85201c7eb2852f548b1ef64308a1486c, type: 2}

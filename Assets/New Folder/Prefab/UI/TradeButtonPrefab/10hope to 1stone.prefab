@@ -156,7 +156,6 @@ MonoBehaviour:
   GetTradeAmount: 1
   inventoryRecord: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   tradeManger: {fileID: 0}
-  generatingPoints: {fileID: 0}
   SpawnObject: {fileID: 9021866711252044548, guid: 5cbe262e551df924187597b90fb877a7,
     type: 3}
   scaler: 4
@@ -239,4 +238,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10 Hope to 1 Stone
+  m_Text: "5 \u5E0C\u671B => 1 \u77F3\u982D"

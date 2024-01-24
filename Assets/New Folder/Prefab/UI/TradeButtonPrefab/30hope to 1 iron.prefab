@@ -156,6 +156,8 @@ MonoBehaviour:
   GetTradeAmount: 1
   inventoryRecord: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   tradeManger: {fileID: 0}
+  SpawnObject: {fileID: 0}
+  scaler: 1
 --- !u!1 &3490205896927599459
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,4 +237,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30 Hope to 1 Iron
+  m_Text: "20 \u5E0C\u671B => 1 \u9435\u7926"

@@ -50,7 +50,7 @@ public class NpcController : MonoBehaviour
 
     public Item loot;
 
-
+    public GameObject hurtparticle;
 
 
 
@@ -184,8 +184,9 @@ public class NpcController : MonoBehaviour
             rb.freezeRotation = true;
 
             //Debug.LogWarning("dead");
+            GameObject l = Instantiate(loot.spawntoscene, this.transform.position + new Vector3(0,.5f,0), Quaternion.identity);
+            l.GetComponent<Rigidbody>().isKinematic = true;
 
-            
             setRotate = transform.rotation;
             controller.enabled = false;
             StartCoroutine(dead());
@@ -227,7 +228,7 @@ public class NpcController : MonoBehaviour
 
     IEnumerator dead()
     {
-        Instantiate(loot.spawntoscene, transform.position, Quaternion.identity);
+        
 
         yield return new WaitForSeconds(8f);
         rb.isKinematic = false;

@@ -169,6 +169,7 @@ MonoBehaviour:
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 1
+  getfromother: 0
 --- !u!114 &8306693093292454814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +185,4 @@ MonoBehaviour:
   CrackedObject: {fileID: 5609212371665585673, guid: d4373216638e70646aaff198ab2dd8aa,
     type: 3}
   resize: 0
+  recolor: 1
