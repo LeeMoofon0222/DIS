@@ -852,6 +852,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.61
       objectReference: {fileID: 0}
+    - target: {fileID: 1426786427689714595, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[1].loot.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700575102668253353, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[0].loot.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1700575102688886405, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -874,6 +884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1972436228229261227, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972436228229261227, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -881,6 +896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917576996449597658, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[1].loot.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3033736517889677576, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
@@ -896,6 +916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -28.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035132644032458949, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[1].loot.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4075926249413184709, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
@@ -916,6 +941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967169454015869388, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[0].loot.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5199602967504365269, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
@@ -972,6 +1002,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5416664922072464504, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[1].loot.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6970396390159395711, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -981,6 +1016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ValcanoIsland
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160820023629691819, guid: ccfeafaeaf4a1e049b2ed57d5441230f,
+        type: 3}
+      propertyPath: lootdrop.Array.data[0].loot.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccfeafaeaf4a1e049b2ed57d5441230f, type: 3}

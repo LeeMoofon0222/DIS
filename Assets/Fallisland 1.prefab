@@ -142,12 +142,12 @@ PrefabInstance:
     - target: {fileID: 4757555682837632942, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4757555682837632942, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4757555682837632942, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 4757555682837632942, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4757555682837632942, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
@@ -178,6 +178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FallIsland (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282136337168583956, guid: cff9fd4e4cc25ec4a80da0365019d463,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5588630136068325097, guid: cff9fd4e4cc25ec4a80da0365019d463,
         type: 3}
