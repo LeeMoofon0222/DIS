@@ -404,6 +404,11 @@ public class PlayerControl : MonoBehaviour
         }
         #endregion
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
+        if(watering == 1)
+        {
+            print("Gay1");
+        }
+
         #region Planting
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit raycastHit, maxRange))
         {
@@ -414,18 +419,21 @@ public class PlayerControl : MonoBehaviour
                 plantpoint = raycastHit.transform.gameObject.transform.GetChild(0).gameObject;
                 if (onHandItem.CompareTag("watering-can") && hasplant && watering==0)
                 {
+                    watering = 1;
                     //thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
+                    print("Gay");
 
                     var _v = onHandItem.GetComponent<OnHandVFX>().vfx;      //取得水粒子
                     StartCoroutine(Watering(_v));       //動畫播放 (總共4.2秒左右)
 
 
-                    watering = 1;
+                    
                 }
+                /*
                 else
                 {
                     watering = 0;
-                }
+                }*/
                 if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.type == ItemType.Plant && thisfield.GetComponent<Plantsys>().plant==null)
                 {
                     PlantObject thisseed = (PlantObject)onHandItem.GetComponent<ItemObject>().item;

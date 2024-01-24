@@ -20,7 +20,7 @@ public class Plantsys : MonoBehaviour
     private GameObject player;
     public int watering;
     public bool hasplant = true;
-    public bool doplant = false;
+    public bool doplant = true;
     public Slider slider;
     private bool test1 = true;
 
@@ -33,19 +33,19 @@ public class Plantsys : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         watering = player.GetComponent<PlayerControl>().watering;
         //print(watering);
-        if (watering == 1 && test1 && doplant)
+        if (player.GetComponent<PlayerControl>().watering == 1 && test1 && doplant)
         {
             //slider.gameObject.SetActive(true);
             Invoke("ReduceBar", 1);
             test1 = false;
         }
 
-        if (doplant && watering == 1)
+        if (doplant && player.GetComponent<PlayerControl>().watering == 1)
         {
             //gameObject.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
             Destroy(plant, period);
             Invoke("PlantPlant", period);
-            player.GetComponent<PlayerControl>().watering = 0;
+            //player.GetComponent<PlayerControl>().watering = 0;
             doplant = false;
         }
         /*
@@ -60,6 +60,7 @@ public class Plantsys : MonoBehaviour
         else
         {
             hasplant = false;
+            p = 0;
         }
         if (slider.value == 0)
         {
@@ -70,16 +71,18 @@ public class Plantsys : MonoBehaviour
         {
             slider.gameObject.SetActive(false);
         }
+        
         if (!doplant)
         {
-            player.GetComponent<PlayerControl>().watering = 0;
+            //player.GetComponent<PlayerControl>().watering = 0;
         }
+
         if (!hasplant)
         {
-            slider.gameObject.SetActive(true);
-            slider.maxValue = period;
-            slider.value = period;
+            slider.gameObject.SetActive(false);
+            doplant = false;
         }
+        //else doplant = true;
     }
     public void DoPlanting(PlantObject thisseed)
     {
@@ -113,6 +116,9 @@ public class Plantsys : MonoBehaviour
             plantpoint = gameObject.transform.GetChild(0).gameObject;
         }
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantpoint.transform.rotation);
+        slider.gameObject.SetActive(true);
+        slider.maxValue = period;
+        slider.value = period;
         plant.layer = 0;
         gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
         planthealth = plant.AddComponent<ItemObject>().objectHealth;
@@ -126,6 +132,10 @@ public class Plantsys : MonoBehaviour
     public void PlantPlant()
     {
         plant = Instantiate(plantlist[p], plantpoint.transform.position, plantlist[p].transform.rotation);
+        player.GetComponent<PlayerControl>().watering = 0;
+        slider.gameObject.SetActive(true);
+        slider.maxValue = period;
+        slider.value = period;
         test1 = true;
         gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
         if (p < step - 1)
@@ -138,6 +148,8 @@ public class Plantsys : MonoBehaviour
     public void ReduceBar()
     {
         slider.value -= 1;
+        player.GetComponent<PlayerControl>().watering = 0;
+
         if (slider.value != 0)
         {
             Invoke("ReduceBar", 1);
