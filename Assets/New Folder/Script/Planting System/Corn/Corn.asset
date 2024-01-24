@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
-  ID: 30018
+  ID: 40003
   itemHealth: 1
   stackable: 1
   itemObject: {fileID: 2201939589813955010, guid: 6620035f75f6dcf4882f5c77e6cdb73d,
@@ -23,7 +23,7 @@ MonoBehaviour:
     type: 3}
   itemName: "\u7389\u7C73\u7A2E\u5B50"
   itemWeights: 0
-  itemIcon: {fileID: 21300000, guid: 216d9aafe7713cd40a8e5e23c917ff1b, type: 3}
+  itemIcon: {fileID: 21300000, guid: 38bed298f1792e845b0d4be82df2c8c5, type: 3}
   hitsound: {fileID: 0}
   type: 3
   gainingType: 3
@@ -31,7 +31,7 @@ MonoBehaviour:
   canThrow: 0
   placeAble: 0
   Preplace: {fileID: 0}
-  period: 10
+  period: 60
   plantstep:
   - {fileID: 7690761589985113636, guid: 7eb7a89c5fd7895428eb78780c60328c, type: 3}
   - {fileID: 8155962168847723671, guid: 045616202c369c145a54fc6e4d1d061c, type: 3}
