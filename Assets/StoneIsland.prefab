@@ -1207,6 +1207,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 62ebb98d928ea75469f7288ee983429b,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &586677098967967809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7375,6 +7376,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 06c54e88b57697f499e86801d495e94f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &1967749289814876219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b62672e2be7180949a1fb63bad274553,
@@ -7531,6 +7533,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 62ebb98d928ea75469f7288ee983429b,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &284011813290957519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7729,6 +7732,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 5609212371665585673, guid: d4373216638e70646aaff198ab2dd8aa,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &7280208421477167464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8065,6 +8069,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &6349549104198471026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8712,6 +8717,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &1934001638689516074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 530dc0ce513c9e6418c848c58167174a,
@@ -8984,6 +8990,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &1404694753416437050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9299,6 +9306,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &5620887212711915826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9553,6 +9561,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 6781804643387444106, guid: 50d1e2ca6d72545418c33beef891d44f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &1934001638309205710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ea9602dc34c0ab4ea1a481ce94d839d,
@@ -10422,6 +10431,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 5609212371665585673, guid: d4373216638e70646aaff198ab2dd8aa,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &1934001637969043852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb0c10ef16ba4644a980ff120009d313,
@@ -10627,6 +10637,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &1934001637933865534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 530dc0ce513c9e6418c848c58167174a,
@@ -12108,6 +12119,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &5103286124092642505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12957,6 +12969,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 62ebb98d928ea75469f7288ee983429b,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &8953683999823327793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14131,6 +14144,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 06c54e88b57697f499e86801d495e94f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1001 &3837749092130005959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19365,6 +19379,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 5575164636987262098, guid: b8ee009d656970c4c8c78e7a80f64967,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1001 &6510520899861748243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20108,6 +20123,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 06c54e88b57697f499e86801d495e94f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &6715901025758856727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b62672e2be7180949a1fb63bad274553,
@@ -21090,6 +21106,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 3829358850743592047, guid: 06c54e88b57697f499e86801d495e94f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!4 &6554732800082543874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b62672e2be7180949a1fb63bad274553,
@@ -21775,6 +21792,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 5575164636987262098, guid: b8ee009d656970c4c8c78e7a80f64967,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1001 &6993284959434900492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23514,6 +23532,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1001 &8373573936256394475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25051,6 +25070,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 5575164636987262098, guid: b8ee009d656970c4c8c78e7a80f64967,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1001 &9150605321674462996
 PrefabInstance:
   m_ObjectHideFlags: 0
