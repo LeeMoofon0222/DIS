@@ -86,7 +86,7 @@ public class PlayerControl : MonoBehaviour
     [Header("other option panel")]
     public GameObject optionMenu;
     public bool optionPage;
-
+    public bool gayL;  //for the setting to find gay L
     [Header("Roasting")]
     public bool bbq;
     public LayerMask bbqLayer;
@@ -194,7 +194,13 @@ public class PlayerControl : MonoBehaviour
         {
             optionMenu.SetActive(true);
             optionPage = true;
+            gayL = true;
 
+        }
+        if(Input.GetKeyDown(KeyCode.Escape) && gayL == true)
+        {
+            optionMenu.SetActive(false);
+            gayL = false;
         }
         if(optionMenu.activeInHierarchy) 
         {
