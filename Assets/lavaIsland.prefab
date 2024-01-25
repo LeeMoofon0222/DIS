@@ -177,6 +177,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 2162058209565103564, guid: 032dd514f7b6b71448df8d58a7f2ee01,
     type: 3}
   resize: 1
+  recolor: 0
 --- !u!1 &2891196392949745455
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +390,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 2162058209565103564, guid: 032dd514f7b6b71448df8d58a7f2ee01,
     type: 3}
   resize: 1
+  recolor: 0
 --- !u!1 &2891196393618192409
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +568,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 2162058209565103564, guid: 032dd514f7b6b71448df8d58a7f2ee01,
     type: 3}
   resize: 1
+  recolor: 0
 --- !u!1 &2891196394304659428
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +746,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 2162058209565103564, guid: 032dd514f7b6b71448df8d58a7f2ee01,
     type: 3}
   resize: 1
+  recolor: 0
 --- !u!1001 &2240143797604497120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,7 +1026,10 @@ PrefabInstance:
       propertyPath: lootdrop.Array.data[0].loot.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1700575101852923186, guid: ccfeafaeaf4a1e049b2ed57d5441230f, type: 3}
+    - {fileID: 1700575102860017843, guid: ccfeafaeaf4a1e049b2ed57d5441230f, type: 3}
+    - {fileID: 737555256751451280, guid: ccfeafaeaf4a1e049b2ed57d5441230f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ccfeafaeaf4a1e049b2ed57d5441230f, type: 3}
 --- !u!4 &4098274808678745259 stripped
 Transform:

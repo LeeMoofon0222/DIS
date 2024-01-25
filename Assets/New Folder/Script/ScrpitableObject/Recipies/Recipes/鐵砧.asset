@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u9435\u7827"
   m_EditorClassIdentifier: 
   materials:
-  - ID: 10006
+  - ID: 10009
     amount: 5
   - ID: 10002
     amount: 2

@@ -184,5 +184,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CrackedObject: {fileID: 1929019139999207096, guid: 44209ac74abafa8468d61b67ee7ad2b8,
     type: 3}
-  resize: 1
-  recolor: 1
+  resize: 0
+  recolor: 0

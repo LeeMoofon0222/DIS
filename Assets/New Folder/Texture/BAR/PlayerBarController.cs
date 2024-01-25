@@ -41,7 +41,7 @@ public class PlayerBarController : MonoBehaviour
 
     void Takehunger(int hunger)
     {
-        currenthunger -= hunger; 
+        //currenthunger -= hunger; 
         bar.Sethunger(currenthunger / 100);
 
 

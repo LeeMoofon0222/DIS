@@ -143,7 +143,7 @@ public class SkyChanger : MonoBehaviour
         }
 
 
-        skyControl.timeOfDay = Mathf.PingPong(Time.time / 1200, 1);
+        //skyControl.timeOfDay = Mathf.PingPong(Time.time / 1200, 1);
 
 
 

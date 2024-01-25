@@ -131,9 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0a7ec90b9fb104b9be0cba34220554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CrackedObject: {fileID: 3829358850743592047, guid: 62ebb98d928ea75469f7288ee983429b,
+  CrackedObject: {fileID: 3829358850743592047, guid: 06c54e88b57697f499e86801d495e94f,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!114 &1109527981835738346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,13 +151,13 @@ MonoBehaviour:
   lootdrop:
   - Randomweight: 70
     loot:
-    - {fileID: 11400000, guid: 6046e9715508f4349b6ddaf5227bfb91, type: 2}
+    - {fileID: 11400000, guid: 9b08ffeb7aedc18419739009fa58db98, type: 2}
   - Randomweight: 30
     loot:
     - {fileID: 0}
   finalDrop:
   - amount: 1
-    loot: {fileID: 11400000, guid: 6046e9715508f4349b6ddaf5227bfb91, type: 2}
+    loot: {fileID: 11400000, guid: 9b08ffeb7aedc18419739009fa58db98, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 1

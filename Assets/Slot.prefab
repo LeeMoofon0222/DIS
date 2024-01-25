@@ -161,12 +161,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   pNum: 0
+  amoutText: {fileID: 0}
   amount: 0
   doneness: 0
   health: 0
   pos: 0
   select: {fileID: 0}
   source: {fileID: 0}
+  generated: 0
+  slotnum: 0
+  noneSprite: {fileID: 0}
 --- !u!1 &1923436305219569879
 GameObject:
   m_ObjectHideFlags: 0
