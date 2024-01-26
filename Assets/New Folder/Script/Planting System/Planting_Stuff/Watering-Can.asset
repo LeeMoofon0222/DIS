@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35740e29920f2440b72049dae9ef886, type: 3}
   m_Name: Watering-Can
   m_EditorClassIdentifier: 
-  ID: 696969699
-  itemHealth: 1
+  ID: 29999
+  itemHealth: 2147483647
   stackable: 0
   itemObject: {fileID: 2932600059415940491, guid: 6cb43985702b8754e9a797299c127102,
     type: 3}
-  spawntoscene: {fileID: 2932600059415940491, guid: 6cb43985702b8754e9a797299c127102,
+  spawntoscene: {fileID: 2932600059415940491, guid: 1d0d128803a48dc4cbd113fbd52aba2e,
     type: 3}
   UIObject: {fileID: 8171476313501535594, guid: 62a3d1dd59cb5414ba6cbf2a968489ad,
     type: 3}

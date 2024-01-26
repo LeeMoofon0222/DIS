@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc70dfe516c920b4a924137e6c99779d, type: 3}
-  m_Name: pumpkinseed
+  m_Name: cornplant
   m_EditorClassIdentifier: 
   materials:
-  - ID: 30013
+  - ID: 30018
     amount: 1
   - ID: 0
     amount: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
     amount: 0
   outputAmount: 4
   output: {fileID: 0}
-  Itemoutput: {fileID: 11400000, guid: 11697f937e878e54ea515b7e298328cc, type: 2}
+  Itemoutput: {fileID: 11400000, guid: 5a8a2b16e043c3e4a85a314ca3684f3c, type: 2}
   craftresult: {fileID: 0}
   forsmelting: 0
   forcooking: 0

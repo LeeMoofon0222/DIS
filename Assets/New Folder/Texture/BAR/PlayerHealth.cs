@@ -214,6 +214,10 @@ public class PlayerHealth : MonoBehaviour
         pm.isDead = false;
         currentlife = maxlife;
 
+        pm.barcontroller.Sethunger(100);
+        
+        GetComponent<PlayerInventoryController>().UpdateDisplay();
+
         respawned = false; 
         //pm.canMove = true;
     }

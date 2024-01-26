@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89f478b72ade3d489a8ee8fa73f2a5b, type: 3}
-  m_Name: Pumpkin
+  m_Name: PumpkinPlant
   m_EditorClassIdentifier: 
   ID: 40004
   itemHealth: 1
   stackable: 1
-  itemObject: {fileID: 4717710798786842025, guid: c3fa706604e09d840930a801f51bbadb,
+  itemObject: {fileID: 2201939589813955010, guid: 46dc92b9bfcdf1f459508499dd1fec28,
     type: 3}
-  spawntoscene: {fileID: 4717710798786842025, guid: c3fa706604e09d840930a801f51bbadb,
+  spawntoscene: {fileID: 2201939589813955010, guid: 46dc92b9bfcdf1f459508499dd1fec28,
     type: 3}
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: "\u5357\u74DC\u7A2E\u5B50"
   itemWeights: 1
-  itemIcon: {fileID: 21300000, guid: 216d9aafe7713cd40a8e5e23c917ff1b, type: 3}
+  itemIcon: {fileID: 21300000, guid: c64a0f9aecb78c2408ec152b299bdcdf, type: 3}
   hitsound: {fileID: 0}
   type: 3
   gainingType: 3
   desciption: 
-  canThrow: 0
+  canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
   period: 180

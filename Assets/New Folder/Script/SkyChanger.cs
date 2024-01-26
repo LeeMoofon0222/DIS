@@ -37,7 +37,10 @@ public class SkyChanger : MonoBehaviour
     int biomeNum;
     float timescale = 3f;
 
+    public Light sun;
+
     public PolyverseSkies skyControl;
+    bool daychange;
 
 
     // Start is called before the first frame update
@@ -142,8 +145,19 @@ public class SkyChanger : MonoBehaviour
             }
         }
 
-
-        //skyControl.timeOfDay = Mathf.PingPong(Time.time / 1200, 1);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                daychange = !daychange;
+            }
+        }
+        if (daychange)
+        {
+            sun.intensity = Mathf.Clamp(Mathf.PingPong(Time.time / 1200, 1), 0.1f, 1f);
+            skyControl.timeOfDay = Mathf.PingPong(Time.time / 1200, 1);
+        }
+        
 
 
 
@@ -187,7 +201,8 @@ public class SkyChanger : MonoBehaviour
     {
         if (   other.CompareTag("cherryIsland")
             || other.CompareTag("desertIsland")
-            || other.CompareTag("lavaIsland"))
+            || other.CompareTag("lavaIsland")
+            || other.CompareTag("FallIsland"))
         {
             exitArea = true;
         }

@@ -37,11 +37,26 @@ public class PlayerBarController : MonoBehaviour
         {
             isHunger = true;
         }
+        else
+        {
+            isHunger = false;
+        }
     }
 
-    void Takehunger(int hunger)
+    public void SetHunger(int _hunger)
     {
-        //currenthunger -= hunger; 
+        currenthunger = _hunger;
+        bar.Sethunger(currenthunger / 100);
+
+    }
+
+    public void Changehunger(int hunger)
+    {
+        currenthunger = bar.GetHunger();
+
+        currenthunger += hunger; 
+
+
         bar.Sethunger(currenthunger / 100);
 
 
@@ -57,7 +72,7 @@ public class PlayerBarController : MonoBehaviour
     IEnumerator hunger()
     {
         yield return new WaitForSeconds(hungerTime);
-        Takehunger((int)(5 * hungrySpeed));
+        Changehunger((int)(-5 * hungrySpeed));
         StartCoroutine(hunger());
     }
 }

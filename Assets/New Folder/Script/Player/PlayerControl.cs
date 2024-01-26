@@ -41,6 +41,7 @@ public class PlayerControl : MonoBehaviour
     public PlayerMoveMent pm;
     public InventoryRecord m_inventory;
     public barController bc;
+    PlayerBarController pbc;
     public ItemwheelController IWC;
     public CursorControl cursorControl;
 
@@ -149,7 +150,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        pbc = GetComponent<PlayerBarController>();
         //isDigging = false;
         handHolderController.Play("Idle");
     }
@@ -972,8 +973,9 @@ public class PlayerControl : MonoBehaviour
         cameraControl.camAnim.SetTrigger("eat");
 
         yield return new WaitForSeconds(1.7f);
-        
-        bc.EatFood(Mathf.RoundToInt(food.satiety));
+
+        //bc.EatFood(Mathf.RoundToInt(food.satiety));
+        pbc.Changehunger(Mathf.RoundToInt(food.satiety));
 
         bc.Setenergy(100);
         if(food.ID < 31000)
@@ -1118,6 +1120,23 @@ public class PlayerControl : MonoBehaviour
             handHolderController.Play("Idle");
         }
         //isDigging = false;
+    }
+
+    public void ResetPose()
+    {
+        isAttacking = false;
+        isDigging = false;
+        CD = 0.51f;
+        if (pm.GetComponent<PlayerMoveMent>().isMoving)
+        {
+            handHolderController.Play("moving");
+            cameraControl.camAnim.Play("None");
+        }
+        else
+        {
+            handHolderController.Play("Idle");
+            cameraControl.camAnim.Play("Breath");
+        }
     }
 
 

@@ -1882,7 +1882,8 @@ MonoBehaviour:
     loot:
     - {fileID: 11400000, guid: 2833ea2e28bfb4049b73c01efdee73f0, type: 2}
   - Randomweight: 30
-    loot: []
+    loot:
+    - {fileID: 0}
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
@@ -1903,6 +1904,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 6382663749448567493, guid: 6c19819a1f349584082a951f78aca1fb,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439298840041675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,6 +3347,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 7498731880489183654, guid: 86c91b976b12f2245a67d75f52b705da,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299001161897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,6 +3755,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 7498731880489183654, guid: 86c91b976b12f2245a67d75f52b705da,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299040416482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4604,7 +4608,8 @@ MonoBehaviour:
     loot:
     - {fileID: 11400000, guid: 2833ea2e28bfb4049b73c01efdee73f0, type: 2}
   - Randomweight: 30
-    loot: []
+    loot:
+    - {fileID: 0}
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
@@ -4625,6 +4630,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 6382663749448567493, guid: 6c19819a1f349584082a951f78aca1fb,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299112290322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5722,6 +5728,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 7498731880489183654, guid: 86c91b976b12f2245a67d75f52b705da,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299326976944
 GameObject:
   m_ObjectHideFlags: 0
@@ -7509,6 +7516,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 4917851366787243840, guid: e4958fcbed9d7cb47aa8e1fff4612f6a,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299517712624
 GameObject:
   m_ObjectHideFlags: 0
@@ -10231,6 +10239,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 4917851366787243840, guid: e4958fcbed9d7cb47aa8e1fff4612f6a,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299853510773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11788,6 +11797,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 4917851366787243840, guid: e4958fcbed9d7cb47aa8e1fff4612f6a,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439299981527509
 GameObject:
   m_ObjectHideFlags: 0
@@ -13345,6 +13355,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 4917851366787243840, guid: e4958fcbed9d7cb47aa8e1fff4612f6a,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439300259755798
 GameObject:
   m_ObjectHideFlags: 0
@@ -16398,6 +16409,7 @@ MonoBehaviour:
   CrackedObject: {fileID: 7498731880489183654, guid: 86c91b976b12f2245a67d75f52b705da,
     type: 3}
   resize: 0
+  recolor: 0
 --- !u!1 &1095439300602527969
 GameObject:
   m_ObjectHideFlags: 0

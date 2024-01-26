@@ -170,7 +170,7 @@ public class PlayerInventoryController : MonoBehaviour
 
         valueSync();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !ItemwheelController.weaponWheelSelected)
         {
 
             inventoryOpen = !inventoryOpen;
@@ -247,7 +247,7 @@ public class PlayerInventoryController : MonoBehaviour
         for(int i = 0; i < inventory.Container.Count; i++)
         {
             if (inventory.Container[i].amount <= 0 ||
-               (inventory.Container[i].item_Health <= -1 && (inventory.Container[i].item.type == ItemType.Tool || inventory.Container[i].item.type == ItemType.Food)))    //0323
+               (inventory.Container[i].item_Health <= 0 && (inventory.Container[i].item.type == ItemType.Tool || inventory.Container[i].item.type == ItemType.Food)))    //0323
             {
                 for (int j = 0; j < itemsOnHand.Count; j++)
                 {
@@ -278,7 +278,9 @@ public class PlayerInventoryController : MonoBehaviour
                 
                 inventory.Container.Remove(inventory.Container[i]);
 
-                
+                pc.onhandSpawned = false;
+                pc.ResetPose();
+                pc.StopAllCoroutines();
 
 
                 break;

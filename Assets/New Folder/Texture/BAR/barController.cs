@@ -38,9 +38,14 @@ public class barController : MonoBehaviour
     public void Sethunger(float hunger)
     {
 
-        //hungerbar.fillAmount = hunger;
+        hungerbar.fillAmount = hunger;
 
     }
+    public float GetHunger()
+    {
+        return hungerbar.fillAmount * 100;
+    }
+
     public void EatFood(float value)
     {
 

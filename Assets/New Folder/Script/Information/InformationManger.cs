@@ -93,7 +93,7 @@ public class InformationManger : MonoBehaviour
             Food.SetActive(true);
 
             food.text = "飽食度:" + FoodObject.satiety.ToString();
-            food.text = "回血量:" + FoodObject.healing.ToString();
+            foodhealing.text = "回血量:" + FoodObject.healing.ToString();
 
         }
         else if(PlayerInventoryController.pre_ItemSlot.type == ItemType.Plant)

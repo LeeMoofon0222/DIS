@@ -198,6 +198,8 @@ public class InventoryRecord : ScriptableObject
                     }
                     else
                     {
+
+                        //RemoveItem(Contai)
                         break;
                     }
                 }
