@@ -10,21 +10,39 @@ public class Makecount : MonoBehaviour
     public Button minus;
     public Button craft;
     public int Count;
+
+    public bool limited;
     // Start is called before the first frame update
 
     void Start()
     {
-        Count = 0;
+        Count = 1;
         Count_text.text = Count.ToString();
 
     }
     public void Plus()
     {
-        Count++;
+
+        if (limited)
+        {
+            Count = 1;
+        }
+        else
+        {
+            Count++;
+        }
+        
         Count_text.text = Count.ToString();
 
 
     }
+
+    public void SetMax( bool tf)
+    {
+        limited= tf;
+    }
+
+
     public void Minus()
     {
         if(Count == 0)

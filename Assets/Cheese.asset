@@ -32,7 +32,7 @@ MonoBehaviour:
   placeAble: 0
   Preplace: {fileID: 0}
   healing: 4
-  satiety: 7
+  satiety: 19
   canbeBBQ: 0
   roastStep: []
   stepTime: []

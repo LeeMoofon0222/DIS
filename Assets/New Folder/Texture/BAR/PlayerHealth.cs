@@ -194,6 +194,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator deadcountDown()
     {
         //pm.canMove = false;
+        GetComponent<PlayerInventoryController>().UpdateDisplay();
         yield return new WaitForSeconds(2f);
         timer = 0f;
 

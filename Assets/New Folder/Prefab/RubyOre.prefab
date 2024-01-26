@@ -139,8 +139,8 @@ MonoBehaviour:
   PickObj: 0
   partical: {fileID: 2961014148580533450, guid: 2e7eb7c56cc43534993119facdb2d21f,
     type: 3}
+  attacking: 0
   canPick: 0
-  rb: {fileID: 9185110139957610223}
   SceneSpawned: 1
   record_health: 0
   record_doneness: 0
@@ -158,20 +158,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseItem: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   lootdrop:
-  - Randomweight: 60
-    loot:
-    - {fileID: 0}
-  - Randomweight: 40
+  - Randomweight: 70
     loot:
     - {fileID: 11400000, guid: 15f44fa17c5eab24299213267e728767, type: 2}
+  - Randomweight: 30
+    loot:
+    - {fileID: 0}
   finalDrop:
   - amount: 1
     loot: {fileID: 11400000, guid: 15f44fa17c5eab24299213267e728767, type: 2}
-  - amount: 1
-    loot: {fileID: 11400000, guid: d130620a4f76a224dad6d9627e011d16, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
   _forRatioType: 0
   peritemuGet: 1
+  getfromother: 0
 --- !u!82 &-8682736932586330649
 AudioSource:
   m_ObjectHideFlags: 0
@@ -179,7 +178,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184496796675777850}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}

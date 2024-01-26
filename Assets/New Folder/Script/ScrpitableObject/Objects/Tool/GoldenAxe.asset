@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldenAxe
   m_EditorClassIdentifier: 
   ID: 20018
-  itemHealth: 100
+  itemHealth: 50
   stackable: 0
   itemObject: {fileID: 3850462174419230506, guid: e923e6c5f9260de4e83c2dfd90aac5c9,
     type: 3}
@@ -31,6 +31,6 @@ MonoBehaviour:
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  ToolATK: 1
+  ToolATK: 10
   ToolDEF: 0
   ratio: 5

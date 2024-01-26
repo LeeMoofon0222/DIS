@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb400673b55cea945b9e80d4b99a58ec, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  ID: 31005
+  ID: 30010
   itemHealth: 5
   stackable: 0
   itemObject: {fileID: 35325665629739908, guid: e31948f47fd9ffe43985a477f8768aee,
@@ -22,7 +22,7 @@ MonoBehaviour:
   UIObject: {fileID: 3021869837899015767, guid: 4adcd6e76057ef3409a3d6b752150dfa,
     type: 3}
   itemName: "\u99AC\u9234\u85AF"
-  itemWeights: 0
+  itemWeights: 2
   itemIcon: {fileID: 21300000, guid: 29e62c7f7e2bffd4194812f45614581e, type: 3}
   hitsound: {fileID: 0}
   type: 0
@@ -32,8 +32,8 @@ MonoBehaviour:
   placeAble: 0
   Preplace: {fileID: 0}
   healing: 2
-  satiety: 2
-  canbeBBQ: 1
+  satiety: 17
+  canbeBBQ: 0
   roastStep:
   - {fileID: 2100000, guid: 9976d9ed5228ed44d830dec4837bfe03, type: 2}
   - {fileID: 2100000, guid: 449bc5ebea1d0f3448fabbd5b4c12879, type: 2}
