@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 10016
   itemHealth: 0
-  stackable: 0
+  stackable: 1
   itemObject: {fileID: 1789130807696522531, guid: 0e07f200f28693044a57e96f6a907180,
     type: 3}
   spawntoscene: {fileID: 5165175423225129739, guid: 4342477bc0d09bf43a9950b7a01785ca,

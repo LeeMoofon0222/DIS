@@ -299,7 +299,7 @@ public class PlayerControl : MonoBehaviour
         #region Placing
         if (itemHolding != null && itemHolding.item.placeAble)
         {
-            if(Physics.Raycast(cam.transform.position, cam.transform.forward,out RaycastHit pointHit, maxRange, LayerMask.GetMask("islands")))
+            if(Physics.Raycast(cam.transform.position, cam.transform.forward,out RaycastHit pointHit, maxRange, LayerMask.GetMask("islands", "foundation", "canBuildOn")))
             {
                 if ( GameObject.FindGameObjectWithTag("preplace") == null)
                 {

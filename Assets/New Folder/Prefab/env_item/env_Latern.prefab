@@ -115,8 +115,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0102736, y: 1.3861985, z: 1.0102736}
-  m_Center: {x: -0.0223117, y: 0.66521955, z: 0.041686352}
+  m_Size: {x: 1.0102736, y: 1.3944489, z: 1.0102736}
+  m_Center: {x: -0.022311723, y: 0.6610946, z: 0.04168634}
 --- !u!114 &6033218405730937910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 270876143045529339}
   SceneSpawned: 0
   record_health: 0
   record_doneness: 0
