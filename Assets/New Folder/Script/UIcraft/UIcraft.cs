@@ -107,7 +107,7 @@ public class UIcraft : MonoBehaviour
 
             inventoryRecord.AddItem(recipe.Itemoutput, recipe.outputAmount * Makecount.Count, recipe.Itemoutput.itemHealth, 0);
             PIC.UpdateDisplay();
-            Makecount.Count = 0;
+            Makecount.Count = 01;
             Makecount.Count_text.text = Makecount.Count.ToString();
             recipe = null;
             StartCoroutine(waitFrame());

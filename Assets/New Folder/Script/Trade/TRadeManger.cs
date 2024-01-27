@@ -23,7 +23,7 @@ public class TRadeManger : MonoBehaviour
     GameObject InstantiateObject;
     //public Sprite BeselectSprite;
 
-    
+    public ParticleSystem vfx;
     public Transform generatepoint;
 
     // Start is called before the first frame update
@@ -88,6 +88,7 @@ public class TRadeManger : MonoBehaviour
     public void CLickTrade()
     {
         TradeButton[CurrentButton].onClick.Invoke();
+        //vfx.Play();
     }
     public void RandomButton()
     {

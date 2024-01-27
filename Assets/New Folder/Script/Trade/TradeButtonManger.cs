@@ -62,8 +62,10 @@ public class TradeButtonManger : MonoBehaviour
             //inventoryRecord.AddItem(GetTRadeItem, GetTradeAmount, GetTRadeItem.itemHealth, 0);
 
             Transform spawnpoint = GameObject.Find("GeneratePoint").transform;
+            ParticleSystem vfx = GameObject.Find("Mystery_VFX").GetComponent<ParticleSystem>();
 
             GameObject spawned = Instantiate(SpawnObject , spawnpoint.position, Quaternion.identity);
+            vfx.Play();
 
             //spawned.transform.localScale *= scaler;
 

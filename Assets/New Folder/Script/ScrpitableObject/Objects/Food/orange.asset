@@ -27,12 +27,12 @@ MonoBehaviour:
   hitsound: {fileID: 0}
   type: 0
   gainingType: 3
-  desciption: 
+  desciption: "\u5713\u6F64\u7684\u67D1\u6A58\u985E\u6C34\u679C,\u5916\u76AE\u6A59\u4EAE,\u679C\u8089\u591A\u6C41"
   canThrow: 1
   placeAble: 0
   Preplace: {fileID: 0}
-  healing: 100
-  satiety: 0
+  healing: 2
+  satiety: 16
   canbeBBQ: 0
   roastStep: []
   stepTime: []
