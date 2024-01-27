@@ -253,7 +253,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+      minColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
       maxColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -4780,7 +4780,7 @@ ParticleSystemRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139205828835559552}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -5675,13 +5675,16 @@ MonoBehaviour:
   gravity: 9.8
   detectDistance: 20
   stoppingDistance: 6
+  stoppingAngle: 20
   HP: 100
+  isfriendly: 0
   anim: {fileID: 7403976272345039557}
+  forcedtoDead: 0
   enable_guard: 0
   guard: {fileID: 0}
   guardDistence: 30
   attackCD: 5
-  attackValue: 10
+  attackValue: 5
   playermask:
     serializedVersion: 2
     m_Bits: 8192
@@ -5693,6 +5696,11 @@ MonoBehaviour:
   hurtparticle: {fileID: 3274811440442846137, guid: b72500f042a5279458f5cd6b136d24a1,
     type: 3}
   attackParticle: {fileID: 2143772515521975664}
+  isDucky: 0
+  movepos: {fileID: 0}
+  itemmask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7875765219789690257
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5753,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4afe7e0f701bb5b4e8f6c6239b7507da, type: 2}
+  - {fileID: 2100000, guid: 0449495dd3f0ac3488fddbcb864aa0ea, type: 2}
   - {fileID: 2100000, guid: 3cfd2e1589acc9547ae2f07f827e7df3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
