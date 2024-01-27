@@ -122,7 +122,7 @@ public class ItemObject : MonoBehaviour
     }
     public void Update()
     {
-        if(transform.position.y <= -20f && !SceneSpawned) Destroy(gameObject);
+        if(transform.position.y <= -100f && !SceneSpawned) Destroy(gameObject);
     }
     /*IEnumerator animDig()
     {

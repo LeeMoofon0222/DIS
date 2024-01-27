@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2616658876456905364}
   - component: {fileID: 3689171071770224632}
   - component: {fileID: 1557251131539860746}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: env_corn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   partical: {fileID: 0}
   attacking: 0
   canPick: 1
-  SceneSpawned: 0
+  SceneSpawned: 1
   record_health: 0
   record_doneness: 0
 --- !u!64 &1557251131539860746
