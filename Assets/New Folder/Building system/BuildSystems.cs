@@ -132,7 +132,7 @@ public class BuildSystems : MonoBehaviour
             int canBuildOn = LayerMask.NameToLayer("canBuildOn");
 
             //©î°£
-            if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer == canBuildOn || buildhit.transform.gameObject.layer == foundation))
+            if (Input.GetKeyUp(KeyCode.X) && (buildhit.transform.gameObject.layer == canBuildOn || buildhit.transform.gameObject.layer == foundation) && buildhit.transform.gameObject.name[0]!='D')
             {
 
                 if (buildhit.transform.gameObject.layer == foundation)
