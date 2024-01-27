@@ -196,6 +196,7 @@ public class MapLottery : MonoBehaviour
         if (isworking) return;
 
         int RandNum = Random.Range(1, 100);
+        int rec = RandNum;
 
         for (int i = 0; i < reward.Count; i++)
         {
@@ -229,13 +230,15 @@ public class MapLottery : MonoBehaviour
 
                         if(RandNum <= 52 && rand != 1)
                         {
-                            Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position, Quaternion.identity);
+                            GameObject op = Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position, Quaternion.identity);
+                            op.GetComponent<ItemObject>().SceneSpawned = true;
                         }
                         else
                         {
                             for(int k = 0; k <= RandNum % 3; k++)
                             {
-                                Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position + new Vector3(k / 6, 0, 0), Quaternion.identity);
+                                GameObject op = Instantiate(reward[i].item[rand].spawntoscene, generatePoint.position + new Vector3(k / 6, 0, 0), Quaternion.identity);
+                                op.GetComponent<ItemObject>().SceneSpawned = true;
                             }
                         }
                         
@@ -245,16 +248,17 @@ public class MapLottery : MonoBehaviour
                     else
                     {
                         // m_inventory.AddItem(lootdrop[i].loot[0], 1, 1, 0);
-                        if(RandNum >= 96)
+                        if(rec >= 96)
                         {
-                            Instantiate(reward[i].item[0].spawntoscene, generatePoint.position, Quaternion.identity);
-                            
+                            GameObject op = Instantiate(reward[i].item[0].spawntoscene, generatePoint.position, Quaternion.identity);
+                            op.GetComponent<ItemObject>().SceneSpawned = true;
                         }
                         else
                         {
                             for (int k = 0; k <= RandNum % 3; k++)
                             {
-                                Instantiate(reward[i].item[0].spawntoscene, generatePoint.position + new Vector3(k/6,0,0), Quaternion.identity);
+                                GameObject op = Instantiate(reward[i].item[0].spawntoscene, generatePoint.position + new Vector3(k/6,0,0), Quaternion.identity);
+                                op.GetComponent<ItemObject>().SceneSpawned = true;
                             }
                         }
 
