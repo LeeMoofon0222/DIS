@@ -239,6 +239,7 @@ public class NpcController : MonoBehaviour
             {
                 GameObject l = Instantiate(loot.spawntoscene, this.transform.position + new Vector3(0, .5f, 0), Quaternion.identity);
                 l.GetComponent<Rigidbody>().isKinematic = true;
+                l.layer = 0;
             }
             
 
