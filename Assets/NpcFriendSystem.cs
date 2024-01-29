@@ -21,31 +21,35 @@ public class NpcFriendSystem : MonoBehaviour
     {
         if(other.TryGetComponent(out ItemObject IO))
         {
-
-            //print(IO.item.ID);
-            foreach(var list in IDandValue)
+            if(IO.gameObject.layer == 3)
             {
-                if (list.x == IO.item.ID)
+                //print(IO.item.ID);
+                foreach (var list in IDandValue)
                 {
-                    love += (int)list.y;
-                    Destroy(IO.gameObject);
+                    if (list.x == IO.item.ID)
+                    {
+                        love += (int)list.y;
+                        Destroy(IO.gameObject);
+                    }
                 }
             }
+            
 
         }
     }
 
     IEnumerator spawnitem()
     {
+        GameObject s = null;
         if(love >= 20)
         {
-            Instantiate(givebacks[2].spawntoscene , transform.position + new Vector3(0 , 1f , 0) ,Quaternion.identity );
+            s = Instantiate(givebacks[2].spawntoscene , transform.position + new Vector3(0 , 1f , 0) ,Quaternion.identity );
 
         }
         else if(love >= 10)
         {
 
-            Instantiate(givebacks[1].spawntoscene, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
+            s = Instantiate(givebacks[1].spawntoscene, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
         }
         else
         {
@@ -53,6 +57,8 @@ public class NpcFriendSystem : MonoBehaviour
 
 
         }
+
+        s.layer = 0;
 
         yield return new WaitForSeconds(120);
         StartCoroutine(spawnitem());
