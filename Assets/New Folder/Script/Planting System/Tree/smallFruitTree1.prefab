@@ -81,14 +81,14 @@ MonoBehaviour:
   baseItem: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79, type: 2}
   lootdrop: []
   finalDrop:
-  - amount: 2
+  - amount: 1
     loot: {fileID: 11400000, guid: d3b26895d71113d4084378330c0bc34d, type: 2}
-  - amount: 2
+  - amount: 1
     loot: {fileID: 11400000, guid: e00fd71208e3dbf48b2bb407a178cc79, type: 2}
-  - amount: 2
+  - amount: 1
     loot: {fileID: 11400000, guid: a93db241807749a478dae87aa722442a, type: 2}
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
-  _forRatioType: 0
+  _forRatioType: 1
   peritemuGet: 1
   getfromother: 0
 --- !u!114 &3515085015584229649
