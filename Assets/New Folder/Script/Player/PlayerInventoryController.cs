@@ -174,6 +174,7 @@ public class PlayerInventoryController : MonoBehaviour
         {
 
             inventoryOpen = !inventoryOpen;
+            equip.SetActive(true);
             informationManger.CloseAll();
             if (isStorage)
             {
@@ -205,6 +206,7 @@ public class PlayerInventoryController : MonoBehaviour
         {
             inventoryOBJ.SetActive(true);
             blurPanel.SetActive(true);
+            
             pm.canMove = false;
             //Cursor.visible = true;
             cameraLook.enabled = false;

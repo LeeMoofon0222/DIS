@@ -159,6 +159,6 @@ MonoBehaviour:
   lootdrop: []
   finalDrop: []
   m_inventory: {fileID: 11400000, guid: d7c02a97ca351114aa6785ce7cf97563, type: 2}
-  _forRatioType: 0
+  _forRatioType: 1
   peritemuGet: 1
   getfromother: 0
