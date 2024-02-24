@@ -33,7 +33,7 @@ MonoBehaviour:
   Preplace: {fileID: 0}
   healing: 2
   satiety: 17
-  canbeBBQ: 0
+  canbeBBQ: 1
   roastStep:
   - {fileID: 2100000, guid: 9976d9ed5228ed44d830dec4837bfe03, type: 2}
   - {fileID: 2100000, guid: 449bc5ebea1d0f3448fabbd5b4c12879, type: 2}

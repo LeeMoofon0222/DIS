@@ -107,7 +107,11 @@ public class PlayerControl : MonoBehaviour
     public AudioSource playerSource;
     public AudioSource swing;
 
-
+    //====================detector=====================
+    ItemObject detectIO;
+    NpcController detectNpc;
+    RaycastHit detecthit;
+    //=================================================
 
     public void SettingmodeForRotate(bool n)
     {
@@ -689,7 +693,8 @@ public class PlayerControl : MonoBehaviour
                     bbq = false;
                     if (bbq_isPlayed)
                     {
-                        GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform.position, Quaternion.identity);
+                        GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform);
+                        smoke.transform.rotation = Quaternion.identity;
                         Destroy(smoke, 6f);
                     }
                     bbq_isPlayed = false;
@@ -713,87 +718,106 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    public void DetectGameObjects()
+    public int DetectGameObjects()
     {
         if (Physics.Raycast(ray, out hit, maxRange))
         {
+            detecthit= hit;
+
             if (hit.transform.TryGetComponent(out ItemObject IO))
             {
-                var gain = IO.transform.GetComponent<ResourseGain>();
-                var hitSound = IO.transform.GetComponent<AudioSource>();
-                if (!IO.canPick)
-                {
-                    if (IO.partical != null)
-                    {
-                        GameObject particalPrefab = Instantiate(IO.partical, hit.point + hit.normal * 0.001f, Quaternion.identity);
-                        particalPrefab.transform.LookAt(hit.point + hit.normal);
-                    }
-
-                    if (IO.item != null)     //判斷有沒有帶Item (他是有意義的)
-                    {
-                        if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.gainingType == gain._forRatioType)
-                        {
-                            if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
-                                gain.GainMoreResources((ToolObject)onHandItem.GetComponent<ItemObject>().item);
-                            /*else
-                            {
-                                if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
-                            }*/
-
-                            //m_inventory.AddItem(IO.item, 1);
-                            gain.tryGetExtraResources();
-                            //Debug.Log("detected");
-                        }
-                        else
-                        {
-                            if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
-                        }
-                    }
-                    IO.ObjectHealth(10);
-
-                    if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
-                    {
-                        m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     
-                        PIC.UpdateDisplay();
-                    }
-                }
+                detectIO = IO;
+                return 1;    
             }
             else if (hit.transform.TryGetComponent(out NpcController npc))
             {
-                if (npc.hurtparticle != null)
-                {
-                    GameObject particalPrefab = Instantiate(npc.hurtparticle, hit.point + hit.normal * 0.001f, Quaternion.identity);
-                    particalPrefab.transform.LookAt(hit.point + hit.normal);
+                detectNpc = npc;
+                return 2;
+            }
+        }
 
-                    Destroy(particalPrefab , 3f);
-                }
+        return 0;
+    }
+
+    void NpcDetected(NpcController npc)
+    {
+        if (npc.hurtparticle != null)
+        {
+            GameObject particalPrefab = Instantiate(npc.hurtparticle, detecthit.point + detecthit.normal * 0.001f, Quaternion.identity);
+            particalPrefab.transform.LookAt(detecthit.point + detecthit.normal);
+
+            Destroy(particalPrefab, 3f);
+        }
 
 
-                if (onHandItem != null)
+        if (onHandItem != null)
+        {
+            if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
+            {
+                ToolObject weapon = (ToolObject)onHandItem.GetComponent<ItemObject>().item;
+                npc.OnHurt((int)weapon.ToolATK);            //這邊待改
+            }
+            else
+                npc.OnHurt(1);
+
+        }
+        else
+        {
+            npc.OnHurt(1);
+        }
+
+
+        if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
+        {
+            m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+            PIC.UpdateDisplay();
+        }
+
+    }
+
+    void IODetected(ItemObject IO)
+    {
+        var gain = IO.transform.GetComponent<ResourseGain>();
+
+        if (!IO.canPick)
+        {
+            if (IO.partical != null)
+            {
+                GameObject particalPrefab = Instantiate(IO.partical, detecthit.point + detecthit.normal * 0.001f, Quaternion.identity);
+                particalPrefab.transform.LookAt(detecthit.point + detecthit.normal);
+            }
+
+            if (IO.item != null)     //判斷有沒有帶Item (他是有意義的)
+            {
+                if (onHandItem != null && onHandItem.GetComponent<ItemObject>().item.gainingType == gain._forRatioType)
                 {
                     if (onHandItem.GetComponent<ItemObject>().item.type == ItemType.Tool)
+                        gain.GainMoreResources((ToolObject)onHandItem.GetComponent<ItemObject>().item);
+                    /*else
                     {
-                        ToolObject weapon = (ToolObject)onHandItem.GetComponent<ItemObject>().item;
-                        npc.OnHurt((int)weapon.ToolATK);            //這邊待改
-                    }
-                    else
-                        npc.OnHurt(1);
+                        if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
+                    }*/
 
+                    //m_inventory.AddItem(IO.item, 1);
+                    gain.tryGetExtraResources();
+                    //Debug.Log("detected");
                 }
                 else
                 {
-                    npc.OnHurt(1);
-                }
-
-
-                if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
-                {
-                    m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);     
-                    PIC.UpdateDisplay();
+                    if (gain.baseItem != null) m_inventory.AddItem(gain.baseItem, gain.peritemuGet, IO.item.itemHealth, 0);
                 }
             }
+            IO.ObjectHealth(10);
+
+            if (itemHolding != null && itemHolding.item.type == ItemType.Tool)
+            {
+                m_inventory.breakingItem(itemHolding.item, 1, PIC.i_pnum[setItem]);
+                PIC.UpdateDisplay();
+            }
         }
+
     }
+
 
 
     public void ChangeonHandItem()      //主手物體控制
@@ -943,11 +967,25 @@ public class PlayerControl : MonoBehaviour
         handHolderController.Play("Digging");
         cameraControl.camAnim.Play("Attack");
 
+        int mode = DetectGameObjects();
+
         yield return new WaitForSeconds(0.2f);
         swing.Play();
         //Debug.Log("1");
         yield return new WaitForSeconds(0.2f);
-        DetectGameObjects();
+        //DetectGameObjects();
+        switch (mode)
+        {
+            case 1:
+                IODetected(detectIO);
+                break;
+            case 2:
+                NpcDetected(detectNpc);
+                break;
+            default:
+                break;
+
+        }
         //Debug.Log("2");
         yield return new WaitForSeconds(0.8f);
         //Debug.Log("3");
@@ -1015,8 +1053,9 @@ public class PlayerControl : MonoBehaviour
         {   
             animPlayed = true;
             yield return new WaitForSeconds(2f);
-            GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform.position, Quaternion.identity);
-            Destroy(smoke , 6f);
+            GameObject smoke = Instantiate(BBQsmoke, onHandItem.transform);
+            smoke.transform.rotation = Quaternion.identity;
+            Destroy(smoke , 5f);
             animPlayed = false;
         }
 
@@ -1027,10 +1066,26 @@ public class PlayerControl : MonoBehaviour
         isDigging = true;
         handHolderController.Play("SwordAttack");
         cameraControl.camAnim.Play("Attack2");
+
+        int mode = DetectGameObjects();
+
         yield return new WaitForSeconds(0.55f);
         swing.Play();
         yield return new WaitForSeconds(0.67f - 0.55f);
-        DetectGameObjects();
+        //DetectGameObjects();
+        switch (mode)
+        {
+            case 1:
+                IODetected(detectIO);
+                break;
+            case 2:
+                NpcDetected(detectNpc);
+                break;
+            default:
+                break;
+
+        }
+
 
         yield return new WaitForSeconds(1.8f - (0.67f - 0.55f) - 0.55f);
         if (pm.GetComponent<PlayerMoveMent>().isMoving)
@@ -1086,10 +1141,24 @@ public class PlayerControl : MonoBehaviour
         handHolderController.Play(holderclip);
         cameraControl.camAnim.Play(camclip);
 
+        int mode = DetectGameObjects();
+
         yield return new WaitForSeconds(checkpoints[0]);
         swing.Play();
         yield return new WaitForSeconds(checkpoints[1] - checkpoints[0]);
-        DetectGameObjects();
+        //DetectGameObjects();
+        switch (mode)
+        {
+            case 1:
+                IODetected(detectIO);
+                break;
+            case 2:
+                NpcDetected(detectNpc);
+                break;
+            default:
+                break;
+
+        }
 
         yield return new WaitForSeconds(checkpoints[2] - (checkpoints[1] - checkpoints[0]) - checkpoints[0]);
         if (pm.GetComponent<PlayerMoveMent>().isMoving)

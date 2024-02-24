@@ -10,6 +10,8 @@ using TMPro;
 public class UIItemManager : MonoBehaviour, 
     IPointerEnterHandler, IPointerExitHandler
 {
+    public TextMeshProUGUI step_text;
+
     public Item item;
     public int pNum;        //0322
     public Text amoutText;
