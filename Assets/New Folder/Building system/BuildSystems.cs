@@ -253,7 +253,6 @@ public class BuildSystems : MonoBehaviour
         }
         preFoundation = GameObject.FindGameObjectWithTag("prebuildFoundation");
 
-        
 
         if (!BuildFoundation && GameObject.FindGameObjectWithTag("prebuildParts")!=null)
         {
