@@ -35,11 +35,11 @@ MonoBehaviour:
   satiety: 17
   canbeBBQ: 1
   roastStep:
-  - {fileID: 2100000, guid: 9976d9ed5228ed44d830dec4837bfe03, type: 2}
-  - {fileID: 2100000, guid: 449bc5ebea1d0f3448fabbd5b4c12879, type: 2}
-  - {fileID: 2100000, guid: 53715956a3626bc43b7ed6c5cd6903ad, type: 2}
-  - {fileID: 2100000, guid: ed43c859e65ad3741b8da8322e583d02, type: 2}
-  - {fileID: 2100000, guid: aefa42d75a3ca1944bbd4602ab02ff30, type: 2}
+  - {fileID: 2100000, guid: ba71ba692f88fb347863ddec4b49a77e, type: 2}
+  - {fileID: 2100000, guid: 70b5bbb481175b4489ce89385832c211, type: 2}
+  - {fileID: 2100000, guid: 70b5bbb481175b4489ce89385832c211, type: 2}
+  - {fileID: 2100000, guid: 70b5bbb481175b4489ce89385832c211, type: 2}
+  - {fileID: 2100000, guid: 66961d517bdc0624a84fda5305dae5c2, type: 2}
   stepTime:
   - 0
   - 2

@@ -64,8 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: cc92635baa3de524d9b7fef26ca5e17b, type: 3}
-  - {fileID: -3846018093981099296, guid: cc92635baa3de524d9b7fef26ca5e17b, type: 3}
+  - {fileID: 2100000, guid: ba71ba692f88fb347863ddec4b49a77e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,8 +105,8 @@ MonoBehaviour:
   CanScaleChange: 0
   PickObj: 1
   partical: {fileID: 0}
+  attacking: 0
   canPick: 1
-  rb: {fileID: 8251460727463216579}
   SceneSpawned: 0
   record_health: 1
   record_doneness: 0
