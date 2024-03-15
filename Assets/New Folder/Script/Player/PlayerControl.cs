@@ -426,7 +426,6 @@ public class PlayerControl : MonoBehaviour
                 {
                     watering = 1;
                     //thisfield.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
-                    print("Gay");
 
                     var _v = onHandItem.GetComponent<OnHandVFX>().vfx;      //取得水粒子
                     StartCoroutine(Watering(_v));       //動畫播放 (總共4.2秒左右)

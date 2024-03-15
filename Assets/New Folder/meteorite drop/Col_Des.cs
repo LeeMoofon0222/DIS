@@ -10,17 +10,13 @@ public class Col_Des : MonoBehaviour
     public Camera _camera;
     void OnCollisionEnter(Collision collision)
     {
-        //var pos = _planeObj.transform.position;
-        //Destroy(_planeObj);
-        //Instantiate(stone_crack, _planeMovePos[_posIndex].transform.position, Quaternion.identity);
-        //_planeObj.GetComponent<Rigidbody>().isKinematic = true;
         mete = true;
         var pos = gameObject.transform.position;
         Destroy(gameObject);
         GameObject obj = Instantiate(stone_crack, pos, Quaternion.identity);
         Destroy(obj,10);
         var ce = GameObject.Find("PlayerCamera").GetComponent<CameraEffects>();
-        ce.Shake(1,1);
+        ce.Shake(1,1); //相機震動(秒數,劇烈程度)
 
         if (collision.transform.CompareTag("Player"))
         {
